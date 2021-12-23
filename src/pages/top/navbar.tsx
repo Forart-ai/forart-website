@@ -20,7 +20,7 @@ const NavbarContainer = styled.div`
   width: 100%;
   justify-content: center;
   height: 70px;
-  position: fixed;
+  //position: fixed;
   //background-color: black;
   z-index: 999;
   

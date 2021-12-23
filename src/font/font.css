@@ -1,4 +1,16 @@
 @font-face {
     font-family:'campton';
+    src: url("./DriveBook.ttf");
+}
+
+
+@font-face {
+    font-family:'DriveExtraBold';
+    src: url("./DriveExtrabold.ttf");
+}
+
+@font-face {
+    font-family:'Comfortaa-Bold';
     src: url("./Comfortaa-Bold.ttf");
 }
+

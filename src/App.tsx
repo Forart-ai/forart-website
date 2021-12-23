@@ -23,10 +23,10 @@ const App = () => {
       <Top />
       <Incubation />
       <Mint />
-      <MetaPlus />
-      <Airdrop />
-      <Roadmap />
-      <Foot />
+      {/*<MetaPlus />*/}
+      {/*<Airdrop />*/}
+      {/*<Roadmap />*/}
+      {/*<Foot />*/}
     </div>
   )
 }
