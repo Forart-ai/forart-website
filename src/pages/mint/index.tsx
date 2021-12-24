@@ -6,12 +6,11 @@ import Coin from '../../image/mint/coins.png'
 
 
 const Wrapper = styled.div`
-  max-width: 1400px;
+  width: 100%;
   height: auto;
-  margin: auto;
+  margin: 150px 0;
   font-family: DriveExtraBold;
-  padding: 0 80px;
-
+  //padding: 0 80px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -19,13 +18,12 @@ const Wrapper = styled.div`
 
 
   @media screen and (max-width: 1100px) {
-    min-width: 100vw;
-    padding: 0 5px;
+    //padding: 0 5px;
   }
 `
 
 const Container = styled.div`
-  max-width: 1900px;
+  max-width: 1400px;
   width: calc(100% - 40px);
   margin-left: auto;
   margin-right: auto;
@@ -62,10 +60,8 @@ const ItemBorder = styled.div`
   justify-content: space-between;
   color: #fff;
   width: 100%;
-  max-width: 1440px;
 
   @media screen and (max-width: 1100px) {
-    margin: 0;
     flex-direction: column;
   }
 
@@ -77,16 +73,12 @@ const ItemContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  
+  padding-bottom: 40px;
+
 
   @media screen and (max-width: 1100px) {
-    min-width: 280px;
-    height: 130px;
-    
+    width: 100%;
   }
-  
-  
-  
 `
 
 const IconArea = styled.div`
@@ -97,14 +89,15 @@ const IconArea = styled.div`
   background: #282c34;
   border-radius: 10px;
   margin-bottom: 20px;
-  
+  max-width: 308px;
+
+
   img {
     width:100%;
   }
   
   @media screen and (max-width: 1100px) {
-    width: 90px;
-    
+    height: 200px;
   }
 `
 
@@ -115,8 +108,6 @@ const ItemText = styled.div`
   position: relative;
   text-align: left;
   width: 100%;
-  
-
   
   .item-title{
     font-weight: 600;
@@ -132,16 +123,16 @@ const ItemText = styled.div`
   }
   
   @media screen and (max-width: 1100px) {
-    width: 70%;
+    width: 100%;
     height: 120px;
 
     .item-title {
-      font-size: 16px;
+      font-size: 1.6em;
     }
     
     .item-detail {
       margin-top: 10px;
-      font-size: 12px;
+      font-size: 1.2em;
     }
   }
 `

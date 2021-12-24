@@ -4,10 +4,8 @@ import Navbar from './navbar'
 import BannerImage from '../../image/top/banner.jpg'
 import { Button } from 'antd'
 import SolonaIcon from '../../image/top/solana-logo.svg'
-
-import solana from '../../image/incubation/solana.svg'
-import celo from '../../image/incubation/celo.svg'
-import avax from '../../image/top/avax.svg'
+import Celo from '../../image/incubation/celo.svg'
+import Avax from '../../image/top/avax.png'
 
 
 const Wrapper = styled.div`
@@ -51,7 +49,8 @@ const Border = styled.div`
 `
 
 const Info = styled.div`
-  width: 65%;
+  width: 80%;
+
 
   @media screen and (max-width: 1100px) {
     width: 95%;
@@ -64,35 +63,16 @@ const Title = styled.div`
 
   .slogan {
     font-weight: 600;
-    font-size: 3rem;
+    font-size: 3.3rem;
     color: #fff;
-    text-shadow: 0 0 10px #52f6c5,
-    0 0 20px #03bcf4,
-    0 0 40px #03bcf4,
-    0 0 80px #03bcf4,
-    0 0 160px #03bcf4;
     user-select: none;
-    //-webkit-box-reflect: below 1px linear-gradient(transparent, #0008);
-    //line-height: 0.7em;
-    //animation: animate 5s linear infinite;
+    background: linear-gradient(90deg,  #4effd2, #3efff6 40%, #3376ff);
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 1em;
+   
   }
-
-  @keyframes animate {
-    0%, 18%, 20%, 50.1%, 60%, 65.1%, 90%, 92% {
-      color: #0e3742
-    }
-
-    18.1%, 20.1%, 50.1%, 60%, 65.1%, 80%, 90.1%, 100% {
-      color: #fff;
-      text-shadow: 0 0 10px #03bcf4,
-      0 0 20px #03bcf4,
-      0 0 40px #03bcf4,
-      0 0 80px #03bcf4,
-      0 0 160px #03bcf4;
-    }
-
-  }
-
+  
   @media screen and (max-width: 1100px) {
     text-align: center;
 
@@ -195,30 +175,43 @@ const BuiltContainer = styled.div`
   margin-top: 100px;
   width: 100%;
   color: #fff;
-  font-size: 2em;
   display: flex;
   align-items: center;
   justify-content: center;
   
-  span{
-    margin-right: 20px;
-  }
-  
-  .built-icons {
-    .celo {
-      width: 50px;
-    }
-    .solana {
-      margin:0  40px;
-      width: 180px;
-    }
-    .avax {
-      width: 160px;
-    }
-  }
- 
-  
+`
+
+const BuiltItems = styled.div`
+  display: flex;
+  align-items: center;
+  margin: 0 30px;
+  position: relative;
+
+  .icon-image {
+    width: 64px;
+    height: 64px;
+    background: #1d2025;
+    border-radius: 20px;
+    padding: 10px;
+    position: relative;
     
+  }
+  
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+    text-align: left;
+  }
+  
+  .name {
+    font-size: 1.8em;
+  }
+  
+  .type {
+    font-size: 1.4em;
+    color: #82858e;
+  }
 `
 
 type Mission = {
@@ -248,6 +241,23 @@ const Top: React.FC = () => {
       image: SolonaIcon,
       title: 'Hello World',
       detail: 'The fastest blockchain in the world, with 50k TPS'
+    }
+  ]
+  const Built: Mission[] = [
+    {
+      image: Celo,
+      title: 'Celo',
+      detail: 'wallet'
+    },
+    {
+      image: SolonaIcon,
+      title: 'Solona',
+      detail: 'Community'
+    },
+    {
+      image: Avax,
+      title: 'Avax',
+      detail: 'Community'
     }
   ]
 
@@ -288,12 +298,18 @@ const Top: React.FC = () => {
           </MissionGroup>
 
           <BuiltContainer>
-            <span>Built On</span>
-            <div className="built-icons">
-              <img className="celo" src={celo} />Celo
-              <img className="solana" src={solana} />
-              <img className="avax" src={avax} />
-            </div>
+            {
+              Built.map((item, index) => (
+                <BuiltItems key={index}>
+                  <img className="icon-image" src={item.image} />
+                  <div className="info">
+                    <div className="name"> {item.title} </div>
+                    <div className="type"> {item.detail} </div>
+                  </div>
+                </BuiltItems>
+              ))
+            }
+
           </BuiltContainer>
         </Border>
       </Container>

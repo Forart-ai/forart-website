@@ -25,8 +25,8 @@ const App = () => {
       <Mint />
       {/*<MetaPlus />*/}
       {/*<Airdrop />*/}
-      {/*<Roadmap />*/}
-      {/*<Foot />*/}
+      <Roadmap />
+      <Foot />
     </div>
   )
 }
