@@ -60,7 +60,7 @@ const Incubation: React.FC = () => {
     <Wrapper >
       <Container >
         <Title>
-          <p>Who uses Forart?</p>
+          <p>How to Use SaaS?</p>
         </Title>
         <Row>
           <div className="cardBox card-1">
@@ -68,23 +68,16 @@ const Incubation: React.FC = () => {
               <SocialHeader >
                 <img src={SocialIcon} />
                 <div className="user-info">
-                  <div className="username">Monica Hsiao</div>
-                  <div className="address">@0xgfh....5gjl</div>
+                  <div className="username"> Fusion of different NFTs</div>
                 </div>
               </SocialHeader>
-              <SocialBody>Encrypt your posts & chats on social networks Allow only your friends to decrypt.</SocialBody>
+              <SocialBody>Using Neural Style Transferring Tech for combining different NFTs to a fully new one.</SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <div className="button-container">Join Club</div>
+                  <div className="button-container">Join Us</div>
                 </ButtonWrapper>
               </SocialFoot>
             </CardBoxContainer>
-            <CardTipsBox_1>
-              <BlurLayer />
-              <CardTips>
-                <img src={LikeIcon} />
-              </CardTips>
-            </CardTipsBox_1>
           </div>
 
           <div className="cardBox card-2">
@@ -92,49 +85,16 @@ const Incubation: React.FC = () => {
               <SocialHeader >
                 <img src={SocialIcon} />
                 <div className="user-info">
-                  <div className="username">Monica Hsiao</div>
-                  <div className="address">@0xgfh....5gjl</div>
+                  <div className="username">AI Generating NFTs</div>
                 </div>
               </SocialHeader>
-              <SocialBody>Encrypt your posts & chats on social networks Allow only your friends to decrypt.</SocialBody>
+              <SocialBody>Text-To-NFT that creates NFTs reflecting the meaning of textual descriptions. </SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <div className="button-container">Join Club</div>
+                  <div className="button-container">Join Us</div>
                 </ButtonWrapper>
               </SocialFoot>
             </CardBoxContainer>
-            <CardTipsBox_2>
-              <BlurLayer />
-              <CardTips>
-                <img src={LikeIcon} />
-              </CardTips>
-            </CardTipsBox_2>
-          </div>
-        </Row>
-
-        <Row>
-          <div className="cardBox card-2">
-            <CardBoxContainer>
-              <SocialHeader >
-                <img src={SocialIcon} />
-                <div className="user-info">
-                  <div className="username">Monica Hsiao</div>
-                  <div className="address">@0xgfh....5gjl</div>
-                </div>
-              </SocialHeader>
-              <SocialBody>Encrypt your posts & chats on social networks Allow only your friends to decrypt.</SocialBody>
-              <SocialFoot>
-                <ButtonWrapper>
-                  <div className="button-container">Join Club</div>
-                </ButtonWrapper>
-              </SocialFoot>
-            </CardBoxContainer>
-            <CardTipsBox_2>
-              <BlurLayer />
-              <CardTips>
-                <img src={LikeIcon} />
-              </CardTips>
-            </CardTipsBox_2>
           </div>
 
           <div className="cardBox card-1">
@@ -142,23 +102,16 @@ const Incubation: React.FC = () => {
               <SocialHeader >
                 <img src={SocialIcon} />
                 <div className="user-info">
-                  <div className="username">Monica Hsiao</div>
-                  <div className="address">@0xgfh....5gjl</div>
+                  <div className="username" />
                 </div>
               </SocialHeader>
-              <SocialBody>Encrypt your posts & chats on social networks Allow only your friends to decrypt.</SocialBody>
+              <SocialBody>The functions for NFT staking, farming</SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <div className="button-container">Join Club</div>
+                  <div className="button-container">Join Us</div>
                 </ButtonWrapper>
               </SocialFoot>
             </CardBoxContainer>
-            <CardTipsBox_1>
-              <BlurLayer />
-              <CardTips>
-                <img src={LikeIcon} />
-              </CardTips>
-            </CardTipsBox_1>
           </div>
         </Row>
 

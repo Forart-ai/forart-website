@@ -11,6 +11,10 @@ import Avax from '../../image/top/avax.png'
 const Wrapper = styled.div`
   width: 100%;
   min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
   
   .filter {
     height: fit-content;
@@ -26,7 +30,6 @@ const Container = styled.div`
   max-width: 1400px;
   height: auto;
   margin: auto;
-  padding-top: 150px;
 
 
   @media screen and (max-width: 1100px) {
@@ -63,13 +66,13 @@ const Title = styled.div`
 
   .slogan {
     font-weight: 600;
-    font-size: 3.3rem;
+    font-size: 4.4em;
     color: #fff;
     user-select: none;
     background: linear-gradient(90deg,  #4effd2, #3efff6 40%, #3376ff);
     -webkit-background-clip: text;
     color: transparent;
-    line-height: 1em;
+    line-height: 1.4em;
    
   }
   
@@ -161,13 +164,14 @@ const ItemText = styled.div`
   .item-title {
     font-size: 1.5rem;
     color: #fff;
-    font-weight: bold;
     letter-spacing: 2px;
   }
   
   .item-detail {
     color: #BEC2CA;
     font-size: 0.9rem;
+    font-family: GothamRndMedium;
+
   }
   `
 
@@ -211,6 +215,7 @@ const BuiltItems = styled.div`
   .type {
     font-size: 1.4em;
     color: #82858e;
+    font-family: GothamRndMedium;
   }
 `
 
@@ -229,18 +234,18 @@ const Top: React.FC = () => {
   const missions: Mission[] = [
     {
       image: SolonaIcon,
-      title: 'Hello World',
-      detail: 'The fastest blockchain in the'
+      title: ' AI-Powered SaaS',
+      detail: ' '
     },
     {
       image: SolonaIcon,
-      title: 'Hello World',
-      detail: 'The fastest blockchain in the world, with 50k TPS'
+      title: 'CO-NFT',
+      detail: ''
     },
     {
       image: SolonaIcon,
-      title: 'Hello World',
-      detail: 'The fastest blockchain in the world, with 50k TPS'
+      title: 'Social NFT',
+      detail: ''
     }
   ]
   const Built: Mission[] = [
@@ -271,10 +276,8 @@ const Top: React.FC = () => {
         <Border>
           <Info>
             <Title>
-              <div>
-                <div className="slogan">Make NFT / Metaverse creation easier and more intresting</div>
-                {/*<div className="foot">Built on</div>*/}
-              </div>
+              <div className="slogan">The First AI-Powered NFT</div>
+              <div className="slogan"> SaaS for Social</div>
             </Title>
             <ButtonContainer>
               <a href="https://app.forart.co" target="_blank" rel="noreferrer"><StyledButton>Launch App</StyledButton></a>

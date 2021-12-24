@@ -10,7 +10,6 @@ const Wrapper = styled.div`
   width: 100%;
   min-height: 700px;
   margin: 150px 0;
-  font-family: DriveExtraBold;
   //padding: 0 80px;
   display: flex;
   justify-content: center;
@@ -27,8 +26,6 @@ const RoadmapContainer = styled.div`
   width: calc(100% - 40px);
   margin-left: auto;
   margin-right: auto;
-
-
 `
 
 
@@ -42,11 +39,10 @@ const Title = styled.div`
 
   .title {
     text-align: center;
-    font-size: 3em;
+    font-size: 3.5em;
     background: linear-gradient(90deg,  #4effd2, #3efff6 40%, #3376ff);
     -webkit-background-clip: text;
     color: transparent;
-    line-height: 1em;
   }
   
   @media screen and (max-width: 1100px) {
@@ -157,8 +153,6 @@ const InfoArea = styled.div`
 
 const Row = styled.div<{ isChecked? : boolean}>`
   font-size: 1.4em;
-  font-family: campton;
-  color: #fff;
   margin-top: 18px;
   display: flex;
   align-items: flex-start;
@@ -174,6 +168,12 @@ const Row = styled.div<{ isChecked? : boolean}>`
       margin-right: 15px;
     }`
 }
+  
+  .info {
+    color: ${props => props.isChecked ? '#2FD709' : '#fff'};
+    font-weight: 100;
+    font-family: GothamRndMedium;
+  }
 `
 
 type mapItem = {
@@ -200,7 +200,7 @@ const Roadmap: React.FC = () => {
         },
         {
           isComplete: true,
-          info:'2. (Beta) NFT Marketplace Marketplace Marketplace'
+          info:'2. (Beta) NFT Marketplace'
         },
         {
           isComplete: false,
@@ -220,7 +220,7 @@ const Roadmap: React.FC = () => {
         },
         {
           isComplete: true,
-          info:'2. (Beta) NFT Marketplace Marketplace Marketplace'
+          info:'2. (Beta) NFT Marketplace'
         },
         {
           isComplete: false,
@@ -240,7 +240,7 @@ const Roadmap: React.FC = () => {
         },
         {
           isComplete: true,
-          info:'2. (Beta) NFT Marketplace Marketplace Marketplace'
+          info:'2. (Beta) NFT Marketplace'
         },
         {
           isComplete: false,
@@ -260,7 +260,7 @@ const Roadmap: React.FC = () => {
         },
         {
           isComplete: true,
-          info:'2. (Beta) NFT Marketplace Marketplace Marketplace'
+          info:'2. (Beta) NFT Marketplace'
         },
         {
           isComplete: false,
@@ -294,7 +294,7 @@ const Roadmap: React.FC = () => {
                           {
                             road.isComplete ? <img src={CheckBoxIcon} /> : <div className="empty" />
                           }
-                          <div> {road.info} </div>
+                          <div className="info"> {road.info} </div>
                         </Row>
                       ))
                     }

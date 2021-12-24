@@ -14,3 +14,14 @@
     src: url("./Comfortaa-Bold.ttf");
 }
 
+@font-face {
+    font-family:'GothamRndBold';
+    src: url("./GothamRndBold.otf");
+}
+
+
+@font-face {
+    font-family:'GothamRndMedium';
+    src: url("./GothamRndMedium.otf");
+}
+

@@ -9,6 +9,7 @@ import Foot from './pages/foot'
 import Incubation from './pages/incubation/index'
 import Mint from './pages/mint/index'
 import Roadmap from './pages/roadmap'
+import SocialFi from './pages/socialFi'
 import './font/font.css'
 
 const App = () => {
@@ -25,6 +26,7 @@ const App = () => {
       <Mint />
       {/*<MetaPlus />*/}
       {/*<Airdrop />*/}
+      <SocialFi />
       <Roadmap />
       <Foot />
     </div>

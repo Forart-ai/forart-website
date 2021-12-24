@@ -9,7 +9,6 @@ const Wrapper = styled.div`
   width: 100%;
   height: auto;
   margin: 150px 0;
-  font-family: DriveExtraBold;
   //padding: 0 80px;
   display: flex;
   justify-content: center;
@@ -39,11 +38,12 @@ const Title = styled.div`
   width: 100%;
   display: flex;
   align-items: flex-start;
-  margin-bottom: 30px;
+  margin-bottom: 70px;
+  
   .title {
     .row {
       text-align: left;
-      font-size: 3em;
+      font-size: 3.5em;
       background: linear-gradient(90deg,  #4effd2, #3efff6 40%, #3376ff);
       -webkit-background-clip: text;
       color: transparent;
@@ -116,10 +116,10 @@ const ItemText = styled.div`
   }
   .item-detail {
     font-size: 1.4em;
-    font-family: campton;
     opacity: .7;
     color: #fff;
     margin-top: 18px;
+    font-family: GothamRndMedium;
   }
   
   @media screen and (max-width: 1100px) {
@@ -150,18 +150,18 @@ const Mint: React.FC = () => {
   const items: PlayItem[] = [
     {
       image: '',
-      title:'Airdrop NFTs',
-      detail: 'The platform will airdrop limited NFTs, which can be used for NFT mining on the platform to obtain native tokens.'
+      title:'NFT Creation startup',
+      detail: 'NFT Artist Creates NFT creation material library on a certain theme.'
     },
     {
       image: '',
-      title:'Upgrade NFTs',
-      detail: 'Two NFTs can be upgraded with AI, minted with native tokens, and get new scarce NFTs.'
+      title:'Mint NFT',
+      detail: 'NFT Mintor selects his favorite creative combinations for minting '
     },
     {
       image: '',
-      title:'Financial NFTs',
-      detail: 'The platform provides part of the financial value guarantee for scarce NFTs.'
+      title:'NFTs Launch',
+      detail: 'AI-Powered SaaS helps NFT Mintors to optimize creation and launch.'
     }
   ]
 
@@ -170,8 +170,7 @@ const Mint: React.FC = () => {
       <Container>
         <Title >
           <div className="title">
-            <div className="row">DeFi + NFT</div>
-            <div className="row"> For Scarce NFTs</div>
+            <div className="row">NFT CO-Creation</div>
           </div>
         </Title>
 

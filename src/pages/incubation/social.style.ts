@@ -8,7 +8,6 @@ export const Wrapper = styled.div`
   align-items: center;
   margin: 150px 0;
   min-width: 1200px;
-  font-family: DriveExtraBold;
 
   @media screen and (max-width: 1100px) {
     min-width: 100vw;
@@ -35,14 +34,13 @@ export const Title = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
+  margin-bottom: 26px;
   p {
-    font-size: 3em;
+    font-size: 3.5em;
     text-align: center;
     background: linear-gradient(90deg,  #4effd2, #3efff6 40%, #3376ff);
     -webkit-background-clip: text;
     color: transparent;
-    line-height: 1em;
   }
 `
 
@@ -150,6 +148,7 @@ export const SocialBody = styled.div `
   line-height: 24px;
   color: #fff;
   text-align: left;
+  font-family: GothamRndMedium;
 `
 
 export const SocialFoot = styled.div`
