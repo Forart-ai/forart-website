@@ -1,10 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 import LogoIcon from '../../image/top/logo.png'
-// import TwitterIcon from '../../image/foot/Twitter.png'
-// import GithubIcon from '../../image/foot/Github.png'
-// import DiscordIcon from '../../image/foot/Discord.svg'
-import Telegram from '../../image/foot/Telegram.png'
+import TwitterIcon from '../../image/foot/twitter.svg'
+import GithubIcon from '../../image/foot/github.svg'
+import DiscordIcon from '../../image/foot/discord.svg'
+import Telegram from '../../image/foot/telegram.svg'
+import Email from '../../image/foot/email.svg'
 
 
 const FootContent = styled.div`
@@ -125,12 +126,21 @@ const SCExternalLink = styled.a`
   }
 `
 
+const Row = styled.div`
+
+  img {
+    width: 20px;
+    margin-right: 15px;
+  }
+`
+
 const Foot:React.FC = () => {
-  const EXTERNAL_LINKS: Array<{ title: string, link: string }> = [
-    { title: 'Twitter', link: 'https://twitter.com/forart_ai' },
-    { title: 'Github', link: 'https://github.com/Forart-co' },
-    { title: 'Discord', link: 'https://discord.gg/RDaUkaW39S' },
-    { title: 'Telegram', link:'https://t.me/forart_ai' }
+  const EXTERNAL_LINKS: Array<{ icon?: any, title: string, link: string }> = [
+    { icon: Email, title: 'Email', link: 'mailto://contact@forart.ai' },
+    { icon: TwitterIcon, title: 'Twitter', link: 'https://twitter.com/forart_ai' },
+    { icon: Telegram, title: 'Telegram', link:'https://t.me/forart_ai' },
+    { icon: GithubIcon, title: 'Github', link: 'https://github.com/Forart-co' },
+    { icon: DiscordIcon,  title: 'Discord', link: 'https://discord.gg/RDaUkaW39S' }
   ]
 
   const DOC_LINKS: Array<{title: string, link: string}> = [
@@ -146,6 +156,7 @@ const Foot:React.FC = () => {
             <figure>
               <img className="logo" src={LogoIcon} />
               <div>AI-Powered NFT SaaS For Social</div>
+
             </figure>
             <InfoItem>
               <div className="strong-title">Product</div>
@@ -162,9 +173,12 @@ const Foot:React.FC = () => {
               <div className="strong-title">Community</div>
               {
                 EXTERNAL_LINKS.map((item, index) => (
-                  <a key= {index} href= {item.link} className= "doc" target="_blank" rel="noreferrer">
-                    {item.title}
-                  </a>
+                  <Row key= {index}>
+                    <img src={item.icon} />
+                    <a  href= {item.link} className= "doc" target="_blank" rel="noreferrer">
+                      {item.title}
+                    </a>
+                  </Row>
                 ))
               }
             </InfoItem>
