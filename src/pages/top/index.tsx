@@ -6,6 +6,9 @@ import { Button } from 'antd'
 import SolonaIcon from '../../image/top/solana-logo.svg'
 import Celo from '../../image/incubation/celo.svg'
 import Avax from '../../image/top/avax.png'
+import COIcon from '../../image/top/top1.png'
+import SaaSIcon from '../../image/top/top2.png'
+import SocialIcon from '../../image/top/top3.png'
 
 
 const Wrapper = styled.div`
@@ -153,7 +156,7 @@ const ItemContainer = styled.div`
 
   img {
     height: auto;
-    width: 15%;
+    width: 18%;
   }
 `
 
@@ -233,20 +236,21 @@ const Top: React.FC = () => {
 
   const missions: Mission[] = [
     {
-      image: SolonaIcon,
-      title: ' AI-Powered SaaS',
+      image: COIcon,
+      title: 'CO-NFT',
       detail: ' '
     },
     {
-      image: SolonaIcon,
-      title: 'CO-NFT',
+      image: SaaSIcon,
+      title: 'AI-Powered SaaS',
       detail: ''
     },
     {
-      image: SolonaIcon,
+      image: SocialIcon,
       title: 'Social NFT',
       detail: ''
     }
+
   ]
   const Built: Mission[] = [
 

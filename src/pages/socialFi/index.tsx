@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import Social1 from '../../image/socialFi/social-1.png'
+import Social1 from '../../image/socialFi/social1.png'
 import Social2 from '../../image/socialFi/social2.png'
 import Social3 from '../../image/socialFi/social3.png'
 import Social4 from '../../image/socialFi/social4.png'
