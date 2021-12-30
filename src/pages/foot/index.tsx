@@ -139,7 +139,7 @@ const Foot:React.FC = () => {
     { icon: Email, title: 'Email', link: 'mailto://contact@forart.ai' },
     { icon: TwitterIcon, title: 'Twitter', link: 'https://twitter.com/forart_ai' },
     { icon: Telegram, title: 'Telegram', link:'https://t.me/forart_ai' },
-    { icon: GithubIcon, title: 'Github', link: 'https://github.com/Forart-co' },
+    { icon: GithubIcon, title: 'Github', link: 'https://github.com/Forart-ai' },
     { icon: DiscordIcon,  title: 'Discord', link: 'https://discord.gg/RDaUkaW39S' }
   ]
 

@@ -93,7 +93,7 @@ const Navbar: React.FC = () => {
           <img src={LogoIcon} />
         </Logo>
         <NavLinksContainer id="NavLinksContainer">
-          <li><a href="https://app.forart.co/" target="_blank" rel="noreferrer">Dapp</a></li>
+          <li><a href="https://app.forart.ai/" target="_blank" rel="noreferrer">Dapp</a></li>
           <li><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">Docs</a></li>
           <li><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></li>
           {/*<li><a onClick={() => scrollToPart('MetaPlus')}>MetaPlus</a></li>*/}
