@@ -109,7 +109,7 @@ export const CardBoxContainer = styled.div`
   position: relative;
   width: 100%;
   height: 100%;
-  background-color: #303f5d;
+  background: rgba(31, 41, 55);
   border-radius: 20px;
   padding: 24px 40px 28px 24px;
   
@@ -171,11 +171,14 @@ export const ButtonWrapper = styled.div`
   padding: 2px;
   border-radius: 13px;
   background: linear-gradient(110deg, #4effd2, #3efff6 65%, #3376ff);
-  color: #fff;
   font-size: 1.3em;
   
+  a{
+    color: #fff;
+  }
   
   .button-container {
+    
     display: flex;
     align-items: center;
     justify-content: center;

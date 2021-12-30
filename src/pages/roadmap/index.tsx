@@ -1,19 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import Idea from '../../image/roadmap/idea.png'
-import Arrow from '../../image/roadmap/arrow.png'
-import Search from '../../image/roadmap/search.png'
-import Design from '../../image/roadmap/design_nor.png'
 import CheckBoxIcon from '../../image/roadmap/check-mark-button.png'
 
 const Wrapper = styled.div`
   width: 100%;
-  min-height: 700px;
-  margin: 150px 0;
-  //padding: 0 80px;
+  min-height: 1000px;
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: column;
 
   @media screen and (max-width: 1100px) {
@@ -53,7 +45,6 @@ const Title = styled.div`
 
 const ItemBorder = styled.div`
   display: flex;
-  align-items: center;
   justify-content: space-between;
   color: #fff;
   width: 100%;
@@ -68,11 +59,10 @@ const ItemBorder = styled.div`
 
 
 const ItemContainer = styled.div`
-  width: 272px;
+  width: 220px;
   height: auto;  
   display: flex;
   flex-direction: column;
-  align-items: center;
   padding-bottom: 40px;
   
 
@@ -84,7 +74,7 @@ const ItemContainer = styled.div`
 const IconArea = styled.div`
   position: relative;
   width: 100%;
-  height: 124px;
+  height: 110px;
   max-width: 308px;
 
   background: #060c21;
@@ -147,18 +137,17 @@ const InfoArea = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
-  position: relative;
-  
+
 `
 
 const Row = styled.div<{ isChecked? : boolean}>`
-  font-size: 1.4em;
+  font-size: 1.3em;
   margin-top: 18px;
   display: flex;
-  align-items: flex-start;
-  
+  align-items: baseline;
+  font-family: GothamRndMedium;
+
   .empty {
-    width: 35px;
   }
 
   ${props => props.isChecked && `
@@ -169,11 +158,21 @@ const Row = styled.div<{ isChecked? : boolean}>`
     }`
 }
   
-  .info {
-    color: ${props => props.isChecked ? '#2FD709' : '#fff'};
-    font-weight: 100;
-    font-family: GothamRndMedium;
+  .isComplete{
+    display: flex;
+    align-items: baseline;
+
+    .info {
+      color: ${props => props.isChecked ? '#2FD709' : '#fff'};
+      font-weight: 100;
+    }
   }
+  
+  .notComplete {
+    margin-left: 35px;
+  }
+  
+  
 `
 
 type mapItem = {
@@ -189,82 +188,98 @@ const Roadmap: React.FC = () => {
 
   const items: mapItem[] = [
     {
-      icon: Idea,
+      icon: '',
       year:'2021',
-      describe:'Q4',
-      title:'Milestone 1',
+      describe:'Q3',
+      title:'2021',
       label:[
         {
           isComplete: true,
-          info:'1. Hello World'
+          info:'1. Project Kickstart'
         },
         {
           isComplete: true,
-          info:'2. (Beta) NFT Marketplace'
-        },
-        {
-          isComplete: false,
-          info:'3.Genesis-NFT launch'
+          info:'2. Market research'
         }
       ]
     },
     {
-      icon: Idea,
+      icon: '',
       year:'2021',
       describe:'Q4',
-      title:'Milestone 1',
+      title:'2021',
       label:[
         {
           isComplete: true,
-          info:'1. Hello World'
+          info: '1. Deployment of the NFTs Creation Smart Contract to Celo\'s Alfajores'
         },
         {
           isComplete: true,
-          info:'2. (Beta) NFT Marketplace'
+          info:'2. Launch Style transferred NFT creation on testnet'
         },
         {
           isComplete: false,
-          info:'3.Genesis-NFT launch'
+          info: '3. Implement of Text-To-NFT Function'
+        },
+        {
+          isComplete: false,
+          info: '4. Release NFT Marketplace Function'
         }
       ]
     },
     {
-      icon: Idea,
-      year:'2021',
-      describe:'Q4',
-      title:'Milestone 1',
+      icon: '',
+      year:'2022',
+      describe:'Q1',
+      title:'2022',
       label:[
         {
-          isComplete: true,
-          info:'1. Hello World'
-        },
-        {
-          isComplete: true,
-          info:'2. (Beta) NFT Marketplace'
+          isComplete: false,
+          info:'1. Launch CO-NFT Function on Celo and Solana Mainnet'
         },
         {
           isComplete: false,
-          info:'3.Genesis-NFT launch'
+          info:'2. Implement of Social NFT'
+        },
+        {
+          isComplete: false,
+          info: '3. CO-NFTs Public Sale'
         }
       ]
     },
     {
-      icon: Idea,
-      year:'2021',
-      describe:'Q4',
-      title:'Milestone 1',
+      icon: '',
+      year:'2022',
+      describe:'Q2',
+      title:'2022',
       label:[
         {
-          isComplete: true,
-          info:'1. Hello World'
-        },
-        {
-          isComplete: true,
-          info:'2. (Beta) NFT Marketplace'
+          isComplete: false,
+          info:'1. SaaS service API deployment.'
         },
         {
           isComplete: false,
-          info:'3.Genesis-NFT launch'
+          info:'2. Launch Social NFT Function on CELO and Solana Mainnet'
+        },
+        {
+          isComplete: false,
+          info:'2. Launch Text-To-NFT Function on Mainnet'
+        }
+      ]
+    },
+    {
+      icon: '',
+      year:'2022',
+      describe:'Q2',
+      title:'2022',
+      label:[
+        {
+          isComplete: false,
+          info:'1. Launch Functions on multi-chains'
+        },
+        {
+          isComplete: false,
+          info:'2. Implement of Forart functions with Metaverse'
         }
       ]
     },
@@ -292,9 +307,16 @@ const Roadmap: React.FC = () => {
                       item.label.map((road, index) => (
                         <Row key={index} isChecked={road.isComplete}>
                           {
-                            road.isComplete ? <img src={CheckBoxIcon} /> : <div className="empty" />
+                            road.isComplete ? (
+                              <div className="isComplete">
+                                <img src={CheckBoxIcon} />
+                                <div className="info"> {road.info} </div>
+                              </div>
+                            ) :
+                              <div className="notComplete">
+                                <div className="info"> {road.info} </div>
+                              </div>
                           }
-                          <div className="info"> {road.info} </div>
                         </Row>
                       ))
                     }

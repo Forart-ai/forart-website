@@ -48,6 +48,7 @@ const ProjectIntroduce = styled.div`
   display: flex;
   justify-content: space-between;
   width: 100%;
+  height: 250px;
 
   figure {
     display: flex;
@@ -133,9 +134,8 @@ const Foot:React.FC = () => {
   ]
 
   const DOC_LINKS: Array<{title: string, link: string}> = [
-    { title:'Roadmap', link:''  },
-    { title:'Whitepaper', link:''  },
-    { title:'Team', link:''  }
+    { title:'Docs', link:'https://simons-mcc.gitbook.io/forart/'  },
+    { title:'Medium', link: 'https://medium.com/@Forart.ai'  }
   ]
 
   return (
@@ -145,7 +145,7 @@ const Foot:React.FC = () => {
           <ProjectIntroduce >
             <figure>
               <img className="logo" src={LogoIcon} />
-              <div>Buy and Sell NFTs from your favorite content creators, earn crypto by interacting with these creators, or mint your own NFTs and start earning rewards today. Powered by Solana.</div>
+              <div>AI-Powered NFT SaaS For Social</div>
             </figure>
             <InfoItem>
               <div className="strong-title">Product</div>

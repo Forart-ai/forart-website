@@ -249,11 +249,7 @@ const Top: React.FC = () => {
     }
   ]
   const Built: Mission[] = [
-    {
-      image: Celo,
-      title: 'Celo',
-      detail: 'wallet'
-    },
+
     {
       image: SolonaIcon,
       title: 'Solona',
@@ -263,7 +259,12 @@ const Top: React.FC = () => {
       image: Avax,
       title: 'Avax',
       detail: 'Community'
-    }
+    },
+    {
+      image: Celo,
+      title: 'Celo',
+      detail: 'wallet'
+    },
   ]
 
   return (
@@ -279,9 +280,9 @@ const Top: React.FC = () => {
               <div className="slogan">The First AI-Powered NFT</div>
               <div className="slogan"> SaaS for Social</div>
             </Title>
-            <ButtonContainer>
-              <a href="https://app.forart.co" target="_blank" rel="noreferrer"><StyledButton>Launch App</StyledButton></a>
-            </ButtonContainer>
+            {/*<ButtonContainer>*/}
+            {/*  <a href="https://app.forart.co" target="_blank" rel="noreferrer"><StyledButton>Launch App</StyledButton></a>*/}
+            {/*</ButtonContainer>*/}
 
           </Info>
           <MissionGroup>

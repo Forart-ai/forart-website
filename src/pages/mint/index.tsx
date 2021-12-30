@@ -1,8 +1,9 @@
 import styled from 'styled-components'
 import React from 'react'
-import Gift from '../../image/mint/gifts.png'
-import Upgrade from '../../image/mint/upgrade.png'
-import Coin from '../../image/mint/coins.png'
+import CO1 from '../../image/mint/co-1.png'
+import CO2 from '../../image/mint/co-2.png'
+import CO3 from '../../image/mint/co-3.png'
+
 
 
 const Wrapper = styled.div`
@@ -83,10 +84,11 @@ const ItemContainer = styled.div`
 
 const IconArea = styled.div`
   position: relative;
+  display: flex;
+  align-items: center;
   width: 100%;
   height: 350px;
   z-index: 2;
-  background: #282c34;
   border-radius: 10px;
   margin-bottom: 20px;
   max-width: 308px;
@@ -94,6 +96,7 @@ const IconArea = styled.div`
 
   img {
     width:100%;
+    object-fit: contain;
   }
   
   @media screen and (max-width: 1100px) {
@@ -149,17 +152,17 @@ const Mint: React.FC = () => {
 
   const items: PlayItem[] = [
     {
-      image: '',
+      image: CO1,
       title:'NFT Creation startup',
       detail: 'NFT Artist Creates NFT creation material library on a certain theme.'
     },
     {
-      image: '',
+      image: CO2,
       title:'Mint NFT',
       detail: 'NFT Mintor selects his favorite creative combinations for minting '
     },
     {
-      image: '',
+      image: CO3,
       title:'NFTs Launch',
       detail: 'AI-Powered SaaS helps NFT Mintors to optimize creation and launch.'
     }

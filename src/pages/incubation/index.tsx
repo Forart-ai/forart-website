@@ -1,21 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import One from '../../image/incubation/number-1.png'
-import Two from '../../image/incubation/number-2.png'
-import Three from '../../image/incubation/number-3.png'
-import Four from '../../image/incubation/number-4.png'
-import Owner from '../../image/incubation/owner.png'
-import Paint from '../../image/incubation/paint.png'
-import Saas from '../../image/incubation/saas.png'
-import SecurityIcon from '../../image/incubation/security.png'
-import LikeIcon from '../../image/incubation/tip12.svg'
+import Saas1 from '../../image/incubation/saas-1.png'
+import Saas2 from '../../image/incubation/saas-2.png'
+import Saas3 from '../../image/incubation/saas-3.png'
 
-import SocialIcon from '../../image/incubation/mask.svg'
-import { Wrapper, Container, Title, Row, CardBoxContainer, SocialHeader, SocialBody, SocialFoot,
-  ButtonWrapper, BlurLayer, CardTips,
-  CardTipsBox_1, CardTipsBox_2 } from './social.style'
-
+import { Wrapper, Container, Title, Row, CardBoxContainer, SocialHeader, SocialBody, SocialFoot, ButtonWrapper, BlurLayer, CardTips, CardTipsBox_1, CardTipsBox_2 } from './social.style'
 
 
 
@@ -36,22 +26,22 @@ const Incubation: React.FC = () => {
 
   const items: WalletItem[] = [
     {
-      image:Paint,
+      image: Saas1,
       title:'Deep Learning Artworks',
       detail: 'According to different artistic style needs, Deep Learning Kit can generate corresponding artworks or elements to assist the artist in the creation of NFT / Metaverse. '
     },
     {
-      image:Saas,
+      image: Saas1,
       title:'NFT SaaS',
       detail: 'Provide standard NFT / Metaverse creation specifications and agreements to form a "SaaS" service, and provide fast NFT Airdrop services for project parties and third-party platforms.'
     },
     {
-      image:Owner,
+      image: Saas1,
       title:'Ownership certification',
       detail: 'Provide ownership certification for the NFT / Metaverse created by the platform to ensure its uniqueness and scarcity.'
     },
     {
-      image:SecurityIcon,
+      image: Saas1,
       title:'Security',
       detail: 'Platform smart contracts will be audited by well-known and authoritative security certification companies in the industry to ensure the security of NFT / Metaverse transactions.'
     }
@@ -66,7 +56,7 @@ const Incubation: React.FC = () => {
           <div className="cardBox card-1">
             <CardBoxContainer>
               <SocialHeader >
-                <img src={SocialIcon} />
+                <img src={Saas1} />
                 <div className="user-info">
                   <div className="username"> Fusion of different NFTs</div>
                 </div>
@@ -74,7 +64,9 @@ const Incubation: React.FC = () => {
               <SocialBody>Using Neural Style Transferring Tech for combining different NFTs to a fully new one.</SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <div className="button-container">Join Us</div>
+                  <div className="button-container">
+                    <a href="https://app.forart.co" target="_blank" rel="noreferrer">Join Us</a>
+                  </div>
                 </ButtonWrapper>
               </SocialFoot>
             </CardBoxContainer>
@@ -83,7 +75,7 @@ const Incubation: React.FC = () => {
           <div className="cardBox card-2">
             <CardBoxContainer>
               <SocialHeader >
-                <img src={SocialIcon} />
+                <img src={Saas2} />
                 <div className="user-info">
                   <div className="username">AI Generating NFTs</div>
                 </div>
@@ -91,7 +83,9 @@ const Incubation: React.FC = () => {
               <SocialBody>Text-To-NFT that creates NFTs reflecting the meaning of textual descriptions. </SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <div className="button-container">Join Us</div>
+                  <div className="button-container">
+                    <a href="https://app.forart.co" target="_blank" rel="noreferrer">Join Us</a>
+                  </div>
                 </ButtonWrapper>
               </SocialFoot>
             </CardBoxContainer>
@@ -100,7 +94,7 @@ const Incubation: React.FC = () => {
           <div className="cardBox card-1">
             <CardBoxContainer>
               <SocialHeader >
-                <img src={SocialIcon} />
+                <img src={Saas3} />
                 <div className="user-info">
                   <div className="username" />
                 </div>
@@ -108,7 +102,9 @@ const Incubation: React.FC = () => {
               <SocialBody>The functions for NFT staking, farming</SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <div className="button-container">Join Us</div>
+                  <div className="button-container">
+                    <a href="https://app.forart.co" target="_blank" rel="noreferrer">Join Us</a>
+                  </div>
                 </ButtonWrapper>
               </SocialFoot>
             </CardBoxContainer>
