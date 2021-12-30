@@ -263,7 +263,7 @@ const Roadmap: React.FC = () => {
         },
         {
           isComplete: false,
-          info:'2. Launch Text-To-NFT Function on Mainnet'
+          info:'3. Launch Text-To-NFT Function on Mainnet'
         }
       ]
     },
@@ -280,6 +280,14 @@ const Roadmap: React.FC = () => {
         {
           isComplete: false,
           info:'2. Implement of Forart functions with Metaverse'
+        },
+        {
+          isComplete: false,
+          info:'3. IDO'
+        },
+        {
+          isComplete: false,
+          info:'4. Listing'
         }
       ]
     },

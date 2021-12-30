@@ -64,9 +64,11 @@ const Incubation: React.FC = () => {
               <SocialBody>Using Neural Style Transferring Tech for combining different NFTs to a fully new one.</SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <div className="button-container">
-                    <a href="https://app.forart.co" target="_blank" rel="noreferrer">Join Us</a>
-                  </div>
+                  <a href="https://app.forart.co" target="_blank" rel="noreferrer">
+                    <div className="button-container">
+                      Join Us
+                    </div>
+                  </a>
                 </ButtonWrapper>
               </SocialFoot>
             </CardBoxContainer>
@@ -83,9 +85,11 @@ const Incubation: React.FC = () => {
               <SocialBody>Text-To-NFT that creates NFTs reflecting the meaning of textual descriptions. </SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <div className="button-container">
-                    <a href="https://app.forart.co" target="_blank" rel="noreferrer">Join Us</a>
-                  </div>
+                  <a href="https://app.forart.co" target="_blank" rel="noreferrer">
+                    <div className="button-container">
+                      Join Us
+                    </div>
+                  </a>
                 </ButtonWrapper>
               </SocialFoot>
             </CardBoxContainer>
@@ -102,9 +106,12 @@ const Incubation: React.FC = () => {
               <SocialBody>The functions for NFT staking, farming</SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <div className="button-container">
-                    <a href="https://app.forart.co" target="_blank" rel="noreferrer">Join Us</a>
-                  </div>
+                  <a href="https://app.forart.co" target="_blank" rel="noreferrer">
+
+                    <div className="button-container">
+                      Join Us
+                    </div>
+                  </a>
                 </ButtonWrapper>
               </SocialFoot>
             </CardBoxContainer>
