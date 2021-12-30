@@ -1,194 +1,186 @@
 import React from 'react'
 import styled from 'styled-components'
-import Idea from '../../image/roadmap/idea.png'
-import Arrow from '../../image/roadmap/arrow.png'
-import Search from '../../image/roadmap/search.png'
-import Design from '../../image/roadmap/design_nor.png'
-
+import CheckBoxIcon from '../../image/roadmap/check-mark-button.png'
 
 const Wrapper = styled.div`
   width: 100%;
-  height: 1100px;
-  padding-top: 30px;
-  background: radial-gradient(#00EBA4 5%, #000000 45%) no-repeat;
-  
+  min-height: 1000px;
+  display: flex;
+  flex-direction: column;
+
   @media screen and (max-width: 1100px) {
     height: fit-content;
   }
 `
 
 const RoadmapContainer = styled.div`
-  display: flex;
-  justify-content: center;
+  max-width: 1200px;
+  width: calc(100% - 40px);
+  margin-left: auto;
+  margin-right: auto;
 `
 
-const RoadmapBorder = styled.div`
-  width: 800px;
-  height: 1000px;
-  
-  @media screen and (max-width: 1100px) {
-    width: 85vw;
-    height: fit-content;
-  }
-  
-`
 
 const Title = styled.div`
-  font-weight: 600;
-  font-size: 38px;
-  line-height: 46px;
-  color: #fff;
-  margin-bottom: 100px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
 
-  span {
-    padding: 0 16px;
-    font-weight: 600;
-    font-size: 65px;
-    line-height: 80px;
-    color: #00EBA4;
-    opacity: .96;
+
+  .title {
+    text-align: center;
+    font-size: 3.5em;
+    background: linear-gradient(90deg,  #4effd2, #3efff6 40%, #3376ff);
+    -webkit-background-clip: text;
+    color: transparent;
   }
   
   @media screen and (max-width: 1100px) {
-    margin-bottom: 50px;
-
-    span {
-      font-size: 36px;
-
-    }
+  
   }
 `
 
-const RoadmapItem = styled.div`
-  width: 100%;
-  height: 250px;
-  color: white;
+
+const ItemBorder = styled.div`
   display: flex;
   justify-content: space-between;
-  position: relative;
-  margin-bottom: 5px;
-
-  &:before {
-    content: '';
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background: linear-gradient(90deg,#00EBA4,#02A6F5);
-    opacity: .4;
-    left: 0;
-    top: 0;
-  }
-  
-  &:nth-child(3) {
-    .arrow {
-      display: none;
-    }
-  }
-  
- @media screen and (max-width: 1100px) {
- }
-  
+  color: #fff;
+  width: 100%;
 
 
-`
 
-const LeftArea = styled.div`
-  width: 30%;
-  height: 100%;
-  position: relative;
-
-  .describe {
-    width: 145px;
-    text-align: center;
-    position: absolute;
-    bottom: 145px;
-    font-weight: 600;
-    left: 70px;
-  }
-
-  .icon {
-    width: 60px;
-    padding: 15px;
-    border-radius: 90px;
-    background: linear-gradient(270deg, #67ebba, #67eaba .34%, #69c2ce 15.61%, #6ba1de 31.22%, #6c87ea 47.25%, #6d75f3 63.72%, #6e6af8 80.92%, #6e66fa);
-    position: absolute;
-    box-shadow: -5px 5px 5px #212121;
-    bottom: 200px;
-    right: 65px;
-  }
-
-  .arrow {
-    position: absolute;
-    width: 50px;
-    top: 110px;
-    right: 75px;
-  }
-  
   @media screen and (max-width: 1100px) {
-    .describe {
-      width: 100%;
-      left: 5px;
-      font-size: 13px;
-    }
-    
-    .icon {
-      padding: 10px;
-      width: 45px;
-      right: 20px;
-    }
-    
-    .arrow {
-      right: 20px;
-
-    }
+    flex-direction: column;
   }
-  
+
 `
 
-const RightArea = styled.div`
-  width: 500px;
-  height: 100%;
-  text-align: left;
+
+const ItemContainer = styled.div`
+  width: 220px;
+  height: auto;  
   display: flex;
   flex-direction: column;
-  position: relative;
+  padding-bottom: 40px;
   
-  .item-title{
-    font-weight: 600;
-    font-size: 26px;
-    line-height: 29px;
-    color: #fff;
-    margin: 20px;
+
+  @media screen and (max-width: 1100px) {
+    width: 100%;
+  }
+`
+
+const IconArea = styled.div`
+  position: relative;
+  width: 100%;
+  height: 110px;
+  max-width: 308px;
+
+  background: #060c21;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  
+  &:before {
+    content: "";
+    border-radius: 10px;
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -1;
+  }
+
+  &:after {
+    content: "";
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: #fff;
+    z-index: -2;
+    filter: blur(10px);
   }
   
-  .item-detail {
-    margin: 20px;
-    font-size: 17px;
-    line-height: 19px;
-    color: #fff;
-    font-weight: 500;
+  &:before, &:after {
+    background: linear-gradient(60deg, #3376ff, #3efff6 65%, #4effd2);
+  }
+  
+  
+  .describe{
+    font-size: 1.8em;
+  }
+  
+  .title {
+    font-size: 1.6em;
+  }
+  
+  img {
+    width: 100%;
   }
 
   @media screen and (max-width: 1100px) {
-    width: 70%;
-    .item-title{
-      font-size: 18px;
-      line-height: 12px;
-    }
-    .item-detail {
-      margin: 20px;
-      font-size: 13px;
-      line-height: 19px;
+    height: 200px;
+  }
+`
+
+const InfoArea = styled.div`
+  width: 100%;
+  text-align: left;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+
+`
+
+const Row = styled.div<{ isChecked? : boolean}>`
+  font-size: 1.3em;
+  margin-top: 18px;
+  display: flex;
+  align-items: baseline;
+  font-family: GothamRndMedium;
+
+  .empty {
+  }
+
+  ${props => props.isChecked && `
+    img {
+      height: 20px;
+      width: 20px;
+      margin-right: 15px;
+    }`
+}
+  
+  .isComplete{
+    display: flex;
+    align-items: baseline;
+
+    .info {
+      color: ${props => props.isChecked ? '#2FD709' : '#fff'};
+      font-weight: 100;
     }
   }
   
+  .notComplete {
+    margin-left: 35px;
+  }
+  
+  
 `
+
 type mapItem = {
   icon:any
   year:string
   describe:string
   title: string
-  detail: string[]
+  label: any[]
 }
 
 
@@ -196,70 +188,152 @@ const Roadmap: React.FC = () => {
 
   const items: mapItem[] = [
     {
-      icon: Idea,
+      icon: '',
+      year:'2021',
+      describe:'Q3',
+      title:'2021',
+      label:[
+        {
+          isComplete: true,
+          info:'1. Project Kickstart'
+        },
+        {
+          isComplete: true,
+          info:'2. Market research'
+        }
+      ]
+    },
+    {
+      icon: '',
       year:'2021',
       describe:'Q4',
-      title:'Milestone 1',
-      detail:[
-        '1. AI-Kit on the testnet',
-        '2. Airdrop Financial NFTs.',
-        '3. NFT + DeFi upgrade-function on the internet'
+      title:'2021',
+      label:[
+        {
+          isComplete: true,
+          info: '1. Deployment of the NFTs Creation Smart Contract to Celo\'s Alfajores'
+        },
+        {
+          isComplete: true,
+          info:'2. Launch Style transferred NFT creation on testnet'
+        },
+        {
+          isComplete: false,
+          info: '3. Implement of Text-To-NFT Function'
+        },
+        {
+          isComplete: false,
+          info: '4. Release NFT Marketplace Function'
+        }
       ]
     },
     {
-      icon: Search,
+      icon: '',
       year:'2022',
       describe:'Q1',
-      title:'Milestone 2',
-      detail:[
-        '1. IDO (January 2022)',
-        '2. NFT Saas on the testnet',
-        '3. MetaPlus on the testnet'
+      title:'2022',
+      label:[
+        {
+          isComplete: false,
+          info:'1. Launch CO-NFT Function on Celo and Solana Mainnet'
+        },
+        {
+          isComplete: false,
+          info:'2. Implement of Social NFT'
+        },
+        {
+          isComplete: false,
+          info: '3. CO-NFTs Public Sale'
+        }
       ]
     },
     {
-      icon: Design,
+      icon: '',
       year:'2022',
       describe:'Q2',
-      title:'Milestone 3',
-      detail:[
-        '1. Mainnet',
-        '2. Support cross-chain'
+      title:'2022',
+      label:[
+        {
+          isComplete: false,
+          info:'1. SaaS service API deployment.'
+        },
+        {
+          isComplete: false,
+          info:'2. Launch Social NFT Function on CELO and Solana Mainnet'
+        },
+        {
+          isComplete: false,
+          info:'3. Launch Text-To-NFT Function on Mainnet'
+        }
       ]
     },
+    {
+      icon: '',
+      year:'2022',
+      describe:'Q2',
+      title:'2022',
+      label:[
+        {
+          isComplete: false,
+          info:'1. Launch Functions on multi-chains'
+        },
+        {
+          isComplete: false,
+          info:'2. Implement of Forart functions with Metaverse'
+        },
+        {
+          isComplete: false,
+          info:'3. IDO'
+        },
+        {
+          isComplete: false,
+          info:'4. Listing'
+        }
+      ]
+    },
+
 
   ]
   return (
     <div className="section" id="Roadmap">
-      <Wrapper >
-        <Title><span>Roadmap</span></Title>
-        <RoadmapContainer >
-          <RoadmapBorder>
-
+      <Wrapper>
+        <RoadmapContainer>
+          <Title>
+            <div className="title">Roadmap</div>
+          </Title>
+          <ItemBorder>
             {
-              items.map(item => (
-                <RoadmapItem key={item.title}>
-                  <LeftArea>
-                    <img className="icon" src={item.icon} />
-                    <div className="describe">
-                      <div>{item.year}</div>
-                      <div>{item.describe}</div>
-                    </div>
-                    <img className="arrow" src={Arrow} />
-                  </LeftArea>
-                  <RightArea >
-                    <div className="item-title">{item.title}</div>
-                    <div className="item-detail" >
-                      {item.detail.map((row, idx) => (
-                        <p key={idx}>{row}</p>
-                      ))}
-                    </div>
-                  </RightArea>
-                </RoadmapItem>
-              ))
-            }
+              items.map((item, index) => (
+                <ItemContainer key={index}>
+                  <IconArea>
+                    <div className="describe"> {item.describe} </div>
+                    <div className="title"> {item.title} </div>
 
-          </RoadmapBorder>
+                  </IconArea>
+                  <InfoArea >
+                    {
+                      item.label.map((road, index) => (
+                        <Row key={index} isChecked={road.isComplete}>
+                          {
+                            road.isComplete ? (
+                              <div className="isComplete">
+                                <img src={CheckBoxIcon} />
+                                <div className="info"> {road.info} </div>
+                              </div>
+                            ) :
+                              <div className="notComplete">
+                                <div className="info"> {road.info} </div>
+                              </div>
+                          }
+                        </Row>
+                      ))
+                    }
+                  </InfoArea>
+                </ItemContainer>
+              ))
+
+            }
+          </ItemBorder>
         </RoadmapContainer>
       </Wrapper>
     </div>

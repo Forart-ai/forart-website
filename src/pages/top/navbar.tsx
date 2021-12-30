@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import LogoIcon from '../../image/top/logo.png'
 import telegram from '../../image/top/telegram.png'
 import twitter from '../../image/top/twitter.png'
+import Email from '../../image/top/email.svg'
 
 function scrollToPart(anchorName: string) {
   if (anchorName) {
@@ -20,7 +21,7 @@ const NavbarContainer = styled.div`
   width: 100%;
   justify-content: center;
   height: 70px;
-  position: fixed;
+  //position: fixed;
   //background-color: black;
   z-index: 999;
   
@@ -100,6 +101,8 @@ const Navbar: React.FC = () => {
           {/*<li><a onClick={() => scrollToPart('Roadmap')}>Roadmap</a></li>*/}
           <li><a href={'https://t.me/forart_ai'} target="_blank" rel="noreferrer"><img className="telegram" src={telegram} /></a></li>
           <li><a href={'https://twitter.com/forart_ai'} target="_blank" rel="noreferrer"><img className="twitter" src={twitter} /></a></li>
+          <li><a href={'mailto://contact@forart.ai'} target="_blank" rel="noreferrer"><img className="twitter" src={Email} /></a></li>
+
         </NavLinksContainer>
       </Wrapper>
     </NavbarContainer>
