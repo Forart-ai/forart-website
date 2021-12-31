@@ -121,8 +121,8 @@ export const SocialHeader = styled.div`
   margin-bottom: 12px;
 
   img {
-    width: 56px;
-    height: 56px;
+    width: 50px;
+    height: 50px;
     margin-right: 12px
   }
   .user-info {
