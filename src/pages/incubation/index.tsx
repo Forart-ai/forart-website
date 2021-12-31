@@ -100,10 +100,10 @@ const Incubation: React.FC = () => {
               <SocialHeader >
                 <img src={Saas3} />
                 <div className="user-info">
-                  <div className="username" />
+                  <div className="username">NFT Infrastructure</div>
                 </div>
               </SocialHeader>
-              <SocialBody>The functions for NFT staking, farming</SocialBody>
+              <SocialBody>NFT infrastructure for NFT minting, launching, staking, and farming.</SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
                   <a href="https://app.forart.co" target="_blank" rel="noreferrer">
