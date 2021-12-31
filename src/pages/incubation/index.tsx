@@ -64,9 +64,9 @@ const Incubation: React.FC = () => {
               <SocialBody>Using Neural Style Transferring Tech for combining different NFTs to a fully new one.</SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <a href="https://app.forart.co" target="_blank" rel="noreferrer">
+                  <a href="https://app.forart.ai/#/nftBreed" target="_blank" rel="noreferrer">
                     <div className="button-container">
-                      Join Us
+                      View
                     </div>
                   </a>
                 </ButtonWrapper>
@@ -85,9 +85,9 @@ const Incubation: React.FC = () => {
               <SocialBody>Text-To-NFT that creates NFTs reflecting the meaning of textual descriptions. </SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <a href="https://app.forart.co" target="_blank" rel="noreferrer">
+                  <a href="https://app.forart.ai/#/AI-Gen" target="_blank" rel="noreferrer">
                     <div className="button-container">
-                      Join Us
+                      View
                     </div>
                   </a>
                 </ButtonWrapper>
@@ -100,16 +100,15 @@ const Incubation: React.FC = () => {
               <SocialHeader >
                 <img src={Saas3} />
                 <div className="user-info">
-                  <div className="username" />
+                  <div className="username">NFT Infrastructure</div>
                 </div>
               </SocialHeader>
-              <SocialBody>The functions for NFT staking, farming</SocialBody>
+              <SocialBody>NFT infrastructure for NFT minting, launching, staking, and farming.</SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <a href="https://app.forart.co" target="_blank" rel="noreferrer">
-
+                  <a href="https://app.forart.ai" target="_blank" rel="noreferrer">
                     <div className="button-container">
-                      Join Us
+                      View
                     </div>
                   </a>
                 </ButtonWrapper>
