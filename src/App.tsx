@@ -24,8 +24,6 @@ const App = () => {
       <Top />
       <Incubation />
       <Mint />
-      {/*<MetaPlus />*/}
-      {/*<Airdrop />*/}
       <SocialFi />
       <Roadmap />
       <Foot />

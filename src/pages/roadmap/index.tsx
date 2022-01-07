@@ -127,7 +127,7 @@ const IconArea = styled.div`
   }
 
   @media screen and (max-width: 1100px) {
-    height: 200px;
+    height: 100px;
   }
 `
 
@@ -137,6 +137,9 @@ const InfoArea = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
+  
+  @media screen and (max-width: 1100px) {
+  }
 
 `
 

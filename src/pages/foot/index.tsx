@@ -31,7 +31,7 @@ const FootContent = styled.div`
   @media screen and (max-width: 1100px) {
     &:before {
       height: auto;
-      min-height: 750px;
+      min-height: 600px;
     }
   }
 `
@@ -67,6 +67,7 @@ const ProjectIntroduce = styled.div`
 
   @media screen and (max-width: 1100px) {
     flex-direction: column;
+    height: 60vh;
   }
 
 `
@@ -91,7 +92,7 @@ const InfoItem = styled.div`
   flex-direction: column;
   max-width: 368px;
   text-align: left;
-  
+
   .strong-title {
     font-weight: bolder;
     font-size: 1.6em;

@@ -25,7 +25,7 @@ const Wrapper = styled.div`
   }
   
   @media screen and (max-width: 1100px) {
-    height: 1000px;
+    min-height: 100vh;
   }
 `
 
@@ -140,6 +140,8 @@ const Item = styled.div`
 
   @media screen and (max-width: 1100px) {
     width: 340px;
+    height: 80px;
+
   }
   
 `
@@ -186,6 +188,12 @@ const BuiltContainer = styled.div`
   align-items: center;
   justify-content: center;
   
+  @media screen and (max-width: 1100px) {
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px auto;
+  }
+  
 `
 
 const BuiltItems = styled.div`
@@ -219,6 +227,14 @@ const BuiltItems = styled.div`
     font-size: 1.4em;
     color: #82858e;
     font-family: GothamRndMedium;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    margin: 0 ;
+    
+    .info {
+      display: none;
+    }
   }
 `
 
