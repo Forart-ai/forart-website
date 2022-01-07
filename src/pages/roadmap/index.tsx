@@ -273,7 +273,7 @@ const Roadmap: React.FC = () => {
     {
       icon: '',
       year:'2022',
-      describe:'Q2',
+      describe:'Q3',
       title:'2022',
       label:[
         {
