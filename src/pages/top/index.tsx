@@ -9,6 +9,7 @@ import Avax from '../../image/top/avax.png'
 import COIcon from '../../image/top/top1.png'
 import SaaSIcon from '../../image/top/top2.png'
 import SocialIcon from '../../image/top/top3.png'
+import Binance from '../../image/top/Binance.png'
 
 
 const Wrapper = styled.div`
@@ -205,7 +206,7 @@ const BuiltItems = styled.div`
   .icon-image {
     width: 64px;
     height: 64px;
-    background: #1d2025;
+    background: #1d2025; 
     border-radius: 20px;
     padding: 10px;
     position: relative;
@@ -276,14 +277,14 @@ const Top: React.FC = () => {
       detail: 'Community'
     },
     {
-      image: Avax,
-      title: 'Avax',
-      detail: 'Community'
+      image: Binance,
+      title: 'Binance',
+      detail: 'Smart Chain'
     },
     {
       image: Celo,
       title: 'Celo',
-      detail: 'wallet'
+      detail: 'Wallet'
     },
   ]
 
