@@ -13,7 +13,6 @@ import Social5 from '../../image/socialFi/social5.png'
 const Wrapper = styled.div`
   width: 100%;
   min-height: 100vh;
-  margin: 120px 0;
   display: flex;
   flex-direction: column;
 
