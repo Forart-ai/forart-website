@@ -10,6 +10,8 @@ import COIcon from '../../image/top/top1.png'
 import SaaSIcon from '../../image/top/top2.png'
 import SocialIcon from '../../image/top/top3.png'
 import Binance from '../../image/top/Binance.png'
+import Cronos from '../../image/top/cronos.svg'
+
 
 
 const Wrapper = styled.div`
@@ -285,6 +287,11 @@ const Top: React.FC = () => {
       image: Celo,
       title: 'Celo',
       detail: 'Wallet'
+    },
+    {
+      image: Cronos,
+      title: 'Cronos',
+      detail: 'Chain'
     },
   ]
 
