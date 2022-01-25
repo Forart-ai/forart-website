@@ -306,7 +306,7 @@ const Top: React.FC = () => {
           <Info>
             <Title>
               <div className="slogan">The First AI-Powered NFT</div>
-              <div className="slogan"> SaaS for Social</div>
+              <div className="slogan"> SaaS for Social Network</div>
             </Title>
             {/*<ButtonContainer>*/}
             {/*  <a href="https://app.forart.co" target="_blank" rel="noreferrer"><StyledButton>Launch App</StyledButton></a>*/}
