@@ -221,11 +221,11 @@ const Roadmap: React.FC = () => {
           info:'2. Launch Style transferred NFT creation on testnet'
         },
         {
-          isComplete: false,
+          isComplete: true,
           info: '3. Implement of Text-To-NFT Function'
         },
         {
-          isComplete: false,
+          isComplete: true,
           info: '4. Release NFT Marketplace Function'
         }
       ]
