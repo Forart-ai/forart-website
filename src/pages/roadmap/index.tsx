@@ -237,11 +237,11 @@ const Roadmap: React.FC = () => {
       title:'2022',
       label:[
         {
-          isComplete: false,
+          isComplete: true,
           info:'1. Launch CO-NFT Function on Celo and Solana Mainnet'
         },
         {
-          isComplete: false,
+          isComplete: true,
           info:'2. Implement of Social NFT'
         },
         {
@@ -297,6 +297,7 @@ const Roadmap: React.FC = () => {
 
 
   ]
+
   return (
     <div className="section" id="Roadmap">
       <Wrapper>
