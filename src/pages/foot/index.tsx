@@ -185,7 +185,7 @@ const Foot:React.FC = () => {
             </InfoItem>
           </ProjectIntroduce>
           <Line />
-          <div className="copyright">2021 © All Rights Reserved.</div>
+          <div className="copyright">2022 © All Rights Reserved.</div>
         </Col>
 
 
