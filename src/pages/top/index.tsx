@@ -279,6 +279,11 @@ const Top: React.FC = () => {
       detail: 'Community'
     },
     {
+      image: Avax,
+      title: 'Avax',
+      detail: 'Community'
+    },
+    {
       image: Binance,
       title: 'Binance',
       detail: 'Smart Chain'
