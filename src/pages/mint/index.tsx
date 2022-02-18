@@ -8,8 +8,8 @@ import CO3 from '../../image/mint/co-3.png'
 
 const Wrapper = styled.div`
   width: 100%;
-  height: auto;
-  margin: 150px 0;
+  height: 700px;
+  margin: 100px 0;
   //padding: 0 80px;
   display: flex;
   justify-content: center;
@@ -18,7 +18,8 @@ const Wrapper = styled.div`
 
 
   @media screen and (max-width: 1100px) {
-    //padding: 0 5px;
+    min-height: 100vh;
+    margin: 50px 0;
   }
 `
 
@@ -51,8 +52,14 @@ const Title = styled.div`
       line-height: 1em;
     }
   }
-  
-  @media screen and (max-width: 1100px) {}
+
+  @media screen and (max-width: 1100px) {
+    .title{
+     .row{
+       font-size: 2.7em;
+     }
+    }
+  }
 `
 
 const ItemBorder = styled.div`
@@ -64,21 +71,24 @@ const ItemBorder = styled.div`
 
   @media screen and (max-width: 1100px) {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 
 `
 
 const ItemContainer = styled.div`
   width: 308px;
-  height: auto;  
+  height: 650px;  
   display: flex;
   flex-direction: column;
-  align-items: center;
+  justify-content: flex-start;
   padding-bottom: 40px;
 
 
   @media screen and (max-width: 1100px) {
     width: 100%;
+  
   }
 `
 
@@ -101,6 +111,12 @@ const IconArea = styled.div`
   
   @media screen and (max-width: 1100px) {
     height: 200px;
+    justify-content: center;
+    align-items: center;
+    img {
+      width: 80%;
+      object-fit: contain;
+    }
   }
 `
 
@@ -128,6 +144,7 @@ const ItemText = styled.div`
   @media screen and (max-width: 1100px) {
     width: 100%;
     height: 120px;
+    align-items: center;
 
     .item-title {
       font-size: 1.6em;
@@ -136,6 +153,7 @@ const ItemText = styled.div`
     .item-detail {
       margin-top: 10px;
       font-size: 1.2em;
+      text-align: center;
     }
   }
 `
@@ -145,7 +163,7 @@ const ItemText = styled.div`
 type PlayItem = {
   image:any
   title: string
-  detail:string
+  detail: any
 }
 
 const Mint: React.FC = () => {
@@ -153,18 +171,18 @@ const Mint: React.FC = () => {
   const items: PlayItem[] = [
     {
       image: CO1,
-      title:'NFT Creation startup',
-      detail: 'NFT Artist Creates NFT creation material library on a certain theme.'
+      title:'Artist creates the traits library',
+      detail: 'Artist provide the traits of themes'
     },
     {
       image: CO2,
-      title:'Mint NFT',
-      detail: 'NFT Mintor selects his favorite creative combinations for minting '
+      title:'Creation from users',
+      detail: 'Users can select the favorite traits to create NFT artworks.'
     },
     {
       image: CO3,
-      title:'NFTs Launch',
-      detail: 'AI-Powered SaaS helps NFT Mintors to optimize creation and launch.'
+      title:'NFT Launch',
+      detail: <p> All the NFTs will launch multiple marketplace to mint and trade. Artist and creators benefit from the listing and royalties</p>
     }
   ]
 

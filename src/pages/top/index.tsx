@@ -9,6 +9,9 @@ import Avax from '../../image/top/avax.png'
 import COIcon from '../../image/top/top1.png'
 import SaaSIcon from '../../image/top/top2.png'
 import SocialIcon from '../../image/top/top3.png'
+import Binance from '../../image/top/Binance.png'
+import Cronos from '../../image/top/cronos.svg'
+
 
 
 const Wrapper = styled.div`
@@ -25,7 +28,7 @@ const Wrapper = styled.div`
   }
   
   @media screen and (max-width: 1100px) {
-    height: 1000px;
+    min-height: 100vh;
   }
 `
 
@@ -140,6 +143,8 @@ const Item = styled.div`
 
   @media screen and (max-width: 1100px) {
     width: 340px;
+    height: 80px;
+
   }
   
 `
@@ -186,6 +191,12 @@ const BuiltContainer = styled.div`
   align-items: center;
   justify-content: center;
   
+  @media screen and (max-width: 1100px) {
+    justify-content: space-around;
+    align-items: center;
+    margin: 30px auto;
+  }
+  
 `
 
 const BuiltItems = styled.div`
@@ -197,7 +208,7 @@ const BuiltItems = styled.div`
   .icon-image {
     width: 64px;
     height: 64px;
-    background: #1d2025;
+    background: #1d2025; 
     border-radius: 20px;
     padding: 10px;
     position: relative;
@@ -219,6 +230,14 @@ const BuiltItems = styled.div`
     font-size: 1.4em;
     color: #82858e;
     font-family: GothamRndMedium;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    margin: 0 ;
+    
+    .info {
+      display: none;
+    }
   }
 `
 
@@ -265,9 +284,19 @@ const Top: React.FC = () => {
       detail: 'Chain'
     },
     {
+      image: Binance,
+      title: 'Binance',
+      detail: 'Smart Chain'
+    },
+    {
       image: Celo,
       title: 'Celo',
-      detail: 'wallet'
+      detail: 'Wallet'
+    },
+    {
+      image: Cronos,
+      title: 'Cronos',
+      detail: 'Chain'
     },
   ]
 

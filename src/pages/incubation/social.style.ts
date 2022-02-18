@@ -6,7 +6,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 150px 0;
+  margin: 80px 0;
   min-width: 1200px;
 
   @media screen and (max-width: 1100px) {
@@ -41,6 +41,12 @@ export const Title = styled.div`
     background: linear-gradient(90deg,  #4effd2, #3efff6 40%, #3376ff);
     -webkit-background-clip: text;
     color: transparent;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    p{
+      font-size: 2.7em;
+    }
   }
 `
 
@@ -100,6 +106,12 @@ export const Row = styled.div`
   @media screen and (max-width: 1100px) {
    flex-direction: column;
     width: 100%;
+
+    .cardBox {
+      margin: 0 20px 10px 23px;
+      width: 300px;
+      height: 320px;
+    }
     
   }
 `

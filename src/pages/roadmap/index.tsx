@@ -127,7 +127,7 @@ const IconArea = styled.div`
   }
 
   @media screen and (max-width: 1100px) {
-    height: 200px;
+    height: 100px;
   }
 `
 
@@ -137,6 +137,9 @@ const InfoArea = styled.div`
   height: auto;
   display: flex;
   flex-direction: column;
+  
+  @media screen and (max-width: 1100px) {
+  }
 
 `
 
@@ -218,11 +221,11 @@ const Roadmap: React.FC = () => {
           info:'2. Launch Style transferred NFT creation on testnet'
         },
         {
-          isComplete: false,
+          isComplete: true,
           info: '3. Implement of Text-To-NFT Function'
         },
         {
-          isComplete: false,
+          isComplete: true,
           info: '4. Release NFT Marketplace Function'
         }
       ]
@@ -234,11 +237,11 @@ const Roadmap: React.FC = () => {
       title:'2022',
       label:[
         {
-          isComplete: false,
+          isComplete: true,
           info:'1. Launch CO-NFT Function on Celo and Solana Mainnet'
         },
         {
-          isComplete: false,
+          isComplete: true,
           info:'2. Implement of Social NFT'
         },
         {
@@ -294,6 +297,7 @@ const Roadmap: React.FC = () => {
 
 
   ]
+
   return (
     <div className="section" id="Roadmap">
       <Wrapper>

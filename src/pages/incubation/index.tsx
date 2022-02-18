@@ -85,7 +85,7 @@ const Incubation: React.FC = () => {
               <SocialBody>Text-To-NFT that creates NFTs reflecting the meaning of textual descriptions. </SocialBody>
               <SocialFoot>
                 <ButtonWrapper>
-                  <a href="https://app.forart.ai/#/AI-Gen" target="_blank" rel="noreferrer">
+                  <a href="https://app.forart.ai/#/Text-to-NFT" target="_blank" rel="noreferrer">
                     <div className="button-container">
                       View
                     </div>

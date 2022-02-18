@@ -3,6 +3,8 @@ import styled from 'styled-components'
 import LogoIcon from '../../image/top/logo.png'
 import telegram from '../../image/top/telegram.png'
 import twitter from '../../image/top/twitter.png'
+import DiscordIcon from '../../image/top/discord.svg'
+
 // import Email from '../../image/top/email.svg'
 
 // function scrollToPart(anchorName: string) {
@@ -101,6 +103,8 @@ const Navbar: React.FC = () => {
           {/*<li><a onClick={() => scrollToPart('Roadmap')}>Roadmap</a></li>*/}
           <li><a href={'https://t.me/forart_ai'} target="_blank" rel="noreferrer"><img className="telegram" src={telegram} /></a></li>
           <li><a href={'https://twitter.com/forart_ai'} target="_blank" rel="noreferrer"><img className="twitter" src={twitter} /></a></li>
+          <li><a href={'https://discord.gg/RDaUkaW39S'} target="_blank" rel="noreferrer"><img className="discord" src={DiscordIcon} /></a></li>
+
           {/*<li><a href={'mailto://contact@forart.ai'} target="_blank" rel="noreferrer"><img className="twitter" src={Email} /></a></li>*/}
 
         </NavLinksContainer>

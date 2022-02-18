@@ -13,7 +13,7 @@ import Social5 from '../../image/socialFi/social5.png'
 const Wrapper = styled.div`
   width: 100%;
   min-height: 100vh;
-  margin: 120px 0;
+  height: 900px;
   display: flex;
   flex-direction: column;
 
@@ -50,13 +50,18 @@ const Title = styled.div`
   }
   
   @media screen and (max-width: 1100px) {
-  
+   
+
   }
 `
 
 const Row = styled.div`
   display: flex;
   justify-content: space-between;
+
+  @media screen and (max-width: 1100px) {
+    flex-direction: column;
+  }
 `
 
 
@@ -96,6 +101,16 @@ const ItemContent = styled.div`
     color: white;
     opacity: .7;
     margin-top: 18px;
+  }
+  
+  @media screen and (max-width: 1100px) {
+    margin: 30px 0;
+
+    img {
+      width: 150px;
+      max-width: 200px;
+      object-fit: contain;
+    }
   }
 `
 

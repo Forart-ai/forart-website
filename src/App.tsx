@@ -11,6 +11,7 @@ import Mint from './pages/mint/index'
 import Roadmap from './pages/roadmap'
 import SocialFi from './pages/socialFi'
 import './font/font.css'
+import Profit from './pages/profit'
 
 const App = () => {
   AOS.init({
@@ -24,8 +25,7 @@ const App = () => {
       <Top />
       <Incubation />
       <Mint />
-      {/*<MetaPlus />*/}
-      {/*<Airdrop />*/}
+      <Profit />
       <SocialFi />
       <Roadmap />
       <Foot />
