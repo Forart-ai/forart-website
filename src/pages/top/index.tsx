@@ -275,13 +275,13 @@ const Top: React.FC = () => {
 
     {
       image: SolonaIcon,
-      title: 'Solana',
-      detail: 'Community'
+      title: 'Solona',
+      detail: 'Chain'
     },
     {
       image: Avax,
       title: 'Avax',
-      detail: 'Community'
+      detail: 'Chain'
     },
     {
       image: Binance,
