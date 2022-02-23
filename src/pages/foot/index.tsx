@@ -137,7 +137,7 @@ const Row = styled.div`
 
 const Foot:React.FC = () => {
   const EXTERNAL_LINKS: Array<{ icon?: any, title: string, link: string }> = [
-    { icon: Email, title: 'Email', link: 'mailto://contact@forart.ai' },
+    { icon: Email, title: 'Email', link: 'mailto:contact@forart.ai' },
     { icon: TwitterIcon, title: 'Twitter', link: 'https://twitter.com/forart_ai' },
     { icon: Telegram, title: 'Telegram', link:'https://t.me/forart_ai' },
     { icon: GithubIcon, title: 'Github', link: 'https://github.com/Forart-ai' },
