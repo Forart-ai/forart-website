@@ -238,15 +238,11 @@ const Roadmap: React.FC = () => {
       label:[
         {
           isComplete: true,
-          info:'1. Launch CO-NFT Function on Celo and Solana Mainnet'
-        },
-        {
-          isComplete: true,
-          info:'2. Implement of Social NFT'
+          info:'1. Launch CO-NFT Function on Avalanche and Solana Mainnet'
         },
         {
           isComplete: false,
-          info: '3. CO-NFTs Public Sale'
+          info: '2. CO-NFTs Public Sale'
         }
       ]
     },
@@ -258,15 +254,19 @@ const Roadmap: React.FC = () => {
       label:[
         {
           isComplete: false,
-          info:'1. SaaS service API deployment.'
+          info:'1. Implement of Social NFT'
         },
         {
           isComplete: false,
-          info:'2. Launch Social NFT Function on CELO and Solana Mainnet'
+          info:'2. SaaS service API deployment.'
         },
         {
           isComplete: false,
-          info:'3. Launch Text-To-NFT Function on Mainnet'
+          info:'3. Launch Social NFT Function on Avalanche and Solana Mainnet'
+        },
+        {
+          isComplete: false,
+          info:'4. Launch Text-To-NFT Function on Mainnet'
         }
       ]
     },
