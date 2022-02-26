@@ -18,8 +18,8 @@ const Wrapper = styled.div`
 
 
   @media screen and (max-width: 1100px) {
-    min-height: 100vh;
     margin: 50px 0;
+    height: fit-content;
   }
 `
 
@@ -88,6 +88,7 @@ const ItemContainer = styled.div`
 
   @media screen and (max-width: 1100px) {
     width: 100%;
+    height: 400px;
   
   }
 `

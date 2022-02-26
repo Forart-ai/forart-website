@@ -19,7 +19,7 @@ const Wrapper = styled.div`
 
 
   @media screen and (max-width: 1100px) {
-    //height: 1000px;
+   height: fit-content;
   }
 `
 

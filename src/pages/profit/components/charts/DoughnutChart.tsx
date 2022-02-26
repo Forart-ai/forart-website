@@ -1,8 +1,11 @@
 import React from 'react'
 import ReactECharts from 'echarts-for-react'
 import { number } from 'echarts/core'
+import { useMediaQuery } from 'react-responsive'
 
 const DoughnutChart: React.FC = () => {
+
+  const isMobile = useMediaQuery({ query: '(max-width: 1100px)' })
 
   const option = {
     tooltip: {
@@ -28,8 +31,8 @@ const DoughnutChart: React.FC = () => {
         },
         label: {
           show: true,
-          position: 'outside',
-          color:'inherit',
+          position: isMobile ? 'inside' : 'outside',
+          color: isMobile ? 'white' : 'inherit',
           formatter: '{b}  {d}%',
           fontSize: '18',
         },
@@ -60,7 +63,7 @@ const DoughnutChart: React.FC = () => {
     <div>
       <ReactECharts
         option={option}
-        style={{ height: '500px', width: '1500px', margin: '0 auto', paddingBottom: '100' }}
+        style={isMobile ? { height: '400px', width: '100vw', margin: '0 auto' } : { height: '500px', width: '1500px', margin: '0 auto', paddingBottom: '100' }}
       />
     </div>
   )

@@ -45,6 +45,10 @@ const ChartBox = styled.div`
   height: 100%;
   display: flex;
   justify-content: center;
+
+  @media screen and (max-width: 1100px) {
+    max-width: 100vw;
+  }
 `
 
 const Profit: React.FC = () => {
