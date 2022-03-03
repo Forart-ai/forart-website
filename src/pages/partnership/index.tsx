@@ -5,6 +5,7 @@ import Star from '../../image/partnership/celo.png'
 import ChainLink from '../../image/partnership/chainlink.png'
 import Slop from '../../image/partnership/slop.png'
 
+
 const Wrapper = styled('div')`
   width: 100%;
   display: flex;

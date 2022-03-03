@@ -16,9 +16,9 @@ import NewsPage from './pages/news'
 
 const App = () => {
   AOS.init({
-    duration: 1200,
+    duration: 1000,
     easing: 'ease-in-sine',
-    delay: 200,
+    delay: 0,
   })
 
   return (

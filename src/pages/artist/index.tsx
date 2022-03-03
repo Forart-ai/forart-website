@@ -2,6 +2,7 @@ import React from 'react'
 import { Box, styled } from '@mui/material'
 import ArtistBanner from '../../image/artist/artist-banner.png'
 import { Boxes } from '../chains/index.style'
+import GradientButton from '../../image/button.png'
 
 const Wrapper = styled('div')`
   width: 100%;
@@ -80,41 +81,17 @@ export const ButtonWithCorner = styled('div')`
   font-size: 16px;
   text-decoration: none;
   overflow: hidden;
-  transition: all 0.2s linear 0s;
-  background-image: linear-gradient(90deg, #00A1FF 0%, #00FF8F 100%);
+  background: url(${GradientButton}) no-repeat center;
+  background-size: contain;
   color: black;
   text-align: center;
   position: relative;
   cursor: pointer;
   margin-top: 30px;
 
-  a {
-    color: rgba(0, 0, 0, 1);
-  }
+ 
 
-  ::before {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    border: 8px solid #F0F5FF;
-    border-top-color: transparent;
-    border-left-color: transparent;
-  }
 
-  ::after {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border: 8px solid #F0F5FF;
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-  }
 
 `
 

@@ -7,7 +7,7 @@ import Underline from '../../image/top/underline.png'
 import {  styled, Typography } from '@mui/material'
 import ForartTheme from '../../contexts/config/dark'
 import { useOverviewData } from '../../hooks/query/useOverviewData'
-
+import GradientButton from '../../image/button.png'
 
 
 
@@ -200,47 +200,7 @@ const DataContainer = styled('div')`
   }
 `
 
-export const CustomizeButton = styled('div')`
-  text-align: center;
-  display: inline-block;
-  position: relative;
-  text-decoration: none;
-  color: #000000;
-  text-transform: capitalize;
-  background-image: linear-gradient(90deg, #00A1FF 0%, #00FF8F 100%);
-  padding: 14px 0px;
-  width: 150px;
-  border-radius: 10px;
-  overflow: hidden;
-  transition: all 0.2s linear 0s;
-  font-size: 16px;
-  cursor: pointer;
 
-
-  &:before {
-    content: "➡";
-    font-size: 15px;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    right: 0;
-    top: 0;
-    opacity: 0;
-    height: 100%;
-    width: 40px;
-    transition: all 0.2s linear 0s;
-  }
-
-  &:hover {
-    text-indent: -20px;
-
-    &:before {
-      opacity: 1;
-      text-indent: 0px;
-    }
-  }
-`
 
 export const ButtonWithCorner = styled('div')`
   padding: 12px 0px;
@@ -248,46 +208,24 @@ export const ButtonWithCorner = styled('div')`
   font-size: 16px;
   text-decoration: none;
   overflow: hidden;
-  transition: all 0.2s linear 0s;
-  background-image: linear-gradient(90deg, #00A1FF 0%, #00FF8F 100%);
+  background: url(${GradientButton}) no-repeat center;
+  background-size: contain;
   color: black;
   text-align: center;
-    position: relative;
+  position: relative;
   cursor: pointer;
-  
-  ::before {
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    border: 8px solid rgba(27,0,53);
-    border-top-color: transparent;
-    border-left-color: transparent;
-  }
- ::after{
-    content: '';
-    width: 0;
-    height: 0;
-    position: absolute;
-    left: 0;
-    top: 0;
-    border: 8px solid  rgba(27,0,53,1 );
-    border-bottom-color: transparent;
-    border-right-color: transparent;
-  }
+
   
 `
 
 const BlurContainer = styled('div')`
-    width: 20%;
+  width: 20%;
   height: 20%;
   max-width: 350px;
   max-height: 350px;
   position: absolute;
   z-index: 3;
-overflow: hidden;
+  overflow: hidden;
   left: -190px;
   top: 1.4%;
 
