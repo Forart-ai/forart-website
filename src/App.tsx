@@ -3,8 +3,6 @@ import './App.css'
 import 'aos/dist/aos.css'
 import AOS from 'aos'
 import Top from './pages/top/index'
-import MetaPlus from './pages/metaPlus'
-import Airdrop from './pages/airdrop'
 import Foot from './pages/foot'
 import Incubation from './pages/incubation/index'
 import Mint from './pages/mint/index'
@@ -23,12 +21,12 @@ const App = () => {
   return (
     <div className="App" >
       <Top />
-      <Incubation />
-      <Mint />
-      <Profit />
-      <SocialFi />
-      <Roadmap />
-      <Foot />
+      {/*<Incubation />*/}
+      {/*<Mint />*/}
+      {/*<Profit />*/}
+      {/*<SocialFi />*/}
+      {/*<Roadmap />*/}
+      {/*<Foot />*/}
     </div>
   )
 }

@@ -3,12 +3,15 @@ import ReactDOM from 'react-dom'
 import './index.css'
 import App from './App'
 import reportWebVitals from './reportWebVitals'
-import 'antd/dist/antd.css'
+import { ThemeProvider } from '@mui/material'
+import ForartTheme from './contexts/config/dark'
 
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <ThemeProvider theme={ForartTheme}>
+      <App />
+    </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')
 )

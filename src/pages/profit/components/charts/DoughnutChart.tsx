@@ -1,6 +1,5 @@
 import React from 'react'
 import ReactECharts from 'echarts-for-react'
-import { number } from 'echarts/core'
 import { useMediaQuery } from 'react-responsive'
 
 const DoughnutChart: React.FC = () => {

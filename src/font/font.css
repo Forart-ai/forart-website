@@ -1,27 +1,18 @@
 @font-face {
-    font-family:'campton';
-    src: url("./DriveBook.ttf");
+    font-family:'d-din';
+    src: url("./D-DIN.ttf");
+}
+
+@font-face {
+    font-family:'d-din-bold';
+    src: url("./D-DIN-Bold.ttf");
 }
 
 
 @font-face {
-    font-family:'DriveExtraBold';
-    src: url("./DriveExtrabold.ttf");
-}
-
-@font-face {
-    font-family:'Comfortaa-Bold';
-    src: url("./Comfortaa-Bold.ttf");
-}
-
-@font-face {
-    font-family:'GothamRndBold';
-    src: url("./GothamRndBold.otf");
+    font-family:'Righteous-Regular';
+    src: url("./Righteous-Regular.ttf");
 }
 
 
-@font-face {
-    font-family:'GothamRndMedium';
-    src: url("./GothamRndMedium.otf");
-}
 

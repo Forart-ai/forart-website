@@ -1,8 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
 import Navbar from './navbar'
-import BannerImage from '../../image/top/banner.jpg'
-import { Button } from 'antd'
 import SolonaIcon from '../../image/top/solana-logo.svg'
 import Celo from '../../image/incubation/celo.svg'
 import Avax from '../../image/top/avax.png'
@@ -11,126 +8,183 @@ import SaaSIcon from '../../image/top/top2.png'
 import SocialIcon from '../../image/top/top3.png'
 import Binance from '../../image/top/Binance.png'
 import Cronos from '../../image/top/cronos.svg'
+import TopBackground from '../../image/top/TopBackground.svg'
+import Underline from '../../image/top/underline.png'
+import TopTitle from '../../image/top/TopTitle.png'
+import { Box, styled, Typography } from '@mui/material'
+import ForartTheme from '../../contexts/config/dark'
 
 
 
-const Wrapper = styled.div`
+
+
+const Wrapper = styled('div')`
   width: 100%;
   min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  
+  background: url(${TopBackground}) no-repeat center;
+  background-size: contain;
+  background-color: rgb(27,0,53);
   .filter {
     height: fit-content;
     //backdrop-filter: blur(4px);
   }
   
-  @media screen and (max-width: 1100px) {
-    min-height: 100vh;
-  }
+  
 `
 
-const Container = styled.div`
-  max-width: 1400px;
+const Container = styled('div')`
+  max-width: 1800px;
+  width: 85%;
   height: auto;
   margin: auto;
-
-
-  @media screen and (max-width: 1100px) {
-    margin-left: 0;
-    height: auto;
-    width: 100vw;
-  }
 `
 
-const Border = styled.div`
-  max-width: 1900px;
-  width: calc(100% - 40px);
-  margin-left: auto;
-  margin-right: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-
-`
-
-const Info = styled.div`
-  width: 80%;
 
 
-  @media screen and (max-width: 1100px) {
-    width: 95%;
-  }
-`
-
-const Title = styled.div`
-  text-align: center;
+const Info = styled('div')`
   width: 100%;
-
-  .slogan {
-    font-weight: 600;
-    font-size: 4.4em;
-    color: #fff;
-    user-select: none;
-    background: linear-gradient(90deg,  #4effd2, #3efff6 40%, #3376ff);
-    -webkit-background-clip: text;
-    color: transparent;
-    line-height: 1.4em;
-   
+  display: flex;
+  justify-content: space-between;
+  
+  ${({ theme }) => theme.breakpoints.down('sm')} {
+    flex-direction: column;
   }
   
-  @media screen and (max-width: 1100px) {
-    text-align: center;
+  
+  
+`
 
+const Title = styled('div')`
+  font-family: Righteous-Regular;
+  color: #fff;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: column;
+  white-space: nowrap;
+  position: relative;
 
-    .slogan {
-      //width: 100vw;
-      font-size: 1.8rem;
-      line-height: 50px;
+  ${({ theme }) => theme.breakpoints.down('sm')} {
+    img {
+      position: absolute;
+      top: 210px;
+      left: -30px;
     }
   }
 
-`
+  ${({ theme }) => theme.breakpoints.between('sm','xl')} {
+    img {
+      position: absolute;
+      top: 210px;
+      left: -30px;
+    }
+  }
 
-const StyledButton = styled(Button)`
-  background-image: linear-gradient(to right, #00EBA4, #02A6F5);
-  height: 40px;
-  border: none;
-  font-size: 1.2rem;
-  color: white;
-  border-radius: 5px;
+  ${({ theme }) => theme.breakpoints.up('xl')} {
+    img {
+      position: absolute;
+      top: 280px;
+      left: -30px;
+    }
+  }
+  
+  
+  
   
 `
 
-const ButtonContainer = styled.div`
+const Slogan = styled('div')`
+  font-family: Righteous-Regular;
+  
+  span {
+    color: #00EBA4;
+  }
+  
+  ${({ theme }) => theme.breakpoints.down('sm')} {
+    font-size: 40px;
+  }
+
+  ${({ theme }) => theme.breakpoints.between('sm','xl')} {
+    font-size: 70px;
+  }
+
+  ${({ theme }) => theme.breakpoints.up('xl')} {
+    font-size: 90px;
+  }
+`
+
+const Highlight = styled('div')`
+  font-family: Righteous-Regular;
+
+
+  ${({ theme }) => theme.breakpoints.down('sm')} {
+    font-size: 50px;
+  }
+
+  ${({ theme }) => theme.breakpoints.between('sm','xl')} {
+    font-size: 80px;
+  }
+
+  ${({ theme }) => theme.breakpoints.up('xl')} {
+    font-size: 110px;
+  }
+`
+
+const DataValue = styled(Typography)`
+  font-family: Righteous-Regular;
+`
+
+const DataLabel = styled(Typography)`
+  font-family: d-din;
+`
+
+
+const DataContainer = styled('div')`
+  color: #ffffff;
+  line-height: 50px;
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  height: auto;
-  align-items: center;
-  margin-top: 20px;
-  width: 100%;
-  
-  @media screen and (max-width: 1100px) {
-    justify-content: center;
-  }
+  gap: 50px;
 `
 
-const MissionGroup = styled.div`
-  width: 100%;
-  margin-top: 80px;
-  display: flex;
-  justify-content: space-between;
+const CustomizeButton = styled('div')`
+  width: 200px;
+  height: 60px;
+  background: #58a;
 
-  @media screen and (max-width: 1100px) {
-    flex-direction: column;
-    align-items: center;
+    position: relative;
+  ::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 10px solid rgb(27,0,53);
+    border-top-color: transparent;
+    border-left-color: transparent;
   }
+  ::after{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 10px solid rgb(27,0,53);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+
+ 
 `
 
-const Item = styled.div`
+const Item = styled('div')`
   height: 120px;
   width: 450px;
   background: rgba(31, 41, 55, 0.6);
@@ -141,15 +195,11 @@ const Item = styled.div`
   border: 1px solid rgba(85, 102, 128, 0.2);
   margin: 10px;
 
-  @media screen and (max-width: 1100px) {
-    width: 340px;
-    height: 80px;
-
-  }
+ 
   
 `
 
-const ItemContainer = styled.div`
+const ItemContainer = styled('div')`
   display: flex;
   width: 100%;
   height: 100%;
@@ -165,7 +215,7 @@ const ItemContainer = styled.div`
   }
 `
 
-const ItemText = styled.div`
+const ItemText = styled('div')`
   width: 80%;
   text-align: left;
   
@@ -178,12 +228,11 @@ const ItemText = styled.div`
   .item-detail {
     color: #BEC2CA;
     font-size: 0.9rem;
-    font-family: GothamRndMedium;
 
   }
   `
 
-const BuiltContainer = styled.div`
+const BuiltContainer = styled('div')`
   margin-top: 100px;
   width: 100%;
   color: #fff;
@@ -199,7 +248,7 @@ const BuiltContainer = styled.div`
   
 `
 
-const BuiltItems = styled.div`
+const BuiltItems = styled('div')`
   display: flex;
   align-items: center;
   margin: 0 30px;
@@ -229,16 +278,9 @@ const BuiltItems = styled.div`
   .type {
     font-size: 1.4em;
     color: #82858e;
-    font-family: GothamRndMedium;
   }
   
-  @media screen and (max-width: 1100px) {
-    margin: 0 ;
-    
-    .info {
-      display: none;
-    }
-  }
+ 
 `
 
 type Mission = {
@@ -301,54 +343,48 @@ const Top: React.FC = () => {
   ]
 
   return (
-    <Wrapper>
-      <div className="filter">
-        <Navbar />
-      </div>
+    <Wrapper theme={ForartTheme}>
+      {/*<div className="filter">*/}
+      {/*  <Navbar />*/}
+      {/*</div>*/}
 
       <Container>
-        <Border>
-          <Info>
-            <Title>
-              <div className="slogan">The First AI-Powered NFT</div>
-              <div className="slogan"> SaaS for Social Network</div>
-            </Title>
-            {/*<ButtonContainer>*/}
-            {/*  <a href="https://app.forart.co" target="_blank" rel="noreferrer"><StyledButton>Launch App</StyledButton></a>*/}
-            {/*</ButtonContainer>*/}
 
-          </Info>
-          <MissionGroup>
-            {
-              missions.map((mission, index) => (
-                <Item key={index}>
-                  <ItemContainer>
-                    <img src={mission.image} />
-                    <ItemText>
-                      <div className="item-title">{mission.title}</div>
-                      <div className="item-detail">{mission.detail}</div>
-                    </ItemText>
-                  </ItemContainer>
-                </Item>
-              ))
-            }
-          </MissionGroup>
+        <Info>
+          <Title>
+            <img src={Underline} />
+            <Slogan >Web 3.0</Slogan>
+            <Highlight  >AI-Powered</Highlight>
+            <Slogan >Social <span>NFT</span></Slogan>
 
-          <BuiltContainer>
-            {
-              Built.map((item, index) => (
-                <BuiltItems key={index}>
-                  <img className="icon-image" src={item.image} />
-                  <div className="info">
-                    <div className="name"> {item.title} </div>
-                    <div className="type"> {item.detail} </div>
-                  </div>
-                </BuiltItems>
-              ))
-            }
+            <CustomizeButton className={'cover'}>OK</CustomizeButton>
+          </Title>
 
-          </BuiltContainer>
-        </Border>
+
+          <DataContainer>
+            <div className={'col'}>
+              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>2333</DataValue>
+              <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>CO-NFTs</DataLabel>
+            </div>
+
+            <div className={'col'}>
+              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>2048</DataValue>
+              <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>Creators</DataLabel>
+            </div>
+
+            <div className={'col'}>
+              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>1080</DataValue>
+              <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>Artist</DataLabel>
+            </div>
+
+
+
+          </DataContainer>
+
+        </Info>
+
+
+
       </Container>
     </Wrapper>
 

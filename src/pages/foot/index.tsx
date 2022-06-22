@@ -114,19 +114,6 @@ const Line = styled.div`
 
 `
 
-const SCExternalLink = styled.a`
-  img {
-    width: 45px;
-  }
-
-  @media screen and (max-width: 1100px) {
-    
-    img {
-      width: 30px;
-    }
-  }
-`
-
 const Row = styled.div`
 
   img {

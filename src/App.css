@@ -51,6 +51,8 @@
 
 ::-webkit-scrollbar {
   background: black;
+  width: 5px !important;
+
 }
 
 ::-webkit-scrollbar-thumb {
