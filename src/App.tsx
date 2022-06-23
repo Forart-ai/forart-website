@@ -4,10 +4,10 @@ import 'aos/dist/aos.css'
 import AOS from 'aos'
 import Top from './pages/top/index'
 import Foot from './pages/foot'
-import Incubation from './pages/incubation/index'
-import Mint from './pages/mint/index'
+import Chains from './pages/chains'
+import Mint from './pages/AiPower/index'
 import Roadmap from './pages/roadmap'
-import SocialFi from './pages/socialFi'
+import CONFT from './pages/conft'
 import './font/font.css'
 import Profit from './pages/profit'
 
@@ -21,10 +21,11 @@ const App = () => {
   return (
     <div className="App" >
       <Top />
-      {/*<Incubation />*/}
-      {/*<Mint />*/}
+      <Chains />
+      <Mint />
+      <CONFT />
+
       {/*<Profit />*/}
-      {/*<SocialFi />*/}
       {/*<Roadmap />*/}
       {/*<Foot />*/}
     </div>

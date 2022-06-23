@@ -20,30 +20,19 @@ import DiscordIcon from '../../image/top/discord.svg'
 
 const NavbarContainer = styled.div`
   display: flex;
-  width: 100%;
-  justify-content: center;
+  max-width: 1600px;
+  width: 85%;
+  justify-content: space-between;
   height: 70px;
   //position: fixed;
   //background-color: black;
   z-index: 999;
   
   
-  @media screen and (max-width: 1100px) {
-    width: 100vw;
-    height: 12vw;
-  }
+  
 `
 
-const Wrapper = styled.div`
-  width:1300px;
-  display: flex;
-  height: 72px;
-  justify-content: space-between;
-  align-items: center;
 
- 
-
-`
 
 const Logo = styled.div`
   width: 130px;
@@ -90,25 +79,23 @@ const NavLinksContainer = styled.div`
 const Navbar: React.FC = () => {
   return (
     <NavbarContainer>
-      <Wrapper>
-        <Logo className="logo">
-          <img src={LogoIcon} />
-        </Logo>
-        <NavLinksContainer id="NavLinksContainer">
-          <li><a href="https://app.forart.ai/" target="_blank" rel="noreferrer">Dapp</a></li>
-          <li><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">Docs</a></li>
-          <li><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></li>
-          {/*<li><a onClick={() => scrollToPart('MetaPlus')}>MetaPlus</a></li>*/}
-          {/*<li><a onClick={() => scrollToPart('Airdrop')}>Airdrop</a></li>*/}
-          {/*<li><a onClick={() => scrollToPart('Roadmap')}>Roadmap</a></li>*/}
-          <li><a href={'https://t.me/forart_ai'} target="_blank" rel="noreferrer"><img className="telegram" src={telegram} /></a></li>
-          <li><a href={'https://twitter.com/forart_ai'} target="_blank" rel="noreferrer"><img className="twitter" src={twitter} /></a></li>
-          <li><a href={'https://discord.gg/RDaUkaW39S'} target="_blank" rel="noreferrer"><img className="discord" src={DiscordIcon} /></a></li>
+      <Logo className="logo">
+        <img src={LogoIcon} />
+      </Logo>
+      <NavLinksContainer id="NavLinksContainer">
+        <li><a href="https://app.forart.ai/" target="_blank" rel="noreferrer">Dapp</a></li>
+        <li><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">Docs</a></li>
+        <li><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></li>
+        {/*<li><a onClick={() => scrollToPart('MetaPlus')}>MetaPlus</a></li>*/}
+        {/*<li><a onClick={() => scrollToPart('Airdrop')}>Airdrop</a></li>*/}
+        {/*<li><a onClick={() => scrollToPart('Roadmap')}>Roadmap</a></li>*/}
+        <li><a href={'https://t.me/forart_ai'} target="_blank" rel="noreferrer"><img className="telegram" src={telegram} /></a></li>
+        <li><a href={'https://twitter.com/forart_ai'} target="_blank" rel="noreferrer"><img className="twitter" src={twitter} /></a></li>
+        <li><a href={'https://discord.gg/RDaUkaW39S'} target="_blank" rel="noreferrer"><img className="discord" src={DiscordIcon} /></a></li>
 
-          {/*<li><a href={'mailto://contact@forart.ai'} target="_blank" rel="noreferrer"><img className="twitter" src={Email} /></a></li>*/}
+        {/*<li><a href={'mailto://contact@forart.ai'} target="_blank" rel="noreferrer"><img className="twitter" src={Email} /></a></li>*/}
 
-        </NavLinksContainer>
-      </Wrapper>
+      </NavLinksContainer>
     </NavbarContainer>
   )
 }
