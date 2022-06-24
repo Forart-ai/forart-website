@@ -26,8 +26,8 @@ const App = () => {
       <CONFT />
 
       {/*<Profit />*/}
-      {/*<Roadmap />*/}
-      {/*<Foot />*/}
+      <Roadmap />
+      <Foot />
     </div>
   )
 }

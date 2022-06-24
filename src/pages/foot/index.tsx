@@ -9,31 +9,96 @@ import Email from '../../image/foot/email.svg'
 
 
 const FootContent = styled.div`
-  height: auto;
-  min-height: 380px;
-  width: 100%;
-  display: flex;
-  justify-content: center;
   position: relative;
-  padding-bottom: 24px;
+  text-align: center;
+  background: linear-gradient(60deg, #F0F5FF 0%, #F0F5FF 100%);
+  color: white;
 
+  .header {
 
-  &:before {
-    position: absolute;
-    width: 100%;
-    content: "";
-    opacity: .8;
-    background-color: #112046;
-    height: auto;
-    min-height: 380px;
   }
+
   
-  @media screen and (max-width: 1100px) {
-    &:before {
-      height: auto;
-      min-height: 600px;
+
+  .inner-header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  .flex { /*Flexbox for containers*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  .waves {
+    position: relative;
+    width: 100%;
+    height: 15vh;
+    margin-bottom: -7px; /*Fix for safari gap*/
+    min-height: 100px;
+    max-height: 150px;
+  }
+
+  .content {
+    position: relative;
+    height: 20vh;
+    text-align: center;
+    background-color:rgb(79, 0, 139);
+  }
+
+  /* Animation */
+
+  .parallax > use {
+    animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
+  }
+
+  .parallax > use:nth-child(1) {
+    animation-delay: -2s;
+    animation-duration: 7s;
+  }
+
+  .parallax > use:nth-child(2) {
+    animation-delay: -3s;
+    animation-duration: 10s;
+  }
+
+  .parallax > use:nth-child(3) {
+    animation-delay: -4s;
+    animation-duration: 13s;
+  }
+
+  .parallax > use:nth-child(4) {
+    animation-delay: -5s;
+    animation-duration: 20s;
+  }
+
+  @keyframes move-forever {
+    0% {
+      transform: translate3d(-90px, 0, 0);
+    }
+    100% {
+      transform: translate3d(85px, 0, 0);
     }
   }
+  /*Shrinking for mobile*/
+  @media (max-width: 768px) {
+    .waves {
+      height: 40px;
+      min-height: 40px;
+    }
+
+    .content {
+      height: 30vh;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+  }
+
 `
 
 const FootMain = styled.div`
@@ -138,45 +203,32 @@ const Foot:React.FC = () => {
 
   return (
     <FootContent >
-      <FootMain >
-        <Col>
-          <ProjectIntroduce >
-            <figure>
-              <img className="logo" src={LogoIcon} />
-              <div>AI-Powered NFT SaaS For Social</div>
+      <div className="inner-header flex" />
 
-            </figure>
-            <InfoItem>
-              <div className="strong-title">Product</div>
-              {
-                DOC_LINKS.map((doc, index) => (
-                  <a key= {index} href= {doc.link} className= "doc" target="_blank" rel="noreferrer">
-                    {doc.title}
-                  </a>
-                ))
-              }
-            </InfoItem>
-
-            <InfoItem>
-              <div className="strong-title">Community</div>
-              {
-                EXTERNAL_LINKS.map((item, index) => (
-                  <Row key= {index}>
-                    <img src={item.icon} />
-                    <a  href= {item.link} className= "doc" target="_blank" rel="noreferrer">
-                      {item.title}
-                    </a>
-                  </Row>
-                ))
-              }
-            </InfoItem>
-          </ProjectIntroduce>
-          <Line />
-          <div className="copyright">2022 © All Rights Reserved.</div>
-        </Col>
+      <div>
+        <svg className="waves"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlnsXlink="http://www.w3.org/1999/xlink"
+          viewBox="0 24 150 28"
+          preserveAspectRatio="none"
+          shapeRendering="auto"
+        >
+          <defs>
+            <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+          </defs>
+          <g className="parallax">
+            <use xlinkHref="#gentle-wave" x="48" y="0" fill="rgba(49,10,109,0.7)" />
+            <use xlinkHref="#gentle-wave" x="48" y="3" fill="rgba(84,3,143,0.6)" />
+            <use xlinkHref="#gentle-wave" x="48" y="5" fill="rgba(198,83,222,0.7)" />
+            <use xlinkHref="#gentle-wave" x="48" y="7" fill="rgb(79, 0, 139)" />
+          </g>
+        </svg>
+      </div>
 
 
-      </FootMain>
+      <div className="content flex">
+        <p>2022.06.24 </p>
+      </div>
 
     </FootContent>
   )
