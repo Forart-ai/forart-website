@@ -1,8 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import LogoIcon from '../../image/top/logo.png'
-import telegram from '../../image/top/telegram.png'
-import twitter from '../../image/top/twitter.png'
+import telegram from '../../image/foot/telegram.png'
+import twitter from '../../image/foot/twitter.png'
 import DiscordIcon from '../../image/top/discord.svg'
 
 // import Email from '../../image/top/email.svg'

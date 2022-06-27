@@ -1,14 +1,15 @@
 import React from 'react'
-import styled from 'styled-components'
 import LogoIcon from '../../image/top/logo.png'
-import TwitterIcon from '../../image/foot/twitter.svg'
-import GithubIcon from '../../image/foot/github.svg'
-import DiscordIcon from '../../image/foot/discord.svg'
-import Telegram from '../../image/foot/telegram.svg'
-import Email from '../../image/foot/email.svg'
+import TwitterIcon from '../../image/foot/twitter.png'
+import GithubIcon from '../../image/foot/github.png'
+import DiscordIcon from '../../image/foot/discord.png'
+import Telegram from '../../image/foot/telegram.png'
+import Email from '../../image/foot/email.png'
+import { Box, styled } from '@mui/material'
+import telegram from '../../image/foot/telegram.png'
 
 
-const FootContent = styled.div`
+const FootContent = styled('div')`
   position: relative;
   text-align: center;
   background: linear-gradient(60deg, #F0F5FF 0%, #F0F5FF 100%);
@@ -40,6 +41,7 @@ const FootContent = styled.div`
     margin-bottom: -7px; /*Fix for safari gap*/
     min-height: 100px;
     max-height: 150px;
+    margin-top: -15vh;
   }
 
   .content {
@@ -55,22 +57,22 @@ const FootContent = styled.div`
     animation: move-forever 25s cubic-bezier(.55, .5, .45, .5) infinite;
   }
 
-  .parallax > use:nth-child(1) {
+  .parallax > use:nth-of-type(1) {
     animation-delay: -2s;
     animation-duration: 7s;
   }
 
-  .parallax > use:nth-child(2) {
+  .parallax > use:nth-of-type(2) {
     animation-delay: -3s;
     animation-duration: 10s;
   }
 
-  .parallax > use:nth-child(3) {
+  .parallax > use:nth-of-type(3) {
     animation-delay: -4s;
     animation-duration: 13s;
   }
 
-  .parallax > use:nth-child(4) {
+  .parallax > use:nth-of-type(4) {
     animation-delay: -5s;
     animation-duration: 20s;
   }
@@ -101,91 +103,86 @@ const FootContent = styled.div`
 
 `
 
-const FootMain = styled.div`
-  max-width: 1400px;
-  width: calc(100% - 40px);
+const Content = styled('div')`
+  position: relative;
+  height: 30vh;
+  max-height: 300px;
+  text-align: center;
+  background-color:rgb(79, 0, 139);
   display: flex;
   justify-content: center;
-  position: relative;
-  padding-top: 50px;
+  align-items: center;
 `
 
-const ProjectIntroduce = styled.div`
+const ContentContainer = styled('div')`
+  max-width: 1600px;
+  width: 85%;
+  height: 20vh;
   display: flex;
   justify-content: space-between;
-  width: 100%;
-  height: 250px;
+  
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    width: 95%;
+  }
+`
 
-  figure {
+const Col = styled('div')`
+  max-width: 32%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  .logo {
+    width: 120px;
+    object-fit: contain;
+  }
+`
+
+
+
+const Label = styled('div')`
+  font-size: 18px;
+  font-family: d-din;
+
+`
+
+const LabelBold = styled('div')`
+  font-size: 18px;
+  font-family: d-din-bold;
+`
+
+
+
+const Text = styled('div')`
+  font-size: 16px;
+  font-family: d-din;
+
+`
+
+const Links = styled('div')`
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  gap: 12px;
+  
+  
+  
+  a {
+    width: 12%;
+    max-width: 40px;
     display: flex;
-    flex-direction: column;
-    max-width: 368px;
-    color: #61dafb;
-    font-size: 1.2em;
-    text-align: left;
-
+    
     img {
-      width: 176px;
-      margin-bottom: 30px;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
     }
-  }
-
-  @media screen and (max-width: 1100px) {
-    flex-direction: column;
-    height: 60vh;
-  }
-
+  } 
 `
 
 
-const Col = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 100%;
-
-  .copyright {
-    text-align: left;
-    color: #42a2bd;
-    font-size: 1em;
-    margin-top: 20px;
-  }
-`
-
-const InfoItem = styled.div`
-  display: flex;
-  flex-direction: column;
-  max-width: 368px;
-  text-align: left;
-
-  .strong-title {
-    font-weight: bolder;
-    font-size: 1.6em;
-    color: #fff;
-    margin-bottom: 20px;
-  }
-
-  .doc {
-    color: #d2fffb;
-    font-size: 1.2em;
-    font-weight: normal;
-    cursor: pointer;
-    line-height: 30px;
-  }
-`
-
-const Line = styled.div`
-  border: 1px #1f3979 solid;
-
-`
-
-const Row = styled.div`
-
-  img {
-    width: 20px;
-    margin-right: 15px;
-  }
-`
 
 const Foot:React.FC = () => {
   const EXTERNAL_LINKS: Array<{ icon?: any, title: string, link: string }> = [
@@ -226,9 +223,47 @@ const Foot:React.FC = () => {
       </div>
 
 
-      <div className="content flex">
-        <p>2022.06.24 </p>
-      </div>
+      <Content>
+        <ContentContainer>
+          <Col>
+            <Box sx={{ display:'flex', flexDirection:'column' }}>
+              <img className={'logo'} src={LogoIcon} />
+              <Label>AI-powered Social NFT</Label>
+            </Box>
+            <Text>©2022 Forart.ai - All Rights Reserved</Text>
+          </Col>
+
+          <Col>
+            <LabelBold>About</LabelBold>
+            <Label>Docs</Label>
+            <Label>Medium</Label>
+            <Label>&nbsp;</Label>
+          </Col>
+
+          <Col>
+            <Box sx={{ display:'flex',
+              flexDirection:'column',
+              alignItems:'flex-start',
+              width:'100%',
+              justifyContent: 'flex-start' }}
+            >
+              <LabelBold>Community</LabelBold>
+              <Links>
+                {
+                  EXTERNAL_LINKS.map(item => (
+                    <a  key={item.title} href={item.link} target="_blank" rel="noreferrer">
+                      <img  src={item.icon} alt={item.link} />
+                    </a>
+                  ))
+                }
+              </Links>
+            </Box>
+
+
+
+          </Col>
+        </ContentContainer>
+      </Content>
 
     </FootContent>
   )
