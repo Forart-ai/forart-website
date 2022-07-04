@@ -10,6 +10,7 @@ import Roadmap from './pages/roadmap'
 import CONFT from './pages/conft'
 import './font/font.css'
 import Profit from './pages/profit'
+import JoinUs from './pages/joinUs'
 
 const App = () => {
   AOS.init({
@@ -24,7 +25,7 @@ const App = () => {
       <Chains />
       <Mint />
       <CONFT />
-
+      <JoinUs />
       {/*<Profit />*/}
       <Roadmap />
       <Foot />

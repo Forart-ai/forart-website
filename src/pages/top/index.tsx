@@ -1,7 +1,8 @@
 import React from 'react'
 import Navbar from './navbar'
 
-import TopBackground from '../../image/top/TopBackground.svg'
+import Cube from '../../image/top/cube3.png'
+
 import Underline from '../../image/top/underline.png'
 import {  styled, Typography } from '@mui/material'
 import ForartTheme from '../../contexts/config/dark'
@@ -17,7 +18,7 @@ const Wrapper = styled('div')`
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background: url(${TopBackground}) no-repeat center;
+  background: url(${Cube}) no-repeat center;
   background-size: contain;
   background-color: rgb(27,0,53);
   
@@ -173,7 +174,7 @@ const DataContainer = styled('div')`
   }
 `
 
-const CustomizeButton = styled('div')`
+export const CustomizeButton = styled('div')`
   text-align: center;
   display: inline-block;
   position: relative;

@@ -140,12 +140,9 @@ const Col = styled('div')`
   }
 `
 
-
-
 const Label = styled('div')`
   font-size: 18px;
   font-family: d-din;
-
 `
 
 const LabelBold = styled('div')`
@@ -153,12 +150,9 @@ const LabelBold = styled('div')`
   font-family: d-din-bold;
 `
 
-
-
 const Text = styled('div')`
   font-size: 16px;
   font-family: d-din;
-
 `
 
 const Links = styled('div')`
@@ -166,8 +160,6 @@ const Links = styled('div')`
   display: flex;
   justify-content: flex-start;
   gap: 12px;
-  
-  
   
   a {
     width: 12%;
