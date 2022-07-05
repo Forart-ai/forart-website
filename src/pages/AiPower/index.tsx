@@ -53,6 +53,8 @@ const Title = styled('div')`
     }
   }
 
+  
+
  
 `
 
@@ -121,6 +123,7 @@ const BlurContainer1 = styled('div')`
   height: 100%;
   position: absolute;
   z-index: -1;
+overflow: hidden;
 
   .blur-blue {
     left: 10%;

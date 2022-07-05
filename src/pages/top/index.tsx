@@ -190,6 +190,7 @@ export const CustomizeButton = styled('div')`
   font-size: 16px;
   cursor: pointer;
 
+
   &:before {
     content: "➡";
     font-size: 15px;

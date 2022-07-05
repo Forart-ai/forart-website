@@ -11,6 +11,9 @@ import CONFT from './pages/conft'
 import './font/font.css'
 import Profit from './pages/profit'
 import JoinUs from './pages/joinUs'
+import PartnershipPage from './pages/partnership'
+import Artist from './pages/artist'
+import NewsPage from './pages/news'
 
 const App = () => {
   AOS.init({
@@ -25,7 +28,10 @@ const App = () => {
       <Chains />
       <Mint />
       <CONFT />
+      <Artist />
       <JoinUs />
+      <PartnershipPage />
+      <NewsPage />
       {/*<Profit />*/}
       <Roadmap />
       <Foot />

@@ -1,10 +1,7 @@
 import React from 'react'
-
-import JoinUsBackground from '../../image/joinUs/joinUs-background.png'
 import JoinUsCube from '../../image/joinUs/joinUs-cube.png'
-
 import { Box, styled } from '@mui/material'
-import { Boxes, BoxesContainer, HalfBoxes } from '../chains/index.style'
+import { Boxes, HalfBoxes } from '../chains/index.style'
 import { CustomizeButton } from '../top'
 
 const Wrapper = styled('div')`
@@ -12,7 +9,7 @@ const Wrapper = styled('div')`
   background: #F0F5FF;
   position: relative;
   box-sizing: border-box;
-
+  padding-bottom: 120px;
 `
 
 const Background = styled('div')`

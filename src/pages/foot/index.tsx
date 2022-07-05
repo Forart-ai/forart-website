@@ -143,6 +143,9 @@ const Col = styled('div')`
 const Label = styled('div')`
   font-size: 18px;
   font-family: d-din;
+  a{
+    color: white;
+  }
 `
 
 const LabelBold = styled('div')`
@@ -227,8 +230,8 @@ const Foot:React.FC = () => {
 
           <Col>
             <LabelBold>About</LabelBold>
-            <Label>Docs</Label>
-            <Label>Medium</Label>
+            <Label><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">Docs</a></Label>
+            <Label><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></Label>
             <Label>&nbsp;</Label>
           </Col>
 

@@ -1,6 +1,9 @@
 import React from 'react'
-import { styled } from '@mui/material'
-import Conft from '../../image/conft/cuttedpng.png'
+import { Box, styled } from '@mui/material'
+import Conft from '../../image/conft/co-nft.png'
+import SocialNFT from '../../image/conft/social-nft.png'
+import Whale from '../../image/conft/whale.png'
+import { Boxes } from '../chains/index.style'
 
 
 
@@ -23,7 +26,8 @@ const Container = styled('div')`
   margin: 0 auto;
 
   img {
-    width: 70%;
+    width: 60%;
+    max-width: 700px;
   }
 `
 
@@ -31,8 +35,8 @@ const Title = styled('div')`
   width: 100%;
   white-space: nowrap;
   margin-bottom: 20px;
-  
- 
+
+
 
 
   .title {
@@ -58,45 +62,13 @@ const Title = styled('div')`
   
 `
 
-
-
-
-const ItemBorder = styled('div')`
+const Item = styled('div')`
+  margin-bottom: 60px;
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 100%;
   flex-direction: column;
-  padding: 0 60px;
-
-  //background-size: contain;
-
-
-
-`
-
-const ItemContent = styled('div')`
-  width: 350px;
-  display: flex;
+  gap: 20px;
+  align-items: center;
   justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 50px 50px 50px;
-  
-  img {
-    width: 200px;
-    max-width: 230px;
-    object-fit: contain;
-  }
-  
-  .detail{
-    font-family: GothamRndMedium;
-    font-size: 1.4em;
-    color: white;
-    opacity: .7;
-    margin-top: 18px;
-  }
-  
-  
 `
 
 
@@ -106,24 +78,31 @@ const CONFT: React.FC = () => {
 
   return (
     <Wrapper>
+
       <Container>
-        <Title>
-          <div className="title">CO-NFT</div>
-          <div className="sub-title">Create NFTs together with artists and ‘Create to earn’</div>
-        </Title>
-        <img src={Conft} />
+        <Item>
+          <Title>
+            <div className="title">CO-NFT</div>
+            <div className="sub-title">Create NFTs together with artists and ‘Create to earn’</div>
+          </Title>
+          <img src={Conft} />
+        </Item>
 
-        <Title>
-          <div className="title">Social NFT</div>
-          <div className="sub-title">NFT co-creation social platform</div>
-        </Title>
-        <img src={Conft} />
+        <Item>
+          <Title>
+            <div className="title">Social NFT</div>
+            <div className="sub-title">NFT co-creation social platform</div>
+          </Title>
+          <img src={SocialNFT} />
+        </Item>
 
-        <Title>
-          <div className="title">Talking Whale</div>
-          <div className="sub-title">Create NFTs together with artists and ‘Create to earn’</div>
-        </Title>
-        <img src={Conft} />
+        <Item>
+          <Title>
+            <div className="title">Talking Whale</div>
+            <div className="sub-title">Create NFTs together with artists and ‘Create to earn’</div>
+          </Title>
+          <img src={Whale} />
+        </Item>
 
       </Container>
     </Wrapper>
