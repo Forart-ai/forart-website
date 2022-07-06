@@ -27,9 +27,9 @@ export const Boxes = styled('div')<{color?: string}>`
 `
 
 export const HalfBoxes = styled('div')<{color?: string}>`
-  max-width: 65px;
+  max-width: calc(130px / 2);
   max-height: 130px;
-  width: 5vw;
+  width: calc(10vw / 2);
   height: 10vw;
   background-color: ${({ color }) => color};
 `

@@ -32,7 +32,6 @@ const App = () => {
       <JoinUs />
       <PartnershipPage />
       <NewsPage />
-      {/*<Profit />*/}
       <Roadmap />
       <Foot />
     </div>

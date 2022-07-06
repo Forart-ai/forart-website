@@ -6,7 +6,6 @@ import DiscordIcon from '../../image/foot/discord.png'
 import Telegram from '../../image/foot/telegram.png'
 import Email from '../../image/foot/email.png'
 import { Box, styled } from '@mui/material'
-import telegram from '../../image/foot/telegram.png'
 
 
 const FootContent = styled('div')`

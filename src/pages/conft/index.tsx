@@ -4,7 +4,11 @@ import Conft from '../../image/conft/co-nft.png'
 import SocialNFT from '../../image/conft/social-nft.png'
 import Whale from '../../image/conft/whale.png'
 import { Boxes } from '../chains/index.style'
+import Blur4 from '../../image/blur/blur4.png'
+import Blur5 from '../../image/blur/blur5.png'
+import Blur6 from '../../image/blur/blur6.png'
 
+import { Simulate } from 'react-dom/test-utils'
 
 
 
@@ -62,25 +66,23 @@ const Title = styled('div')`
   
 `
 
-const Item = styled('div')`
+const Item = styled('div')<{blur?: any}>`
   margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
   justify-content: center;
+  background: url(${({ blur }) => blur}) no-repeat top;
+  background-size: 50%;
 `
 
 
-
-
 const CONFT: React.FC = () => {
-
   return (
     <Wrapper>
-
       <Container>
-        <Item>
+        <Item blur={Blur6}>
           <Title>
             <div className="title">CO-NFT</div>
             <div className="sub-title">Create NFTs together with artists and ‘Create to earn’</div>
@@ -88,7 +90,7 @@ const CONFT: React.FC = () => {
           <img src={Conft} />
         </Item>
 
-        <Item>
+        <Item blur={Blur4}>
           <Title>
             <div className="title">Social NFT</div>
             <div className="sub-title">NFT co-creation social platform</div>
@@ -96,7 +98,7 @@ const CONFT: React.FC = () => {
           <img src={SocialNFT} />
         </Item>
 
-        <Item>
+        <Item blur={Blur5}>
           <Title>
             <div className="title">Talking Whale</div>
             <div className="sub-title">Create NFTs together with artists and ‘Create to earn’</div>

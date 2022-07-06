@@ -5,16 +5,20 @@ import RoadmapImg from '../../image/roadmap/roadmap.png'
 
 const Wrapper = styled('div')`
   width: 100%;
+  height: fit-content;
   display: flex;
   flex-direction: column;
-  background: url(${Wave}) no-repeat center #F0F5FF;
-  background-size: cover;
+  justify-content: center;
+  align-items: center;
+  background: url(${Wave}) no-repeat center #F0F5FF ;
+  background-size: 100% 100%;
+  padding:  0 0 140px 0;
+  
+  
 `
 
 const RoadmapContainer = styled('div')`
-  width: 85%;
-  max-width: 1400px; 
-  margin: 70px auto 180px auto;
+  width: 100%;
   user-select: none;
   
   img {
@@ -23,11 +27,11 @@ const RoadmapContainer = styled('div')`
   }
 `
 
-
 const Title = styled('div')`
   width: 100%;
   text-align: center;
   white-space: nowrap;
+  margin-bottom: 60px;
 
 
   .title {
@@ -59,6 +63,7 @@ const Roadmap: React.FC = () => {
 
   return (
     <Wrapper>
+
       <Title>
         <div className="title">Roadmap</div>
       </Title>

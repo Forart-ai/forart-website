@@ -1,5 +1,5 @@
 import React from 'react'
-import JoinUsCube from '../../image/joinUs/joinUs-cube.png'
+import JoinUsCube from '../../image/joinUs/cubeWithiLight.png'
 import { Box, styled } from '@mui/material'
 import { Boxes, HalfBoxes } from '../chains/index.style'
 import { CustomizeButton } from '../top'
@@ -10,6 +10,8 @@ const Wrapper = styled('div')`
   position: relative;
   box-sizing: border-box;
   padding-bottom: 120px;
+  display: flex;
+  flex-direction: column;
 `
 
 const Background = styled('div')`
@@ -32,8 +34,8 @@ const Background = styled('div')`
   }
 
   img {
-    max-width: 500px;
-    right: 10px;
+    max-width: 800px;
+    right: 8%;
     top: -150px;
     position: absolute;
   }
@@ -41,24 +43,22 @@ const Background = styled('div')`
 `
 
 const TextContainer = styled('div')`
-    position: relative;
+  position: relative;
   font-family: Righteous-Regular;
   color: white;
- display: flex;
-  justify-content: center;
-  flex-direction: column;
-  align-items: center;
- 
+  display: flex;
+  width: 100%;
   
 `
 const Text = styled('div')`
-  max-width: 1800px;
-  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
   font-size: 46px;
+  position: relative;
+  width: fit-content;
+
 
   ${({ theme }) => theme.breakpoints.up('xl')} {
     font-size: 60px;
@@ -73,21 +73,25 @@ const JoinUs: React.FC = () => {
   return (
 
     <Wrapper>
-      <Box sx={{ position:'relative', overflow:'hidden', display:'flex', justifyContent:'flex-start', }}>
+      <Box sx={{ display:'flex', justifyContent:'flex-start', }}>
         <HalfBoxes />
-        <HalfBoxes />
-        <HalfBoxes />
+        <Boxes color={''} />
         <Boxes color={'#7864E6'} />
       </Box>
-      <Background >
 
+      <Background >
         <div className={'background'} >
-          <Box sx={{ display:'flex', justifyContent:'flex-start', left:'5vw', top:'0' }}>
-            <HalfBoxes />
+          <Box sx={{ display:'flex', justifyContent:'flex-start' }}>
+            <HalfBoxes color={''} />
             <Boxes color={'#D25AE6'} />
+            <Boxes color={''} />
+
           </Box>
 
           <TextContainer>
+            <HalfBoxes />
+            <Boxes color={''} />
+            <Boxes color={''} />
             <Text>
               Partner with Forart.ai
               <CustomizeButton>Launch dapp</CustomizeButton>

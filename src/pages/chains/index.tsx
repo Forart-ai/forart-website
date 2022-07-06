@@ -24,7 +24,6 @@ const Chains: React.FC = () => {
       <Container >
         <ChainBox>
           <img src={Solana} />
-          <img src={Biance} />
           <img src={Avax} />
           <img src={Celo} />
 

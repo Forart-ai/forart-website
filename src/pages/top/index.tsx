@@ -216,6 +216,47 @@ export const CustomizeButton = styled('div')`
   }
 `
 
+const ButtonWithCorner = styled('div')`
+  padding: 14px 0px;
+  width: 150px;
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.2s linear 0s;
+  background-image: linear-gradient(90deg, #00A1FF 0%, #00FF8F 100%);
+  color: black;
+  text-align: center;
+  text-decoration: none;
+    position: relative;
+  cursor: pointer;
+  
+  ::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 5px solid rgba(27,0,53,1);
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+ ::after{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 5px solid  rgba(27,0,53,1);
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
+
+ 
+
+`
+
 
 const Top: React.FC = () => {
 
@@ -234,7 +275,11 @@ const Top: React.FC = () => {
             <Highlight  >AI-Powered</Highlight>
             <Slogan >Social <span>NFT</span></Slogan>
 
-            <CustomizeButton className={'cover'}>Launch Dapp</CustomizeButton>
+            {/*<CustomizeButton className={'cover'}>Launch Dapp</CustomizeButton>*/}
+
+            <ButtonWithCorner className={'cover'}>
+              Launch Dapp
+            </ButtonWithCorner>
           </Title>
 
 
@@ -253,9 +298,6 @@ const Top: React.FC = () => {
               <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>1080</DataValue>
               <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>Artist</DataLabel>
             </div>
-
-
-
           </DataContainer>
 
         </Info>
