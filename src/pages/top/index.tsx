@@ -216,8 +216,8 @@ export const CustomizeButton = styled('div')`
   }
 `
 
-const ButtonWithCorner = styled('div')`
-  padding: 14px 0px;
+export const ButtonWithCorner = styled('div')`
+  padding: 12px 0px;
   width: 150px;
   font-size: 16px;
   text-decoration: none;
@@ -226,7 +226,6 @@ const ButtonWithCorner = styled('div')`
   background-image: linear-gradient(90deg, #00A1FF 0%, #00FF8F 100%);
   color: black;
   text-align: center;
-  text-decoration: none;
     position: relative;
   cursor: pointer;
   
@@ -237,7 +236,7 @@ const ButtonWithCorner = styled('div')`
     position: absolute;
     right: 0;
     bottom: 0;
-    border: 5px solid rgba(27,0,53,1);
+    border: 8px solid rgba(27,0,53,1);
     border-top-color: transparent;
     border-left-color: transparent;
   }
@@ -248,14 +247,32 @@ const ButtonWithCorner = styled('div')`
     position: absolute;
     left: 0;
     top: 0;
-    border: 5px solid  rgba(27,0,53,1);
+    border: 8px solid  rgba(27,0,53,1);
     border-bottom-color: transparent;
     border-right-color: transparent;
   }
-
- 
-
+  
 `
+
+const BlurContainer = styled('div')`
+    width: 20%;
+  height: 20%;
+  max-width: 350px;
+  max-height: 350px;
+  position: absolute;
+  z-index: 3;
+overflow: hidden;
+  left: -190px;
+  top: 1.4%;
+
+  .blur-purple {
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(closest-side circle, rgba(123,12,140, 1),  rgba(123,12,140, .6),  rgba(123,12,140, .4), transparent);
+  }
+  
+`
+
 
 
 const Top: React.FC = () => {
@@ -265,7 +282,9 @@ const Top: React.FC = () => {
       <div className="filter">
         <Navbar />
       </div>
-
+      <BlurContainer >
+        <div className={'blur-purple'} />
+      </BlurContainer>
       <Container>
 
         <Info>

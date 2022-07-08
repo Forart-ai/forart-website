@@ -2,7 +2,7 @@ import React from 'react'
 import SoulCard from '../../image/aiPower/soul-card.png'
 import MagicWand from '../../image/aiPower/magic-wand.png'
 
-import { Boxes, BoxesContainer, HalfBoxes } from '../chains/index.style'
+import {  HalfBoxes } from '../chains/index.style'
 import { Box, styled } from '@mui/material'
 
 
@@ -15,6 +15,7 @@ const Wrapper = styled('div')`
   background-color: #F0F5FF;
   position: relative;
   padding-bottom: 120px;
+  height: 1500px;
 
   
 `
@@ -195,11 +196,11 @@ const AiPower: React.FC = () => {
         </Title>
 
         <ItemBorder>
-          <ItemMessage>
+          <ItemMessage  data-aos={'fade-right'}>
             <div className="title">Art soul card</div>
             <div className="text">Using Neural Style Transferring Tech for combining different NFTs to afully new one.</div>
           </ItemMessage>
-          <ItemImage>
+          <ItemImage  data-aos={'fade-left'}>
             <Box sx={{ display:'flex', justifyContent: 'flex-end' }}>
               <BlurContainer1>
                 <div className={'blur-blue'} />
@@ -215,7 +216,7 @@ const AiPower: React.FC = () => {
 
         <ItemBorder>
 
-          <ItemImage>
+          <ItemImage data-aos={'fade-right'}>
 
             <Box sx={{ display:'flex', justifyContent: 'flex-start' }}>
               <BlurContainer2>
@@ -226,7 +227,7 @@ const AiPower: React.FC = () => {
             </Box>
           </ItemImage>
 
-          <ItemMessage>
+          <ItemMessage data-aos={'fade-left'}>
             <div className="title">Magic wand</div>
             <div className="text">Using Neural Style Transferring Tech for combining different NFTs to afully new one.</div>
           </ItemMessage>

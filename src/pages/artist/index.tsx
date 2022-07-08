@@ -1,7 +1,6 @@
 import React from 'react'
 import { Box, styled } from '@mui/material'
 import ArtistBanner from '../../image/artist/artist-banner.png'
-import { CustomizeButton } from '../top'
 import { Boxes } from '../chains/index.style'
 
 const Wrapper = styled('div')`
@@ -62,9 +61,46 @@ const Title = styled('div')`
       font-size: 16px;
     }
   }
+`
+
+export const ButtonWithCorner = styled('div')`
+  padding: 12px 0px;
+  width: 150px;
+  font-size: 16px;
+  text-decoration: none;
+  overflow: hidden;
+  transition: all 0.2s linear 0s;
+  background-image: linear-gradient(90deg, #00A1FF 0%, #00FF8F 100%);
+  color: black;
+  text-align: center;
+    position: relative;
+  cursor: pointer;
   
+  ::before {
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border: 8px solid #F0F5FF;
+    border-top-color: transparent;
+    border-left-color: transparent;
+  }
+ ::after{
+    content: '';
+    width: 0;
+    height: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border: 8px solid #F0F5FF;
+    border-bottom-color: transparent;
+    border-right-color: transparent;
+  }
   
 `
+
 
 
 const Artist:React.FC = () => {
@@ -82,7 +118,9 @@ const Artist:React.FC = () => {
         <Title>
           <div className={'title'}>Become an artiston Forart</div>
           <div className={'sub-title'} >Join us to showcase your creations and engage more fans Co-creation and exchange of NFTs.</div>
-          <CustomizeButton className={'cover'}>Launch Dapp</CustomizeButton>
+          <ButtonWithCorner className={'cover'}>
+            Launch Dapp
+          </ButtonWithCorner>
         </Title>
       </Container>
     </Wrapper>

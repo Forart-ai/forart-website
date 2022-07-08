@@ -1965,8 +1965,8 @@
 
 "@types/aos@^3.0.4":
   version "3.0.4"
-  resolved "https://registry.nlark.com/@types/aos/download/@types/aos-3.0.4.tgz"
-  integrity sha1-/Q3OQw8Y0RgIGqztLHnDBhexWBg=
+  resolved "https://registry.yarnpkg.com/@types/aos/-/aos-3.0.4.tgz#fd0dce430f18d118081aaced2c79c30617b15818"
+  integrity sha512-mna6Jd6bdK1NpwarLopGvXOgUoCfj0470IwLxuVOFDElTGI0JTd7xSGQ0AjbAEnHErC/b3fA9t2uB3IXVKmckA==
 
 "@types/aria-query@^4.2.0":
   version "4.2.2"

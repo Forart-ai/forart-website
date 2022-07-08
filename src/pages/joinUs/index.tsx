@@ -2,7 +2,7 @@ import React from 'react'
 import JoinUsCube from '../../image/joinUs/cubeWithiLight.png'
 import { Box, styled } from '@mui/material'
 import { Boxes, HalfBoxes } from '../chains/index.style'
-import { CustomizeButton } from '../top'
+import { ButtonWithCorner, CustomizeButton } from '../top'
 
 const Wrapper = styled('div')`
   width: 100%;
@@ -92,9 +92,11 @@ const JoinUs: React.FC = () => {
             <HalfBoxes />
             <Boxes color={''} />
             <Boxes color={''} />
-            <Text>
+            <Text >
               Partner with Forart.ai
-              <CustomizeButton>Launch dapp</CustomizeButton>
+              <ButtonWithCorner className={'cover'}>
+                Launch Dapp
+              </ButtonWithCorner>
             </Text>
 
           </TextContainer>

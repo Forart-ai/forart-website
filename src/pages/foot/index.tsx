@@ -187,10 +187,7 @@ const Foot:React.FC = () => {
     { icon: DiscordIcon,  title: 'Discord', link: 'https://discord.gg/RDaUkaW39S' }
   ]
 
-  const DOC_LINKS: Array<{title: string, link: string}> = [
-    { title:'Docs', link:'https://simons-mcc.gitbook.io/forart/'  },
-    { title:'Medium', link: 'https://medium.com/@Forart.ai'  }
-  ]
+
 
   return (
     <FootContent >

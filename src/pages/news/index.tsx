@@ -23,7 +23,7 @@ const Container = styled('div')`
   margin: 0 auto;
 
   img {
-    width: 60%;
+    width: 70%;
     max-width: 500px;
   }
 `
