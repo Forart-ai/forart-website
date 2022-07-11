@@ -20,14 +20,14 @@ import DiscordIcon from '../../image/top/discord.svg'
 
 const NavbarContainer = styled.div`
   display: flex;
+  align-items: center;
   max-width: 1600px;
-  width: 85%;
+  width: 90%;
   justify-content: space-between;
   height: 70px;
   //position: fixed;
   //background-color: black;
   z-index: 999;
-  
   
   
 `
@@ -42,11 +42,7 @@ const Logo = styled.div`
     width: 100%;
   }
   
-  @media screen and (max-width: 1100px) {
-    img {
-      width: 80%;
-    }
-  }
+
 `
 
 const NavLinksContainer = styled.div`
@@ -66,14 +62,10 @@ const NavLinksContainer = styled.div`
       color: white;
     }
     
-    img {
-      width: 30px;
-    }
+  
   }
 
-  @media screen and (max-width: 1100px) {
-    display: none;
-  }
+  
 `
 
 const Navbar: React.FC = () => {

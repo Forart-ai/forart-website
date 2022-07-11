@@ -14,6 +14,7 @@ import ForartTheme from '../../contexts/config/dark'
 const Wrapper = styled('div')`
   width: 100%;
   min-height: 100vh;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,14 +32,29 @@ const Wrapper = styled('div')`
     //backdrop-filter: blur(4px);
   }
   
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    background: url(${Cube}) no-repeat bottom;
+    background-size: 150%;
+    background-color: rgb(27,0,53);
+  }
+  
    
 `
 
 const Container = styled('div')`
   max-width: 1800px;
   width: 85%;
-  height: auto;
+  height: 100%;
   margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
 `
 
 
@@ -47,10 +63,12 @@ const Info = styled('div')`
   width: 100%;
   display: flex;
   justify-content: space-between;
-  
+
+
   ${({ theme }) => theme.breakpoints.down('md')} {
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
+    margin-top: 50px;
   }
   
   
@@ -168,9 +186,14 @@ const DataContainer = styled('div')`
   flex-direction: column;
   justify-content: center;
   gap: 50px;
+  margin-top: 40px;
 
   ${({ theme }) => theme.breakpoints.down('md')} {
     flex-direction: row;
+    gap: unset;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
   }
 `
 
@@ -236,7 +259,7 @@ export const ButtonWithCorner = styled('div')`
     position: absolute;
     right: 0;
     bottom: 0;
-    border: 8px solid rgba(27,0,53,1);
+    border: 8px solid rgba(27,0,53);
     border-top-color: transparent;
     border-left-color: transparent;
   }
@@ -247,7 +270,7 @@ export const ButtonWithCorner = styled('div')`
     position: absolute;
     left: 0;
     top: 0;
-    border: 8px solid  rgba(27,0,53,1);
+    border: 8px solid  rgba(27,0,53,1 );
     border-bottom-color: transparent;
     border-right-color: transparent;
   }

@@ -14,9 +14,9 @@ const Wrapper = styled('div')`
   flex-direction: column;
   background-color: #F0F5FF;
   position: relative;
-  padding-bottom: 120px;
-  height: 1500px;
-
+  padding-bottom: 90px;
+  max-height: 1500px;
+height: fit-content;
   
 `
 

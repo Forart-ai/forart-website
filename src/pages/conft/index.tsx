@@ -18,17 +18,14 @@ import Card3 from '../../image/conft/social/card3.png'
 import Mobile from '../../image/conft/social/card4.png'
 
 
-
-
-
-
 const Wrapper = styled('div')`
   width: 100%;
   display: flex;
   flex-direction: column;
   background-color: #F0F5FF;
   position: relative;
-  height: 2000px;
+  max-height: 2000px;
+  height: fit-content;
 
 
 `
@@ -39,8 +36,12 @@ const Container = styled('div')`
   margin: 0 auto;
 
   img {
-    width: 80%;
-    max-width: 700px;
+    max-width: 90%;
+  }
+  
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    width: 95%;
+    border: 1px red solid;
   }
 `
 
@@ -76,7 +77,6 @@ const Title = styled('div')`
 `
 
 const Item = styled('div')<{blur?: any}>`
-  margin-bottom: 60px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -84,38 +84,47 @@ const Item = styled('div')<{blur?: any}>`
   justify-content: center;
   background: url(${({ blur }) => blur}) no-repeat center;
   background-size: 50%;
+  margin-bottom: 80px;
 `
 
 const CoNftImage = styled('div')`
   width: 100%;
-  height: 400px;
+  max-height: 550px;
+  height: auto;
   display: flex;
   justify-content: center;
+  align-items: flex-start;
   position: relative;
-  
+
+
   img {
     max-width: 320px;
-    width: 40%;
+    width: 50%;
     object-fit: contain;
+
+  }
+
+  .stairs {
+    position: absolute;
+    width: 40%;
+    max-width: 320px;
   }
   
   .stairs1 {
-    position: relative;
-    left: 4%;
-    bottom: 15%;
+   left: 25%;
+  }
+
+  .stairs3{
+    right: 20%;
+    
   }
   
   .stairs2 {
     position: relative;
-    top: 3%;
-    right: 5%;
+    top: 80px;
   }
 
-  .stairs3{
-    position: relative;
-    right: 8%;
-    bottom: 16%;
-  }
+  
 `
 
 const SocialImages = styled('div')`
@@ -129,13 +138,13 @@ const SocialImages = styled('div')`
   
   img {
     max-width: 400px;
-    width: 50%;
+    width: 60%;
     object-fit: contain;
   }
   
   .card {
     position: absolute;
-    width: 23%;
+    width: 40%;
     max-width: 320px;
   }
   
@@ -156,6 +165,23 @@ const SocialImages = styled('div')`
     bottom: 3%;
     right: 17%;
   }
+
+
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    .card1 {
+      left: 0;
+      top: 10%;
+    }
+
+    .card2 {
+      right: 0;
+    }
+
+    .card3 {
+      bottom: 3%;
+      right: 0;
+    }
+  }
 `
 
 const WhaleImage = styled('div')`
@@ -173,17 +199,17 @@ const CONFT: React.FC = () => {
             <div className="sub-title">Create NFTs together with artists and &apos;Create to earn&apos;</div>
           </Title>
           <CoNftImage>
-            <img className={'stairs1'}
+            <img className={'stairs stairs1'}
               src={Conft1}
               data-aos="fade-down"
               data-aos-delay="500"
             />
-            <img className={'stairs2'}
+            <img className={'stairs stairs2'}
               src={Conft2}
               data-aos="fade-down"
               data-aos-delay="1000"
             />
-            <img className={'stairs3'}
+            <img className={'stairs stairs3'}
               src={Conft3}
               data-aos="fade-down"
               data-aos-delay="1500"

@@ -121,7 +121,10 @@ const ContentContainer = styled('div')`
   justify-content: space-between;
   
   ${({ theme }) => theme.breakpoints.down('md')} {
+    flex-direction: column;
     width: 95%;
+    justify-content: center;
+    align-items: center;
   }
 `
 
@@ -136,6 +139,11 @@ const Col = styled('div')`
   .logo {
     width: 120px;
     object-fit: contain;
+  }
+
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    max-width: 100%;
+    justify-content: center;
   }
 `
 
@@ -249,9 +257,6 @@ const Foot:React.FC = () => {
                 }
               </Links>
             </Box>
-
-
-
           </Col>
         </ContentContainer>
       </Content>

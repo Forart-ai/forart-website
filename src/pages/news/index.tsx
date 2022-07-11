@@ -13,7 +13,7 @@ const Wrapper = styled('div')`
   background-color: #F0F5FF;
   position: relative;
   padding: 0 0 100px 0;
-
+height: fit-content;
 
 `
 
@@ -152,7 +152,7 @@ const NewsPage:React.FC = () => {
         <NewsContainer>
           {
             newsList.map(item => (
-              <Box key={item.link} sx={{ display: 'flex', flexDirection:'column', maxWidth:'440px' }}>
+              <Box  data-aos="fade-down" key={item.link} sx={{ display: 'flex', flexDirection:'column', maxWidth:'440px' }}>
                 <a href={item.link} target="_blank" rel="noreferrer">
                   <Item>
                     <Border >
