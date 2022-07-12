@@ -33,8 +33,9 @@ const Wrapper = styled('div')`
   }
   
   ${({ theme }) => theme.breakpoints.down('md')} {
-    background: url(${Cube}) no-repeat bottom;
-    background-size: 150%;
+    background: url(${Cube}) no-repeat ;
+    background-size: 210%;
+    background-position: bottom right 28%;
     background-color: rgb(27,0,53);
   }
   

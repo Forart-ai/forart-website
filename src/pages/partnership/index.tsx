@@ -1,7 +1,7 @@
 import React from 'react'
 import { styled } from '@mui/material'
 import BigBrain from '../../image/partnership/big-brain.png'
-import Star from '../../image/partnership/star.png'
+import Star from '../../image/partnership/celo.png'
 import ChainLink from '../../image/partnership/chainlink.png'
 import Slop from '../../image/partnership/slop.png'
 
@@ -9,10 +9,14 @@ const Wrapper = styled('div')`
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #F0F5FF;
   position: relative;
   box-sizing: border-box;
-  padding: 0 0 100px 0;
+  min-height: 500px;
+  max-height: fit-content;
+  overflow: hidden;
 `
 
 const Container = styled('div')`
@@ -32,7 +36,7 @@ const Title = styled('div')`
     font-size: 60px;
 
     ${({ theme }) => theme.breakpoints.down('md')} {
-      font-size: 40px;
+      font-size: 34px;
     }
   }
 
@@ -57,21 +61,31 @@ const Title = styled('div')`
 `
 
 const Row = styled('div')`
-    display: flex;
+  display: flex;
   justify-content: center;
   align-items: center;
-  gap: 5vw;
   padding: 40px 0;
+  gap: 50px;  
   
   img {
-    width: 15vw;
-    max-width: 250px;
+    width: 280px;
+    height: 90px;
+    border: 2px rgba(120,100,230, .5) solid;
+    border-radius: .6rem;
+    box-sizing: border-box;
+    object-fit: contain;
+    padding: 10px;
   }
   
-  .star {
-    max-width: 130px;
-    width: 10vw;
 
+  ${({ theme }) => theme.breakpoints.down('lg')} {
+    flex-wrap: wrap;
+    gap: 10px;
+    img {
+      width: 45%;
+    }
+
+   
   }
 `
 
@@ -82,7 +96,7 @@ const PartnershipPage:React.FC = () => {
         <Title>
           <div className={'title'}>Inventors & Partnership</div>
         </Title>
-        <Row>
+        <Row data-aos={'fade-down'} >
           <img src={BigBrain} alt={'big-brain'} />
           <img className={'star'} src={Star} alt={''} />
           <img src={ChainLink} alt={'chain-link'} />

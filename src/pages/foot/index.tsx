@@ -128,8 +128,17 @@ const ContentContainer = styled('div')`
   }
 `
 
+const Row = styled('div')`
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  align-items: flex-start;
+  gap: 150px;
+  margin-top: 40px;
+`
+
 const Col = styled('div')`
-  max-width: 32%;
+  max-width: 35%;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -143,7 +152,7 @@ const Col = styled('div')`
 
   ${({ theme }) => theme.breakpoints.down('md')} {
     max-width: 100%;
-    justify-content: center;
+    justify-content: flex-start;
   }
 `
 
@@ -163,6 +172,7 @@ const LabelBold = styled('div')`
 const Text = styled('div')`
   font-size: 16px;
   font-family: d-din;
+  text-align: left;
 `
 
 const Links = styled('div')`
@@ -232,32 +242,34 @@ const Foot:React.FC = () => {
             <Text>©2022 Forart.ai - All Rights Reserved</Text>
           </Col>
 
-          <Col>
-            <LabelBold>About</LabelBold>
-            <Label><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">Docs</a></Label>
-            <Label><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></Label>
-            <Label>&nbsp;</Label>
-          </Col>
+          <Row>
+            <Col>
+              <LabelBold>About</LabelBold>
+              <Label><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">Docs</a></Label>
+              <Label><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></Label>
+              <Label>&nbsp;</Label>
+            </Col>
 
-          <Col>
-            <Box sx={{ display:'flex',
-              flexDirection:'column',
-              alignItems:'flex-start',
-              width:'100%',
-              justifyContent: 'flex-start' }}
-            >
-              <LabelBold>Community</LabelBold>
-              <Links>
-                {
-                  EXTERNAL_LINKS.map(item => (
-                    <a  key={item.title} href={item.link} target="_blank" rel="noreferrer">
-                      <img  src={item.icon} alt={item.link} />
-                    </a>
-                  ))
-                }
-              </Links>
-            </Box>
-          </Col>
+            <Col>
+              <Box sx={{ display:'flex',
+                flexDirection:'column',
+                alignItems:'flex-start',
+                width:'100%',
+                justifyContent: 'flex-start' }}
+              >
+                <LabelBold>Community</LabelBold>
+                <Links>
+                  {
+                    EXTERNAL_LINKS.map(item => (
+                      <a  key={item.title} href={item.link} target="_blank" rel="noreferrer">
+                        <img  src={item.icon} alt={item.link} />
+                      </a>
+                    ))
+                  }
+                </Links>
+              </Box>
+            </Col>
+          </Row>
         </ContentContainer>
       </Content>
 

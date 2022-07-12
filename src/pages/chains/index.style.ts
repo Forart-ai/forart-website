@@ -8,7 +8,6 @@ export const Wrapper = styled('div')`
   background-color: #F0F5FF;
   position: relative;
   overflow: hidden;
-
 `
 
 export const BoxesContainer = styled('div')`
@@ -16,6 +15,7 @@ export const BoxesContainer = styled('div')`
   flex-direction: column;
   width: 100%;
   position: relative;
+  height: 100%;
 `
 
 export const Boxes = styled('div')<{color?: string}>`
@@ -53,9 +53,16 @@ export const ChainBox = styled('div')`
   box-shadow: 2px 3px 7px  rgb(0, 0, 0, 0.51);
   padding: 20px 16px;
   border-radius: 10px;
+  gap: 20px;
   
-  ${({ theme }) => theme.breakpoints.down('lg')} {
+  img {
+    object-fit: contain;
+  }
+  
+  ${({ theme }) => theme.breakpoints.down('md')} {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
 `
 

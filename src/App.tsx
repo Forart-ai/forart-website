@@ -26,6 +26,7 @@ const App = () => {
       <Top />
       <Chains />
       <Mint />
+
       <CONFT />
       <Artist />
       <JoinUs />

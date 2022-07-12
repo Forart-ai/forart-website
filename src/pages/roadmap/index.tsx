@@ -1,7 +1,9 @@
 import React from 'react'
 import Wave from '../../image/roadmap/wave.png'
-import { styled } from '@mui/material'
+import { styled, useMediaQuery, useTheme } from '@mui/material'
 import RoadmapImg from '../../image/roadmap/roadmap.png'
+import RoadmapMobileImg from '../../image/roadmap/roadmap-mobile.png'
+
 
 const Wrapper = styled('div')`
   width: 100%;
@@ -10,11 +12,14 @@ const Wrapper = styled('div')`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: url(${Wave}) no-repeat center #F0F5FF ;
-  background-size: 100% 100%;
+  background: url(${Wave}) no-repeat bottom #F0F5FF  ;
+  background-size: 100% 100% ;
   padding:  0 0 140px 0;
-  
-  
+  overflow: hidden;
+
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    background-size: 200% 40%;
+  }
 `
 
 const RoadmapContainer = styled('div')`
@@ -60,6 +65,8 @@ const Title = styled('div')`
 
 const Roadmap: React.FC = () => {
 
+  const theme = useTheme()
+  const mobile = useMediaQuery(theme.breakpoints.down('md'))
 
   return (
     <Wrapper>
@@ -69,7 +76,8 @@ const Roadmap: React.FC = () => {
       </Title>
 
       <RoadmapContainer>
-        <img src={RoadmapImg} />
+        { !mobile && <img src={RoadmapImg} />}
+        { mobile &&  <img src={RoadmapMobileImg} />}
       </RoadmapContainer>
     </Wrapper>
   )

@@ -45,12 +45,11 @@ const Chains: React.FC = () => {
           <img src={Solana} />
           <img src={Avax} />
           <img src={Celo} />
-
         </ChainBox>
       </Container>
 
       <BoxesContainer>
-        <Box sx={{ display:'flex', justifyContent:'flex-end' }}>
+        <Box sx={{ position:'relative', display:'flex', justifyContent:'flex-end', alignItems:'flex-end', bottom:'0' }}>
           <Boxes color={'#00A1FF'} />
           <HalfBoxes color={'transpent'} />
         </Box>

@@ -5,12 +5,14 @@ import { Boxes } from '../chains/index.style'
 
 const Wrapper = styled('div')`
   width: 100%;
+  height: 700px;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #F0F5FF;
   position: relative;
-  padding: 0 0 100px 0;
-
+  overflow: hidden;
 
 `
 
@@ -20,7 +22,9 @@ const Container = styled('div')`
   margin: 0 auto;
   display: flex;
   justify-content: space-between;
-  align-items: flex-start;
+  height: 100%;
+  align-items: center;
+
 
   img {
     width: 60%;
@@ -31,6 +35,12 @@ const Container = styled('div')`
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 90%;
+
+    img {
+      width: 80%;
+      max-width: 500px;
+    }
   }
 `
 
@@ -48,7 +58,8 @@ const Title = styled('div')`
     font-size: 60px;
 
     ${({ theme }) => theme.breakpoints.down('md')} {
-      font-size: 40px;
+      font-size: 40px; 
+      margin-top: 30px;
     }
   }
 
@@ -75,6 +86,7 @@ export const ButtonWithCorner = styled('div')`
   text-align: center;
     position: relative;
   cursor: pointer;
+  margin-top: 30px;
   
   ::before {
     content: '';
@@ -106,17 +118,17 @@ export const ButtonWithCorner = styled('div')`
 const Artist:React.FC = () => {
   return (
     <Wrapper>
-      <Box sx={{ position:'relative', width:'100%', display:'flex',flexDirection:'column', justifyContent:'flex-end', alignItems:'flex-end' }}>
+      <Box sx={{ position:'absolute', width:'100%', display:'flex',flexDirection:'column', justifyContent:'flex-end', alignItems:'flex-end', top:'0' }}>
         <Box sx={{ position:'relative', width:'100%', display:'flex', justifyContent:'flex-end', alignItems:'flex-end' }}>
           <Boxes color={'#F5C864'} />
           <Boxes color={''} />
         </Box>
         <Boxes color={'#50008C'} />
       </Box>
-      <Container>
-        <img src={ArtistBanner} />
-        <Title>
-          <div className={'title'}>Become an artiston Forart</div>
+      <Container >
+        <img src={ArtistBanner} data-aos={'fade-right'} />
+        <Title data-aos={'fade-left'}>
+          <div className={'title'}>Become an artist on Forart.ai</div>
           <div className={'sub-title'} >Join us to showcase your creations and engage more fans Co-creation and exchange of NFTs.</div>
           <ButtonWithCorner className={'cover'}>
             Launch Dapp

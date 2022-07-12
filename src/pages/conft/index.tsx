@@ -22,26 +22,29 @@ const Wrapper = styled('div')`
   width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-color: #F0F5FF;
   position: relative;
-  max-height: 2000px;
-  height: fit-content;
+  height: 2200px;
+  max-height: fit-content;
+  overflow: hidden;
 
-
+  ${({ theme }) => theme.breakpoints.down('lg')} {
+    height: 1500px;
+  }
 `
 
 const Container = styled('div')`
   width: 85%;
+  height: 100%;
   max-width: 1400px;
   margin: 0 auto;
+  height: 100%;
 
-  img {
-    max-width: 90%;
-  }
   
   ${({ theme }) => theme.breakpoints.down('md')} {
     width: 95%;
-    border: 1px red solid;
   }
 `
 
@@ -84,7 +87,7 @@ const Item = styled('div')<{blur?: any}>`
   justify-content: center;
   background: url(${({ blur }) => blur}) no-repeat center;
   background-size: 50%;
-  margin-bottom: 80px;
+  margin-top: 100px;
 `
 
 const CoNftImage = styled('div')`
@@ -101,7 +104,6 @@ const CoNftImage = styled('div')`
     max-width: 320px;
     width: 50%;
     object-fit: contain;
-
   }
 
   .stairs {
@@ -123,7 +125,21 @@ const CoNftImage = styled('div')`
     position: relative;
     top: 80px;
   }
+  
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    .stairs1 {
+      left:0;
+    }
+    .stairs2 {
+      top: 38px;
+      right: 5%;
+    }
 
+    .stairs3{
+      right: 0%;
+
+    }
+  }
   
 `
 
@@ -185,8 +201,11 @@ const SocialImages = styled('div')`
 `
 
 const WhaleImage = styled('div')`
-  height: 400px;
+  
+  img {
+    width: 80%;
 
+  }
 `
 
 const CONFT: React.FC = () => {

@@ -10,18 +10,21 @@ const Wrapper = styled('div')`
   width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
   background-color: #F0F5FF;
   position: relative;
-  padding: 0 0 100px 0;
-height: fit-content;
-
+  min-height: 550px;
+  max-height: fit-content;
+overflow: hidden;
 `
 
 const Container = styled('div')`
   width: 85%;
+  height: 100%;
   max-width: 1600px;
   margin: 0 auto;
-
+   
   img {
     width: 70%;
     max-width: 500px;
@@ -41,7 +44,7 @@ const Title = styled('div')`
     font-family: Righteous-Regular;
     font-size: 60px;
 
-    ${({ theme }) => theme.breakpoints.down('md')} {
+    ${({ theme }) => theme.breakpoints.down('lg')} {
       font-size: 40px;
     }
   }
@@ -51,7 +54,7 @@ const Title = styled('div')`
     font-family: d-din-bold;
     font-size: 22px;
 
-    ${({ theme }) => theme.breakpoints.down('md')} {
+    ${({ theme }) => theme.breakpoints.down('lg')} {
       font-size: 16px;
     }
   }
@@ -67,6 +70,7 @@ const NewsContainer = styled('div')`
   ${({ theme }) => theme.breakpoints.down('lg')} {
     flex-direction: column;
     align-items: center;
+    justify-content: center;
   }
   
 `
@@ -81,7 +85,7 @@ const Item = styled('div')`
   width: 440px;
   height: 260px;
   
-  ${({ theme }) => theme.breakpoints.down('md')} {
+  ${({ theme }) => theme.breakpoints.down('lg')} {
     max-width: 380px;
     max-height: 220px;
     width: 380px;
@@ -94,6 +98,24 @@ const Detail = styled('div')`
   color: #1450B4;
   font-family: d-din-bold;
   font-size: 22px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+height: 98px;
+
+  .text {
+    text-align: left;
+  }
+  
+  .date {
+    font-family: d-din;
+    color: #3e3e3e;
+    width: 100%;
+    text-align: right;
+    font-size: 18px;
+  }
+  
   
 `
 
@@ -120,24 +142,28 @@ padding: 20px;
 type NewsType = {
     image: any,
     title: string,
-    link: string
+    link: string,
+    date?:string
 }
 
 const newsList: NewsType[] =[
   {
     image:News1,
     title:' Development Update Of May',
-    link: 'https://medium.com/@Forart.ai/development-update-of-may-5d4ee739562f'
+    link: 'https://medium.com/@Forart.ai/development-update-of-may-5d4ee739562f',
+    date:'June 1'
   },
   {
     image:News2,
     title:'Forart.ai: ‘Create to earn’ may go viral in the P2E field after STEPN',
-    link: 'https://medium.com/@Forart.ai/forart-ai-create-to-earn-may-go-viral-in-the-p2e-field-after-stepn-292f84ccc3ed'
+    link: 'https://medium.com/@Forart.ai/forart-ai-create-to-earn-may-go-viral-in-the-p2e-field-after-stepn-292f84ccc3ed',
+    date:'April 10'
   },
   {
     image:News3,
     title:'Donate Guide',
-    link: 'https://medium.com/@Forart.ai/donate-guide-fdd7a631a23a'
+    link: 'https://medium.com/@Forart.ai/donate-guide-fdd7a631a23a',
+    date:'April 1'
   }
 ]
 
@@ -149,10 +175,10 @@ const NewsPage:React.FC = () => {
           <div className={'title'}>News</div>
         </Title>
 
-        <NewsContainer>
+        <NewsContainer data-aos="fade-down">
           {
             newsList.map(item => (
-              <Box  data-aos="fade-down" key={item.link} sx={{ display: 'flex', flexDirection:'column', maxWidth:'440px' }}>
+              <Box   key={item.link} sx={{ display: 'flex', flexDirection:'column', maxWidth:'440px' }}>
                 <a href={item.link} target="_blank" rel="noreferrer">
                   <Item>
                     <Border >
@@ -160,7 +186,15 @@ const NewsPage:React.FC = () => {
                     </Border>
                   </Item>
                 </a>
-                <Detail>{item.title}</Detail>
+                <Detail>
+                  <div className={'text'}>
+                    {item.title}
+                  </div>
+
+                  <div className={'date'}>
+                    {item.date}
+                  </div>
+                </Detail>
               </Box>
             ))
           }
