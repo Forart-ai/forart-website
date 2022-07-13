@@ -159,9 +159,11 @@ const JoinUs: React.FC = () => {
 
             <Text >
               Partner with Forart.ai
-              <ButtonWithCorner className={'cover'}>
-                Launch Dapp
-              </ButtonWithCorner>
+              <a href={'https://airtable.com/shrBHhxpSfatrQ8nA'} target="_blank" rel="noreferrer">
+                <ButtonWithCorner className={'cover'}>
+                  Apply to join
+                </ButtonWithCorner>
+              </a>
             </Text>
 
 

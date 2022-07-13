@@ -84,10 +84,14 @@ export const ButtonWithCorner = styled('div')`
   background-image: linear-gradient(90deg, #00A1FF 0%, #00FF8F 100%);
   color: black;
   text-align: center;
-    position: relative;
+  position: relative;
   cursor: pointer;
   margin-top: 30px;
-  
+
+  a {
+    color: rgba(0, 0, 0, 1);
+  }
+
   ::before {
     content: '';
     width: 0;
@@ -99,7 +103,8 @@ export const ButtonWithCorner = styled('div')`
     border-top-color: transparent;
     border-left-color: transparent;
   }
- ::after{
+
+  ::after {
     content: '';
     width: 0;
     height: 0;
@@ -110,7 +115,7 @@ export const ButtonWithCorner = styled('div')`
     border-bottom-color: transparent;
     border-right-color: transparent;
   }
-  
+
 `
 
 
@@ -130,9 +135,11 @@ const Artist:React.FC = () => {
         <Title data-aos={'fade-left'}>
           <div className={'title'}>Become an artist on Forart.ai</div>
           <div className={'sub-title'} >Join us to showcase your creations and engage more fans Co-creation and exchange of NFTs.</div>
-          <ButtonWithCorner className={'cover'}>
-            Launch Dapp
-          </ButtonWithCorner>
+          <a href={'https://airtable.com/shrZrqgHKtAr2BPuV'} target="_blank" rel="noreferrer">
+            <ButtonWithCorner className={'cover'}>
+              Apply to join
+            </ButtonWithCorner>
+          </a>
         </Title>
       </Container>
     </Wrapper>

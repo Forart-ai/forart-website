@@ -27,8 +27,9 @@ const RoadmapContainer = styled('div')`
   user-select: none;
   
   img {
-    width: 100%;
-    object-fit: contain;
+    width: 100vw;
+    height: 500px;
+    object-fit: cover;
   }
 `
 
