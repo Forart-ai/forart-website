@@ -14,9 +14,8 @@ const Wrapper = styled('div')`
   align-items: center;
   background: url(${Wave}) no-repeat bottom #F0F5FF  ;
   background-size: 100% 100% ;
-  padding:  0 0 140px 0;
+  padding:  50px 0 140px 0;
   overflow: hidden;
-  margin-top: 30px;
 
   ${({ theme }) => theme.breakpoints.down('md')} {
     background-size: 200% 40%;
