@@ -16,6 +16,7 @@ const Wrapper = styled('div')`
   background-size: 100% 100% ;
   padding:  0 0 140px 0;
   overflow: hidden;
+  margin-top: 30px;
 
   ${({ theme }) => theme.breakpoints.down('md')} {
     background-size: 200% 40%;

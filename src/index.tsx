@@ -5,12 +5,17 @@ import App from './App'
 import reportWebVitals from './reportWebVitals'
 import { ThemeProvider } from '@mui/material'
 import ForartTheme from './contexts/config/dark'
+import { QueryClient, QueryClientProvider } from 'react-query'
+
+const queryClient = new QueryClient()
 
 
 ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={ForartTheme}>
-      <App />
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>
     </ThemeProvider>
   </React.StrictMode>,
   document.getElementById('root')

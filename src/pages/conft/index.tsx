@@ -26,7 +26,7 @@ const Wrapper = styled('div')`
   align-items: center;
   background-color: #F0F5FF;
   position: relative;
-  height: 2200px;
+  height: 2250px;
   max-height: fit-content;
   overflow: hidden;
 
@@ -51,7 +51,7 @@ const Container = styled('div')`
 const Title = styled('div')`
   width: 100%;
   white-space: nowrap;
-  margin-bottom: 20px;
+  margin-bottom: 3rem;
 
 
 
@@ -85,9 +85,10 @@ const Item = styled('div')<{blur?: any}>`
   gap: 20px;
   align-items: center;
   justify-content: center;
-  background: url(${({ blur }) => blur}) no-repeat center;
+  background: url(${({ blur }) => blur}) no-repeat top;
   background-size: 50%;
   margin-top: 100px;
+  margin-bottom: 5rem;
 `
 
 const CoNftImage = styled('div')`

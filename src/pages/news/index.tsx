@@ -14,7 +14,7 @@ const Wrapper = styled('div')`
   justify-content: center;
   background-color: #F0F5FF;
   position: relative;
-  min-height: 550px;
+  min-height: 630px;
   max-height: fit-content;
 overflow: hidden;
 `

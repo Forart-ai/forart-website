@@ -6,6 +6,7 @@ import Cube from '../../image/top/cube3.png'
 import Underline from '../../image/top/underline.png'
 import {  styled, Typography } from '@mui/material'
 import ForartTheme from '../../contexts/config/dark'
+import { useOverviewData } from '../../hooks/query/useOverviewData'
 
 
 
@@ -300,6 +301,8 @@ overflow: hidden;
 
 
 const Top: React.FC = () => {
+  const { data: overviewData } = useOverviewData()
+
 
   return (
     <Wrapper theme={ForartTheme}>
@@ -328,18 +331,18 @@ const Top: React.FC = () => {
 
           <DataContainer>
             <div className={'col'}>
-              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>2333</DataValue>
+              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>{overviewData?.created}</DataValue>
               <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>CO-NFTs</DataLabel>
             </div>
 
             <div className={'col'}>
-              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>2048</DataValue>
+              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>{overviewData?.creator}</DataValue>
               <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>Creators</DataLabel>
             </div>
 
             <div className={'col'}>
-              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>1080</DataValue>
-              <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>Artist</DataLabel>
+              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>2</DataValue>
+              <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>Artists</DataLabel>
             </div>
           </DataContainer>
 
