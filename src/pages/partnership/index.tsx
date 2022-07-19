@@ -97,10 +97,10 @@ const PartnershipPage:React.FC = () => {
           <div className={'title'}>Inventors & Partnership</div>
         </Title>
         <Row data-aos={'fade-down'} >
-          <img src={BigBrain} alt={'big-brain'} />
-          <img className={'star'} src={Star} alt={''} />
-          <img src={ChainLink} alt={'chain-link'} />
-          <img src={Slop} alt={'slop'} />
+          <a href="https://www.bigbrain.holdings/" target="_blank" rel="noreferrer"> <img src={BigBrain} alt={'big-brain'} /></a>
+          <a href="https://celostarter.net/" target="_blank" rel="noreferrer"> <img className={'star'} src={Star} alt={''} /> </a>
+          <a href="https://chain.link/" target="_blank" rel="noreferrer"> <img src={ChainLink} alt={'chain-link'} /> </a>
+          <a href="https://slope.finance/" target="_blank" rel="noreferrer"> <img src={Slop} alt={'slop'} /></a>
         </Row>
       </Container>
     </Wrapper>

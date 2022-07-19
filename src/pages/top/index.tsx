@@ -71,6 +71,7 @@ const Info = styled('div')`
     flex-direction: column;
     align-items: flex-start;
     margin-top: 50px;
+    height: 90%;
   }
   
   
@@ -323,9 +324,12 @@ const Top: React.FC = () => {
 
             {/*<CustomizeButton className={'cover'}>Launch Dapp</CustomizeButton>*/}
 
-            <ButtonWithCorner className={'cover'}>
-              Launch Dapp
-            </ButtonWithCorner>
+
+            <a href="https://app.forart.ai/" target="_blank" rel="noreferrer">
+              <ButtonWithCorner className={'cover'}>
+                Launch Dapp
+              </ButtonWithCorner>
+            </a>
           </Title>
 
 

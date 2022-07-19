@@ -5,7 +5,7 @@ import GithubIcon from '../../image/foot/github.png'
 import DiscordIcon from '../../image/foot/discord.png'
 import Telegram from '../../image/foot/telegram.png'
 import Email from '../../image/foot/email.png'
-import { Box, styled } from '@mui/material'
+import { Box, styled, useMediaQuery, useTheme } from '@mui/material'
 
 
 const FootContent = styled('div')`
@@ -111,6 +111,11 @@ const Content = styled('div')`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    height: 50vh;
+   max-height: 600px;
+  }
 `
 
 const ContentContainer = styled('div')`
@@ -124,7 +129,9 @@ const ContentContainer = styled('div')`
     flex-direction: column;
     width: 95%;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    height: fit-content;
+    gap: 30px;
   }
 `
 
@@ -138,12 +145,13 @@ const Row = styled('div')`
 `
 
 const Col = styled('div')`
-  max-width: 35%;
+  max-width: 36%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: flex-start;
+  gap: 10px;
 
   .logo {
     width: 120px;
@@ -173,6 +181,8 @@ const Text = styled('div')`
   font-size: 16px;
   font-family: d-din;
   text-align: left;
+  
+  white-space: nowrap;
 `
 
 const Links = styled('div')`
@@ -205,6 +215,9 @@ const Foot:React.FC = () => {
     { icon: DiscordIcon,  title: 'Discord', link: 'https://discord.gg/RDaUkaW39S' }
   ]
 
+  const theme = useTheme()
+  const mobile = useMediaQuery(theme.breakpoints.down('md'))
+
 
 
   return (
@@ -234,42 +247,86 @@ const Foot:React.FC = () => {
 
       <Content>
         <ContentContainer>
-          <Col>
-            <Box sx={{ display:'flex', flexDirection:'column' }}>
-              <img className={'logo'} src={LogoIcon} />
-              <Label>AI-powered Social NFT</Label>
-            </Box>
-            <Text>©2022 Forart.ai - All Rights Reserved</Text>
-          </Col>
+          {
+            !mobile ? (
+              <>
+                <Col>
+                  <Box sx={{ display:'flex', flexDirection:'column' }}>
+                    <img className={'logo'} src={LogoIcon} />
+                    <Label>AI-powered Social NFT</Label>
+                  </Box>
+                  <Text>©2022 Forart.ai - All Rights Reserved</Text>
+                </Col>
 
-          <Row>
-            <Col>
-              <LabelBold>About</LabelBold>
-              <Label><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">Docs</a></Label>
-              <Label><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></Label>
-              <Label>&nbsp;</Label>
-            </Col>
+                <Row>
+                  <Col>
+                    <LabelBold>About</LabelBold>
+                    <Label><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">White Paper</a></Label>
+                    <Label><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></Label>
+                    <Label>&nbsp;</Label>
+                  </Col>
 
-            <Col>
-              <Box sx={{ display:'flex',
-                flexDirection:'column',
-                alignItems:'flex-start',
-                width:'100%',
-                justifyContent: 'flex-start' }}
-              >
-                <LabelBold>Community</LabelBold>
-                <Links>
-                  {
-                    EXTERNAL_LINKS.map(item => (
-                      <a  key={item.title} href={item.link} target="_blank" rel="noreferrer">
-                        <img  src={item.icon} alt={item.link} />
-                      </a>
-                    ))
-                  }
-                </Links>
-              </Box>
-            </Col>
-          </Row>
+                  <Col>
+                    <Box sx={{ display:'flex',
+                      flexDirection:'column',
+                      alignItems:'flex-start',
+                      width:'100%',
+                      justifyContent: 'flex-start' }}
+                    >
+                      <LabelBold>Community</LabelBold>
+                      <Links>
+                        {
+                          EXTERNAL_LINKS.map(item => (
+                            <a  key={item.title} href={item.link} target="_blank" rel="noreferrer">
+                              <img  src={item.icon} alt={item.link} />
+                            </a>
+                          ))
+                        }
+                      </Links>
+                    </Box>
+                  </Col>
+                </Row>
+              </>
+            ): (
+              <>
+                <Col>
+                  <Box sx={{ display:'flex', flexDirection:'column' }}>
+                    <img className={'logo'} src={LogoIcon} />
+                    <Label>AI-powered Social NFT</Label>
+                  </Box>
+                  <Text>©2022 Forart.ai - All Rights Reserved</Text>
+                </Col>
+
+                <Col>
+                  <LabelBold>About</LabelBold>
+                  <Label><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">White Paper</a></Label>
+                  <Label><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></Label>
+                  <Label>&nbsp;</Label>
+                </Col>
+
+                <Col>
+                  <Box sx={{ display:'flex',
+                    flexDirection:'column',
+                    alignItems:'flex-start',
+                    width:'100%',
+                    justifyContent: 'flex-start' }}
+                  >
+                    <LabelBold>Community</LabelBold>
+                    <Links>
+                      {
+                        EXTERNAL_LINKS.map(item => (
+                          <a  key={item.title} href={item.link} target="_blank" rel="noreferrer">
+                            <img  src={item.icon} alt={item.link} />
+                          </a>
+                        ))
+                      }
+                    </Links>
+                  </Box>
+                </Col>
+              </>
+            )
+
+          }
         </ContentContainer>
       </Content>
 

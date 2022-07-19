@@ -33,8 +33,8 @@ const DefaultService = axios.create({
   baseURL: ''
 })
 
-const API_HOST = 'https://dev-api.forart.ai/'
-// const API_HOST = 'https://api.forart.ai/api/forart/'
+// const API_HOST = 'https://dev-api.forart.ai/'
+const API_HOST = 'https://api.forart.ai/api/forart/'
 
 const ForartService = axios.create({
   baseURL: `${API_HOST}`

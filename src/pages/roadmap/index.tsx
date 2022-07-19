@@ -2,7 +2,7 @@ import React from 'react'
 import Wave from '../../image/roadmap/wave.png'
 import { styled, useMediaQuery, useTheme } from '@mui/material'
 import RoadmapImg from '../../image/roadmap/roadmap.png'
-import RoadmapMobileImg from '../../image/roadmap/roadmap-mobile.png'
+import RoadmapMobileImg from '../../image/roadmap/roadmap-mobile-2.png'
 
 
 const Wrapper = styled('div')`
@@ -16,6 +16,8 @@ const Wrapper = styled('div')`
   background-size: 100% 100% ;
   padding:  50px 0 140px 0;
   overflow: hidden;
+  box-sizing: border-box;
+
 
   ${({ theme }) => theme.breakpoints.down('md')} {
     background-size: 200% 40%;
@@ -25,11 +27,18 @@ const Wrapper = styled('div')`
 const RoadmapContainer = styled('div')`
   width: 100%;
   user-select: none;
+  box-sizing: border-box;
   
   img {
     width: 100vw;
-    height: 500px;
     object-fit: cover;
+  }
+
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    img {
+      width: 90vw;
+      object-fit: contain;
+    }
   }
 `
 

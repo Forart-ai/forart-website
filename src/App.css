@@ -3,7 +3,7 @@
   background: #04000A;
   font-family: 'GothamRndBold';
   position: relative;
-
+overflow: hidden;
   z-index: 0;
 }
 
