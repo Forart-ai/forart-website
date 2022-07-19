@@ -167,6 +167,8 @@ const Col = styled('div')`
 const Label = styled('div')`
   font-size: 18px;
   font-family: d-din;
+  text-align: left;
+
   a{
     color: white;
   }
@@ -253,8 +255,8 @@ const Foot:React.FC = () => {
                 <Col>
                   <img className={'logo'} src={LogoIcon} />
                   <Box sx={{ display:'flex', flexDirection:'column', alignItems:'flex-start', marginTop:'20px' }}>
-                    <Text>©2022 Forart.ai - All Rights Reserved</Text>
                     <Label>AI-powered Social NFT</Label>
+                    <Text>©2022 Forart.ai - All Rights Reserved</Text>
                   </Box>
 
                 </Col>

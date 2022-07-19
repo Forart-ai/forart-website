@@ -67,6 +67,8 @@ const Row = styled('div')`
   align-items: center;
   gap: 2rem;
   margin-top: 30px;
+  -webkit-column-gap: 2rem;
+
   .item {
     width: 280px;
     height: 90px;

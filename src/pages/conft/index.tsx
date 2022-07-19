@@ -50,7 +50,6 @@ const Container = styled('div')`
 
 const Title = styled('div')`
   width: 100%;
-  white-space: nowrap;
   margin-bottom: 3rem;
 
 
@@ -80,6 +79,7 @@ const Title = styled('div')`
 `
 
 const Item = styled('div')<{blur?: any}>`
+  -webkit-column-gap: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -89,6 +89,11 @@ const Item = styled('div')<{blur?: any}>`
   background-size: 50%;
   margin-top: 100px;
   margin-bottom: 5rem;
+  
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    background: url(${({ blur }) => blur}) no-repeat bottom;
+    background-size: 100%;
+  }
 `
 
 const CoNftImage = styled('div')`

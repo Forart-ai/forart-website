@@ -16,7 +16,6 @@ const Wrapper = styled('div')`
   align-items: center;
   background-color: #F0F5FF;
   position: relative;
-  padding-bottom: 90px;
   height: 1200px;
   min-height: fit-content;
   
