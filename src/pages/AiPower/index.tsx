@@ -200,6 +200,25 @@ const BlurContainer2 = styled('div')`
   }
 `
 
+const Tags = styled('div')`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 30px;
+  gap: 1rem;
+  margin-top: 10px;
+
+  .tag {
+    border: 1px #1450B4 solid;
+    padding: 2px 6px;
+    border-radius: 3rem;
+    background: rgba(20, 80, 180, 0.1);
+    color: #1450B4;
+    font-weight: bold;
+  }
+`
+
 
 
 
@@ -218,6 +237,11 @@ const AiPower: React.FC = () => {
         <Title >
           <div className="title">AI-Powered NFT</div>
           <div className="sub-title">Quickly create unique and beautiful NFTs with AI technology</div>
+          <Tags>
+            <div className={'tag'}>Free-code</div>
+            <div className={'tag'}>Bulk creation</div>
+            <div className={'tag'}>In minute-creation</div>
+          </Tags>
         </Title>
 
         {

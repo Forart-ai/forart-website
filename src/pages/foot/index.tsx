@@ -251,17 +251,18 @@ const Foot:React.FC = () => {
             !mobile ? (
               <>
                 <Col>
-                  <Box sx={{ display:'flex', flexDirection:'column' }}>
-                    <img className={'logo'} src={LogoIcon} />
+                  <img className={'logo'} src={LogoIcon} />
+                  <Box sx={{ display:'flex', flexDirection:'column', alignItems:'flex-start', marginTop:'20px' }}>
+                    <Text>©2022 Forart.ai - All Rights Reserved</Text>
                     <Label>AI-powered Social NFT</Label>
                   </Box>
-                  <Text>©2022 Forart.ai - All Rights Reserved</Text>
+
                 </Col>
 
                 <Row>
                   <Col>
                     <LabelBold>About</LabelBold>
-                    <Label><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">White Paper</a></Label>
+                    <Label><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">Whitepaper</a></Label>
                     <Label><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></Label>
                     <Label>&nbsp;</Label>
                   </Col>
@@ -290,16 +291,18 @@ const Foot:React.FC = () => {
             ): (
               <>
                 <Col>
+
+                  <img className={'logo'} src={LogoIcon} />
+
                   <Box sx={{ display:'flex', flexDirection:'column' }}>
-                    <img className={'logo'} src={LogoIcon} />
                     <Label>AI-powered Social NFT</Label>
+                    <Text>©2022 Forart.ai - All Rights Reserved</Text>
                   </Box>
-                  <Text>©2022 Forart.ai - All Rights Reserved</Text>
                 </Col>
 
                 <Col>
                   <LabelBold>About</LabelBold>
-                  <Label><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">White Paper</a></Label>
+                  <Label><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">Whitepaper</a></Label>
                   <Label><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></Label>
                   <Label>&nbsp;</Label>
                 </Col>

@@ -17,6 +17,7 @@ const Wrapper = styled('div')`
   min-height: 500px;
   max-height: fit-content;
   overflow: hidden;
+  
 `
 
 const Container = styled('div')`
@@ -64,26 +65,38 @@ const Row = styled('div')`
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 40px 0;
-  gap: 50px;  
-  
-  img {
+  gap: 2rem;
+  margin-top: 30px;
+  .item {
     width: 280px;
     height: 90px;
     border: 2px rgba(120,100,230, .5) solid;
     border-radius: .6rem;
     box-sizing: border-box;
+  }
+  
+ 
+  
+  img {
+    width: 100%;
+    height: 100%;
     object-fit: contain;
     padding: 10px;
   }
   
 
-  ${({ theme }) => theme.breakpoints.down('lg')} {
-    flex-wrap: wrap;
+  ${({ theme }) => theme.breakpoints.down('md')} {
+    padding: 0;
+    gap: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 45vw);
     gap: 10px;
-    img {
-      width: 45%;
+    
+    .item {
+      width: 45vw;
+      height: 80px;
     }
+    
 
    
   }
@@ -96,11 +109,22 @@ const PartnershipPage:React.FC = () => {
         <Title>
           <div className={'title'}>Inventors & Partnership</div>
         </Title>
-        <Row data-aos={'fade-down'} >
-          <a href="https://www.bigbrain.holdings/" target="_blank" rel="noreferrer"> <img src={BigBrain} alt={'big-brain'} /></a>
-          <a href="https://celostarter.net/" target="_blank" rel="noreferrer"> <img className={'star'} src={Star} alt={''} /> </a>
-          <a href="https://chain.link/" target="_blank" rel="noreferrer"> <img src={ChainLink} alt={'chain-link'} /> </a>
-          <a href="https://slope.finance/" target="_blank" rel="noreferrer"> <img src={Slop} alt={'slop'} /></a>
+        <Row  >
+          <div className={'item'}>
+            <a href="https://www.bigbrain.holdings/" target="_blank" rel="noreferrer"> <img src={BigBrain} alt={'big-brain'} /></a>
+          </div>
+          <div className={'item'}>
+            <a href="https://celostarter.net/" target="_blank" rel="noreferrer"> <img className={'star'} src={Star} alt={''} /> </a>
+          </div>
+          <div className={'item'}>
+            <a href="https://chain.link/" target="_blank" rel="noreferrer"> <img src={ChainLink} alt={'chain-link'} /> </a>
+          </div>
+          <div className={'item'}>
+            <a href="https://slope.finance/" target="_blank" rel="noreferrer"> <img src={Slop} alt={'slop'} /></a>
+          </div>
+
+
+
         </Row>
       </Container>
     </Wrapper>
