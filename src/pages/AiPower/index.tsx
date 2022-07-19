@@ -37,7 +37,6 @@ const Container = styled('div')`
 const Title = styled('div')`
   width: 100%;
   text-align: center;
-  white-space: nowrap;
 
 
   .title {
@@ -207,6 +206,7 @@ const Tags = styled('div')`
   height: 30px;
   gap: 1rem;
   margin-top: 10px;
+  white-space: nowrap;
 
   .tag {
     border: 1px #1450B4 solid;
