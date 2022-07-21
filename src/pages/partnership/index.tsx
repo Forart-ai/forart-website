@@ -110,7 +110,7 @@ const PartnershipPage:React.FC = () => {
     <Wrapper>
       <Container>
         <Title>
-          <div className={'title'}>Inventors & Partnership</div>
+          <div className={'title'}>Investors & Partners</div>
         </Title>
         <Row  >
           <div className={'item'}>

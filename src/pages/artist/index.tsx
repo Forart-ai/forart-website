@@ -111,7 +111,7 @@ const Artist:React.FC = () => {
         <img src={ArtistBanner} data-aos={'fade-right'} />
         <Title data-aos={'fade-left'}>
           <div className={'title'}>Become an artist on Forart.ai</div>
-          <div className={'sub-title'} >Join us to showcase your creations and engage more fans Co-creation and exchange of NFTs.</div>
+          <div className={'sub-title'} > Join us to co-create NFTs with fans to spread your creations.</div>
           <a href={'https://airtable.com/shrZrqgHKtAr2BPuV'} target="_blank" rel="noreferrer">
             <ButtonWithCorner className={'cover'}>
               Apply to join

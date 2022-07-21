@@ -234,8 +234,8 @@ const AiPower: React.FC = () => {
       </Box>
       <Container>
         <Title >
-          <div className="title">AI-Powered NFT</div>
-          <div className="sub-title">Quickly create unique and beautiful NFTs with AI technology</div>
+          <div className="title">AI-Powered</div>
+          <div className="sub-title">Fast create unique and beautiful NFTs with AI technology.</div>
           <Tags>
             <div className={'tag'}>Free-code</div>
             <div className={'tag'}>Bulk creation</div>
@@ -249,7 +249,7 @@ const AiPower: React.FC = () => {
               <ItemBorder>
                 <ItemMessage  data-aos={'fade-right'}>
                   <div className="title">Art soul card</div>
-                  <div className="text">Through AI style migration algorithm, you can generate a brand- new image that integrated the style of your favorite artist into your photo.</div>
+                  <div className="text">With the AI style transfer, you can create brand-new images that integrates the favorite style into your photos.</div>
                 </ItemMessage>
                 <ItemImage  data-aos={'fade-left'}>
                   <Box sx={{ display:'flex', justifyContent: 'flex-end' }}>
@@ -302,7 +302,7 @@ const AiPower: React.FC = () => {
 
                   <ItemMessage  data-aos={'fade-right'}>
                     <div className="title">Art soul card</div>
-                    <div className="text">Using Neural Style Transferring Tech for combining different NFTs to afully new one.</div>
+                    <div className="text">With the AI style transfer, you can create brand-new images that integrates the favorite style into your photos.</div>
                   </ItemMessage>
 
                 </ItemBorder>
@@ -321,7 +321,7 @@ const AiPower: React.FC = () => {
 
                   <ItemMessage data-aos={'fade-left'}>
                     <div className="title">Magic wand</div>
-                    <div className="text">Using Neural Style Transferring Tech for combining different NFTs to afully new one.</div>
+                    <div className="text">Enter the text content and your favorite art style, you&apos;ll get stunning artwork through the text-to-image AI algorithm</div>
                   </ItemMessage>
                 </ItemBorder>
               </>

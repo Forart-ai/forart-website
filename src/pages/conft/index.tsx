@@ -245,7 +245,7 @@ const CONFT: React.FC = () => {
         <Item blur={Blur4}>
           <Title>
             <div className="title">Social NFT</div>
-            <div className="sub-title">Communicate, share, comment, contest, and fully unleash the social attributes of NFTs</div>
+            <div className="sub-title">Fully unlock the socializing of NFTs with Communication, sharing, commenting, contests, etc.</div>
           </Title>
           <SocialImages>
             <img className={'card card1'} src={Card1}  data-aos="fade-right" />
@@ -259,7 +259,7 @@ const CONFT: React.FC = () => {
         <Item blur={Blur5}>
           <Title>
             <div className="title">Talking Whale</div>
-            <div className="sub-title">Not only track the NFT giant whale but also talk to the him.</div>
+            <div className="sub-title">Not only track the NFT Whales but also talk to them.</div>
           </Title>
           <WhaleImage data-aos="fade-down"     data-aos-offset="500">
             <img src={Whale}  />
