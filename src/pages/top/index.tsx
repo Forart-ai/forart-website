@@ -8,6 +8,7 @@ import {  styled, Typography } from '@mui/material'
 import ForartTheme from '../../contexts/config/dark'
 import { useOverviewData } from '../../hooks/query/useOverviewData'
 import GradientButton from '../../image/button.png'
+import useMintedAmount from '../../hooks/query/aiGeneralQuery'
 
 
 
@@ -241,6 +242,7 @@ const BlurContainer = styled('div')`
 
 const Top: React.FC = () => {
   const { data: overviewData } = useOverviewData()
+  const aiGeneralAmount = useMintedAmount()
 
 
   return (
@@ -283,8 +285,8 @@ const Top: React.FC = () => {
             </div>
 
             <div className={'col'}>
-              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>2</DataValue>
-              <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>Artists</DataLabel>
+              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>{aiGeneralAmount?.data || 0}</DataValue>
+              <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>AI-Generate</DataLabel>
             </div>
           </DataContainer>
 

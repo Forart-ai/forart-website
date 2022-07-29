@@ -10,5 +10,6 @@ module.exports = {
   printWidth: 120,
   tabWidth: 2,
   jsxBracketSameLine: false,
-  arrowParens: 'avoid'
+  arrowParens: 'avoid',
+
 }
