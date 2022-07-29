@@ -39,7 +39,7 @@ export const ENDPOINTS: Record<Cluster, Endpoint> = {
 }
 
 export const DEFAULT_CLUSTER: Cluster = 'mainnet-beta' as Cluster
-export const DEFAULT_ENDPOINT: string = 'https://mango.rpcpool.com/' || ENDPOINTS[DEFAULT_CLUSTER].endpointUrl
+export const DEFAULT_ENDPOINT: string = clusterApiUrl('mainnet-beta') || ENDPOINTS[DEFAULT_CLUSTER].endpointUrl
 
 // export const DEFAULT_CLUSTER: Cluster = 'devnet'
 
