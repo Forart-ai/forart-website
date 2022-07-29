@@ -12,7 +12,7 @@
     "@solana/spl-token-registry": "0.2.1393",
     "@solana/wallet-adapter-base": "0.9.5",
     "@solana/wallet-adapter-wallets": "^0.15.5",
-    "@solana/web3.js": "1.44.2",
+    "@solana/web3.js": "^1.50.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",
