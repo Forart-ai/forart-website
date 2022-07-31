@@ -4,7 +4,7 @@ import BigBrain from '../../image/partnership/big-brain.png'
 import Star from '../../image/partnership/celo.png'
 import ChainLink from '../../image/partnership/chainlink.png'
 import Slop from '../../image/partnership/slop.png'
-
+import Kalao from '../../image/partnership/kalao.svg'
 
 const Wrapper = styled('div')`
   width: 100%;
@@ -23,7 +23,7 @@ const Wrapper = styled('div')`
 
 const Container = styled('div')`
   width: 90%;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 
 `
@@ -69,6 +69,8 @@ const Row = styled('div')`
   gap: 2rem;
   margin-top: 30px;
   -webkit-column-gap: 2rem;
+  flex-wrap: wrap;
+  
 
   .item {
     width: 280px;
@@ -90,7 +92,6 @@ const Row = styled('div')`
 
   ${({ theme }) => theme.breakpoints.down('md')} {
     padding: 0;
-    gap: 0;
     display: grid;
     grid-template-columns: repeat(2, 45vw);
     gap: 10px;
@@ -124,6 +125,9 @@ const PartnershipPage:React.FC = () => {
           </div>
           <div className={'item'}>
             <a href="https://slope.finance/" target="_blank" rel="noreferrer"> <img src={Slop} alt={'slop'} /></a>
+          </div>
+          <div className={'item'}>
+            <a href="https://marketplace.kalao.io/" target="_blank" rel="noreferrer"> <img src={Kalao} alt={'kalao'} /></a>
           </div>
 
 
