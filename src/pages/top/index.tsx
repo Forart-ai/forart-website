@@ -9,6 +9,7 @@ import ForartTheme from '../../contexts/config/dark'
 import { useOverviewData } from '../../hooks/query/useOverviewData'
 import GradientButton from '../../image/button.png'
 import useMintedAmount from '../../hooks/query/aiGeneralQuery'
+import CountUp from 'react-countup'
 
 
 
@@ -88,9 +89,14 @@ const Title = styled('div')`
   flex-direction: column;
   white-space: nowrap;
   position: relative;
-  
+  transform: scale(0.94);
+  //animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   img{
     position: absolute;
+    opacity: 0;
+    filter: blur(4px);
+    animation: fade-in 1s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+
   }
 
 
@@ -123,18 +129,40 @@ const Title = styled('div')`
       left: -30px;
     }
   }
-  
-  
+
+  @keyframes scale {
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fade-in {
+    100% {
+    
+       opacity: 1;
+       filter: blur(0);
+     
+    }
+  }
   
   
 `
 
 const Slogan = styled('div')`
   font-family: Righteous-Regular;
-  
+  transform: scale(0.94);
+  color: #fff;
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
   span {
-    color: #00EBA4;
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+    display: flex;
+    .highlight {
+      color: #00EBA4;
+    }
   }
+  
   
   ${({ theme }) => theme.breakpoints.down('sm')} {
     font-size: 40px;
@@ -151,11 +179,49 @@ const Slogan = styled('div')`
   ${({ theme }) => theme.breakpoints.up('xl')} {
     font-size: 90px;
   }
+
+  span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  span:nth-child(3) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  span:nth-child(4) {
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  @keyframes scale {
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+
 `
 
 const Highlight = styled('div')`
   font-family: Righteous-Regular;
-
+  transform: scale(0.94);
+  color: #fff;
+  animation: scale 3s forwards cubic-bezier(0.5, 1, 0.89, 1);
+  span {
+    display: inline-block;
+    opacity: 0;
+    filter: blur(4px);
+  }
 
   ${({ theme }) => theme.breakpoints.down('sm')} {
     font-size: 50px;
@@ -171,6 +237,35 @@ const Highlight = styled('div')`
 
   ${({ theme }) => theme.breakpoints.up('xl')} {
     font-size: 110px;
+  }
+
+  span:nth-child(1) {
+    animation: fade-in 0.8s 0.1s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  span:nth-child(2) {
+    animation: fade-in 0.8s 0.2s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  span:nth-child(3) {
+    animation: fade-in 0.8s 0.3s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  span:nth-child(4) {
+    animation: fade-in 0.8s 0.4s forwards cubic-bezier(0.11, 0, 0.5, 0);
+  }
+
+  @keyframes scale {
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  @keyframes fade-in {
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
   }
 `
 
@@ -258,9 +353,9 @@ const Top: React.FC = () => {
         <Info>
           <Title>
             <img src={Underline} />
-            <Slogan >Web 3.0</Slogan>
-            <Highlight  >AI-Powered</Highlight>
-            <Slogan >Social <span>NFT</span></Slogan>
+            <Slogan ><span>Web 3.0</span></Slogan>
+            <Highlight  > <span>AI-Powered</span></Highlight>
+            <Slogan > <span>Social &nbsp;<div className={'highlight'}>NFT</div></span></Slogan>
 
             {/*<CustomizeButton className={'cover'}>Launch Dapp</CustomizeButton>*/}
 
@@ -275,17 +370,17 @@ const Top: React.FC = () => {
 
           <DataContainer>
             <div className={'col'}>
-              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>{overviewData?.created}</DataValue>
+              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}><CountUp end={overviewData?.created || 0} duration={2.55} separator={','} /> </DataValue>
               <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>CO-NFTs</DataLabel>
             </div>
 
             <div className={'col'}>
-              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>{overviewData?.creator}</DataValue>
+              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}><CountUp end={overviewData?.creator || 0} duration={2.55} separator={','} /></DataValue>
               <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>Creators</DataLabel>
             </div>
 
             <div className={'col'}>
-              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}>{aiGeneralAmount?.data || 0}</DataValue>
+              <DataValue sx={{ fontSize: { xs: 40, md: 50, xl: 60 } }}><CountUp end={aiGeneralAmount?.data || 0} duration={2.55} separator={','} /></DataValue>
               <DataLabel sx={{ fontSize: { xs: 20, md: 20, xl: 30 } }}>AI-Generate</DataLabel>
             </div>
           </DataContainer>
