@@ -342,9 +342,7 @@ const Top: React.FC = () => {
 
   return (
     <Wrapper theme={ForartTheme}>
-      <div className="filter">
-        <Navbar />
-      </div>
+
       <BlurContainer >
         <div className={'blur-purple'} />
       </BlurContainer>

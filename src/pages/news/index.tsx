@@ -148,22 +148,22 @@ type NewsType = {
 
 const newsList: NewsType[] =[
   {
-    image:News1,
-    title:' Development Update Of May',
-    link: 'https://medium.com/@Forart.ai/development-update-of-may-5d4ee739562f',
-    date:'June 1'
+    image:'https://miro.medium.com/max/700/1*V34kUfHwqmcJAn7gz0RJ7A.gif',
+    title:'Development Update Of June & July',
+    link: 'https://medium.com/@Forart.ai/development-update-of-june-july-dc137d455333',
+    date:'Jul 29'
   },
   {
-    image:News2,
-    title:'Forart.ai: ‘Create to earn’ may go viral in the P2E field after STEPN',
-    link: 'https://medium.com/@Forart.ai/forart-ai-create-to-earn-may-go-viral-in-the-p2e-field-after-stepn-292f84ccc3ed',
-    date:'April 10'
+    image:'https://miro.medium.com/max/700/1*cWDUVDX6DHNSBHa9OVmzCQ.jpeg',
+    title:'How to get Depainter WL and join spacetronauts NFT creation?',
+    link: 'https://medium.com/@Forart.ai/how-to-get-depainter-wl-and-join-spacetronauts-nft-creation-3e5d08356579',
+    date:'Jul 22'
   },
   {
-    image:News3,
-    title:'Donate Guide',
+    image:'https://miro.medium.com/max/700/1*fQTeoWcMOT_AFIR5UhbMqw.jpeg',
+    title:'Development Update Of May',
     link: 'https://medium.com/@Forart.ai/donate-guide-fdd7a631a23a',
-    date:'April 1'
+    date:'Jun 1'
   }
 ]
 

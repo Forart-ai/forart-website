@@ -4,6 +4,7 @@ import LogoIcon from '../../image/top/logo.png'
 import telegram from '../../image/foot/telegram.png'
 import twitter from '../../image/foot/twitter.png'
 import DiscordIcon from '../../image/top/discord.svg'
+import { useNavigate } from 'react-router-dom'
 
 // import Email from '../../image/top/email.svg'
 
@@ -69,6 +70,8 @@ const NavLinksContainer = styled.div`
 `
 
 const Navbar: React.FC = () => {
+
+  const navigator = useNavigate()
   return (
     <NavbarContainer>
       <Logo className="logo">
@@ -82,6 +85,7 @@ const Navbar: React.FC = () => {
         {/*<li><a href="https://app.forart.ai/" target="_blank" rel="noreferrer">Dapp</a></li>*/}
         <li><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">Whitepaper</a></li>
         <li><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></li>
+        <li>FAQ</li>
         {/*<li><a onClick={() => scrollToPart('MetaPlus')}>MetaPlus</a></li>*/}
         {/*<li><a onClick={() => scrollToPart('Airdrop')}>Airdrop</a></li>*/}
         {/*<li><a onClick={() => scrollToPart('Roadmap')}>Roadmap</a></li>*/}

@@ -13,6 +13,8 @@ import JoinUs from './pages/joinUs'
 import PartnershipPage from './pages/partnership'
 import Artist from './pages/artist'
 import NewsPage from './pages/news'
+import { Routes, Route, Link } from 'react-router-dom'
+import Home from './pages/Home'
 
 const App = () => {
   AOS.init({
@@ -23,16 +25,11 @@ const App = () => {
 
   return (
     <div className="App" >
-      <Top />
-      <Chains />
-      <Mint />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        {/*<Route path="about" element={<About />} />*/}
+      </Routes>
 
-      <CONFT />
-      <Artist />
-      <JoinUs />
-      <PartnershipPage />
-      <NewsPage />
-      <Roadmap />
       <Foot />
     </div>
   )
