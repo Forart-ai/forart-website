@@ -19,7 +19,7 @@ import FAQPage from './pages/faq'
 
 const App = () => {
   AOS.init({
-    duration: 1000,
+    duration: 600,
     easing: 'ease-in-sine',
     delay: 0,
   })

@@ -14,7 +14,7 @@ const Wrapper = styled('div')`
   position: relative;
   display: flex;
   justify-content: center;
-  padding: 0 0 100px 0;
+  padding: 0 0 300px 0;
 
 
   .custom-shape-divider-top-1659492913 {
@@ -59,10 +59,10 @@ const Text = styled('div')`
   flex-direction: column;
   align-items: flex-start;
   z-index: 99;
+  font-family: Righteous-Regular;
 
 
   .bold {
-    font-family: d-din-bold;
     color: #250b28;
     font-size: 40px;
   }
@@ -212,14 +212,18 @@ const FAQPage:React.FC = () => {
     },
     {
       title:  <>2. As a new member, how to acquire &quot;DePainter&quot; NFT? </>,
-      detail: <>The whitelist will be gradually released. Please stay tuned for upcoming events!</>
+      detail:
+  <>
+    Currently, mint HypeTeen is the only way to acquire &quot;Depainter&quot; WL.<br />
+    The whitelist will be gradually released. Please stay tuned for upcoming events!
+  </>
     },
     {
       title:  <>3. As a CO-Creator, what benefit will I enjoy?  </>,
       detail: <>10% of Co-NFT sales revenue on the launchpad, and 10% of the royalty from the later transaction.</>
     },
     {
-      title:  <>4.If I&apos;m artist, where can I submit the cooperation application?</>,
+      title:  <>4.If I&apos;m an artist, where can I submit the cooperation application?</>,
       detail:
   <>
     Welcome to join Forart.ai!<br />
@@ -228,7 +232,7 @@ const FAQPage:React.FC = () => {
     },
     {
       title:  <>5. What benefit will I enjoy as an artist on Forart.ai</>,
-      detail: <>After the CO-NFT creation is completed, this collection will be launched in multiple markets. Artist will receive 60% of the revenue and royalties from the transaction.</>
+      detail: <>After the CO-NFT creation is completed, this collection will be launched in multiple markets. Artists will receive 60% of the revenue and royalties from the transaction.</>
     },
     {
       title:  <>6. If I am a project party, where can I submit a cooperation application?</>,
@@ -244,11 +248,11 @@ const FAQPage:React.FC = () => {
   <>
     Forart.ai has always attached importance to the user’s sense of interactive experience.<br />
     We continuously optimize the interaction of our platform according to the feedback while moving forward.<br />
-    If you have any suggestions regarding our project, welcome to drop them in our Discord community!
+    If you have any suggestion regarding our project, welcome to drop them in our Discord community!
   </>
     },
     {
-      title:  <> 8. What are the platforms where I can keep informed about the updates and progress of your project?</>,
+      title:  <> 8. What are the platforms where I can keep informed about the updates and progresses of your project?</>,
       detail:
   <>
     Kindly follow our official Twitter and official Medium, all the updates will be released there. <br />

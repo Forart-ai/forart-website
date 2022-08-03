@@ -341,7 +341,7 @@ const Top: React.FC = () => {
 
 
   return (
-    <Wrapper theme={ForartTheme}>
+    <Wrapper theme={ForartTheme} data-aos={'fade-in'}>
 
       <BlurContainer >
         <div className={'blur-purple'} />
