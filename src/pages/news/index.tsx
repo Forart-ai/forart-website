@@ -4,6 +4,7 @@ import News1 from '../../image/news/news1.jpeg'
 import News2 from '../../image/news/news2.png'
 import News3 from '../../image/news/news3.png'
 import NewsBorder from '../../image/news/news-border.png'
+import { useForartMediumPublicationsQuery } from '../../hooks/useForartMediumPublicationsQuery'
 
 
 const Wrapper = styled('div')`
@@ -168,6 +169,8 @@ const newsList: NewsType[] =[
 ]
 
 const NewsPage:React.FC = () => {
+  const { data } = useForartMediumPublicationsQuery()
+  console.log(data)
   return (
     <Wrapper>
       <Container>
@@ -177,12 +180,12 @@ const NewsPage:React.FC = () => {
 
         <NewsContainer data-aos="fade-down">
           {
-            newsList.map(item => (
+            data?.slice(0,3).map(item => (
               <Box   key={item.link} sx={{ display: 'flex', flexDirection:'column', maxWidth:'440px' }}>
                 <a href={item.link} target="_blank" rel="noreferrer">
                   <Item>
                     <Border >
-                      <img src={item.image} />
+                      <img src={item.imageUrl} />
                     </Border>
                   </Item>
                 </a>

@@ -15,6 +15,7 @@ import Artist from './pages/artist'
 import NewsPage from './pages/news'
 import { Routes, Route, Link } from 'react-router-dom'
 import Home from './pages/Home'
+import FAQPage from './pages/faq'
 
 const App = () => {
   AOS.init({
@@ -27,7 +28,7 @@ const App = () => {
     <div className="App" >
       <Routes>
         <Route path="/" element={<Home />} />
-        {/*<Route path="about" element={<About />} />*/}
+        <Route path="faq" element={<FAQPage />} />
       </Routes>
 
       <Foot />

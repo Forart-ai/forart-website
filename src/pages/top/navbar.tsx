@@ -4,7 +4,7 @@ import LogoIcon from '../../image/top/logo.png'
 import telegram from '../../image/foot/telegram.png'
 import twitter from '../../image/foot/twitter.png'
 import DiscordIcon from '../../image/top/discord.svg'
-import { useNavigate } from 'react-router-dom'
+import { useLocation, useNavigate } from 'react-router-dom'
 
 // import Email from '../../image/top/email.svg'
 
@@ -19,17 +19,17 @@ import { useNavigate } from 'react-router-dom'
 //   }
 // }
 
-const NavbarContainer = styled.div`
+const NavbarContainer = styled.div<{location: string}>`
   display: flex;
   align-items: center;
-  max-width: 1600px;
-  width: 90%;
+  width: 100%;
+  padding: 0 7vw;
   justify-content: space-between;
   height: 70px;
   //position: fixed;
-  //background-color: black;
+  background-color: ${({ location }) => location === '/faq' ? 'rgb(37,11,40)' : 'transparent'};
   z-index: 999;
-  
+  transition: all .8s;
   
 `
 
@@ -38,6 +38,7 @@ const NavbarContainer = styled.div`
 const Logo = styled.div`
   width: 130px;
   background-size: 100%;
+  cursor: pointer;
 
   img {
     width: 100%;
@@ -70,11 +71,14 @@ const NavLinksContainer = styled.div`
 `
 
 const Navbar: React.FC = () => {
-
   const navigator = useNavigate()
+
+  const location = useLocation()
+
+
   return (
-    <NavbarContainer>
-      <Logo className="logo">
+    <NavbarContainer location={location.pathname}>
+      <Logo className="logo"  onClick={() => navigator('/')}>
         <img src={LogoIcon} />
       </Logo>
       <NavLinksContainer id="NavLinksContainer">
@@ -85,7 +89,7 @@ const Navbar: React.FC = () => {
         {/*<li><a href="https://app.forart.ai/" target="_blank" rel="noreferrer">Dapp</a></li>*/}
         <li><a href="https://simons-mcc.gitbook.io/forart/" target="_blank" rel="noreferrer">Whitepaper</a></li>
         <li><a href="https://medium.com/@Forart.ai" target="_blank" rel="noreferrer">Medium</a></li>
-        <li>FAQ</li>
+        <li onClick={() => navigator('faq')}>FAQ</li>
         {/*<li><a onClick={() => scrollToPart('MetaPlus')}>MetaPlus</a></li>*/}
         {/*<li><a onClick={() => scrollToPart('Airdrop')}>Airdrop</a></li>*/}
         {/*<li><a onClick={() => scrollToPart('Roadmap')}>Roadmap</a></li>*/}
